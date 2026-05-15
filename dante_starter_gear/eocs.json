@@ -1,0 +1,59 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SPAWN_STARTER_GEAR",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "global": true,
+    "effect": [
+      { "u_spawn_item": "briefcase_dante", "use_item_group": true },
+      { "u_spawn_item": "dante_warp_stone" },
+      { "u_spawn_item": "dante_storage_crystal" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_DIMENSION_TOGGLE",
+    "//": "Toggle between main world and pocket dimension. Used by dante_warp_stone item.",
+    "condition": {
+      "compare_string": [ "yes", { "u_val": "in_pocket_dimension" } ]
+    },
+    "effect": [
+      { "u_message": "You focus on the warp stone, and reality shimmers back into focus." },
+      { "u_travel_to_dimension": "default", "region_type": "default", "npc_travel_radius": 10, "npc_travel_filter": "all" },
+      { "u_teleport": { "u_val": "dante_origin_location" }, "force_safe": true },
+      { "u_add_var": "in_pocket_dimension", "value": "no" }
+    ],
+    "false_effect": [
+      { "u_message": "The warp stone hums as the fabric of reality bends around you." },
+      { "u_location_variable": { "u_val": "dante_origin_location" } },
+      {
+        "if": { "not": { "compare_string": [ "yes", { "u_val": "dante_pocket_entry_saved" } ] } },
+        "then": [
+          { "copy_var": { "u_val": "dante_origin_location" }, "target_var": { "u_val": "dante_pocket_entry" } },
+          { "location_variable_adjust": { "u_val": "dante_pocket_entry" }, "z_adjust": 0, "z_override": true },
+          { "u_add_var": "dante_pocket_entry_saved", "value": "yes" }
+        ]
+      },
+      { "u_teleport": { "u_val": "dante_pocket_entry" }, "force_safe": true },
+      { "u_travel_to_dimension": "dimension_dante", "region_type": "dimension_dante", "npc_travel_radius": 10, "npc_travel_filter": "all" },
+      { "u_location_variable": { "context_val": "arrival_pos" } },
+      { "mapgen_update": "dante_workshop_update", "target_var": { "context_val": "arrival_pos" } },
+      { "u_location_variable": { "context_val": "portal_loc" }, "furniture": "f_dante_return_portal", "target_max_radius": 48 },
+      { "location_variable_adjust": { "context_val": "portal_loc" }, "x_adjust": -2 },
+      { "u_teleport": { "context_val": "portal_loc" }, "force_safe": true },
+      { "u_add_var": "in_pocket_dimension", "value": "yes" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_RETURN_FROM_POCKET",
+    "//": "Return from the pocket dimension. Used by f_dante_return_portal furniture.",
+    "effect": [
+      { "u_message": "You step through the shimmering portal, and the world reconstitutes around you." },
+      { "u_travel_to_dimension": "default", "region_type": "default", "npc_travel_radius": 10, "npc_travel_filter": "all" },
+      { "u_teleport": { "u_val": "dante_origin_location" }, "force_safe": true },
+      { "u_add_var": "in_pocket_dimension", "value": "no" }
+    ]
+  }
+]

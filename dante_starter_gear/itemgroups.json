@@ -1,0 +1,13 @@
+[
+  {
+    "id": "briefcase_dante",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "briefcase_dante",
+        "contents-item": [ "atomic_smartphone", "teleport_watch", "antigravity_terminal" ]
+      }
+    ]
+  }
+]

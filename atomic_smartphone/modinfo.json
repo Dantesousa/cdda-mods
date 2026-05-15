@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "atomic_smartphone",
+    "name": "Atomic Smartphone",
+    "authors": [ "Dante" ],
+    "description": "Adds a smartphone with an infinite (atomic) battery, similar to the old atomic cell phone.",
+    "category": "items",
+    "dependencies": [ "dda" ]
+  }
+]

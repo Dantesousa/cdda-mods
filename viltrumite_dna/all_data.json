@@ -1,0 +1,456 @@
+[
+  {
+    "type": "enchantment",
+    "id": "ENCH_VILTRUMITE_BASE",
+    "condition": "ALWAYS",
+    "values": [
+      { "value": "STRENGTH", "add": 10 },
+      { "value": "DEXTERITY", "add": 5 },
+      { "value": "PERCEPTION", "add": 3 },
+      { "value": "SPEED", "add": 25 },
+      { "value": "REGEN_HP", "multiply": 9.0 },
+      { "value": "REGEN_HP_AWAKE", "multiply": 3.0 },
+      { "value": "MENDING_MODIFIER", "add": 2 },
+      { "value": "REGEN_STAMINA", "add": 5 },
+      { "value": "CLIMATE_CONTROL_HEAT", "add": 1000 },
+      { "value": "CLIMATE_CONTROL_CHILL", "add": 1000 }
+    ],
+    "incoming_damage_mod": [
+      { "type": "bullet", "multiply": -0.50 },
+      { "type": "stab", "multiply": -0.30 },
+      { "type": "bash", "multiply": -0.20 }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "TRAIT_VILTRUMITE_BASE",
+    "name": { "str": "Viltrumite Heritage" },
+    "points": 10,
+    "description": "You possess the DNA of a Viltrumite conqueror.  Your biology is vastly superior to a normal human, granting incredible strength, rapid cellular regeneration, and nearly impenetrable skin.  You will grow even stronger when pushed to your limits.",
+    "starting_trait": true,
+    "valid": true,
+    "purifiable": false,
+    "initial_ma_styles": [ "style_viltrumite" ],
+    "enchantments": ["ENCH_VILTRUMITE_BASE"],
+    "flags": [ "NO_DISEASE", "UNARMED_BONUS", "HEAT_IMMUNE", "COLD_IMMUNE", "BLEED_IMMUNE" ],
+    "armor": [ { "parts": "ALL", "bash": 25, "cut": 35, "bullet": 45, "stab": 35 } ]
+  },
+  {
+    "type": "enchantment",
+    "id": "ENCH_VILTRUMITE_EVOLVED_1",
+    "condition": "ALWAYS",
+    "values": [
+      { "value": "STRENGTH", "add": 15 },
+      { "value": "DEXTERITY", "add": 7 },
+      { "value": "PERCEPTION", "add": 4 },
+      { "value": "SPEED", "add": 35 },
+      { "value": "REGEN_HP", "multiply": 19.0 },
+      { "value": "REGEN_HP_AWAKE", "multiply": 8.0 },
+      { "value": "MENDING_MODIFIER", "add": 5 },
+      { "value": "REGEN_STAMINA", "add": 10 },
+      { "value": "CLIMATE_CONTROL_HEAT", "add": 1000 },
+      { "value": "CLIMATE_CONTROL_CHILL", "add": 1000 }
+    ],
+    "incoming_damage_mod": [
+      { "type": "bullet", "multiply": -0.70 },
+      { "type": "stab", "multiply": -0.45 },
+      { "type": "bash", "multiply": -0.30 },
+      { "type": "cut", "multiply": -0.15 }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "TRAIT_VILTRUMITE_EVOLVED_1",
+    "name": { "str": "Viltrumite Warrior" },
+    "points": 0,
+    "description": "Your DNA has begun to adapt to the rigors of combat.  Your muscles are denser, your skin tougher, and your reflexes even more lethal.  The Viltrumite in you is awakening.",
+    "valid": false,
+    "purifiable": false,
+    "changes_to": [ "TRAIT_VILTRUMITE_BASE" ],
+    "enchantments": ["ENCH_VILTRUMITE_EVOLVED_1"],
+    "flags": [ "NO_DISEASE", "UNARMED_BONUS", "HEAT_IMMUNE", "COLD_IMMUNE", "BLEED_IMMUNE" ],
+    "armor": [ { "parts": "ALL", "bash": 30, "cut": 45, "bullet": 60, "stab": 45 } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "eff_viltrumite_flight",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "flags": [ "LEVITATION", "CLIMB_FLYING" ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ { "value": "SPEED", "add": 150 } ]
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_VILTRUMITE_FLIGHT_ACTIVE",
+    "name": { "str": "Viltrumite Flight" },
+    "points": 0,
+    "description": "You manipulate your own gravity, allowing you to fly freely through the air and move vertically at will.",
+    "active": true,
+    "valid": false,
+    "purifiable": false,
+    "activated_eocs": [ "EOC_VILTRUMITE_FLIGHT_TOGGLE" ],
+    "flags": [ "FEATHER_FALL" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_FLIGHT_TOGGLE",
+    "condition": { "math": [ "u_viltrumite_flight_active == 0" ] },
+    "effect": [
+      { "math": [ "u_viltrumite_flight_active = 1" ] },
+      { "u_add_effect": "eff_viltrumite_flight", "duration": "PERMANENT" },
+      { "u_message": "You take to the air, manipulating your own gravity.", "type": "good" }
+    ],
+    "false_effect": [
+      { "math": [ "u_viltrumite_flight_active = 0" ] },
+      { "u_lose_effect": [ "eff_viltrumite_flight" ] },
+      { "u_message": "You return to the ground.", "type": "info" }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "viltrumite_super_punch",
+    "name": { "str": "Viltrumite Super Punch" },
+    "description": "A devastating punch with the force of a Viltrumite.  It crushes bones, shatters walls, and sends enemies flying.",
+    "valid_targets": [ "hostile", "ground" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": 80,
+    "max_damage": 400,
+    "damage_increment": 8,
+    "min_range": 1,
+    "max_range": 1,
+    "min_bash_scaling": 3,
+    "max_bash_scaling": 3,
+    "flags": [ "SOMATIC", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE" ],
+    "extra_effects": [ { "id": "viltrumite_punch_boom", "hit_self": false } ],
+    "base_casting_time": 100,
+    "base_energy_cost": 300
+  },
+  {
+    "type": "SPELL",
+    "id": "viltrumite_punch_boom",
+    "name": { "str": "Shockwave", "//~": "NO_I18N" },
+    "description": "The shockwave from a Viltrumite punch.",
+    "valid_targets": [ "hostile", "ground" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_aoe": 1,
+    "max_aoe": 2,
+    "min_damage": 30,
+    "max_damage": 120,
+    "flags": [ "RANDOM_DAMAGE", "IGNORE_WALLS" ],
+    "base_casting_time": 0,
+    "base_energy_cost": 0
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_VILTRUMITE_SUPER_PUNCH",
+    "name": { "str": "Viltrumite Super Punch" },
+    "points": 0,
+    "description": "Focus your Viltrumite strength into a single devastating punch.  The force alone can shatter walls and tear through lesser foes.",
+    "active": true,
+    "valid": false,
+    "purifiable": false,
+    "activated_eocs": [ "EOC_VILTRUMITE_SUPER_PUNCH" ],
+    "flags": [ "UNARMED_BONUS" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_SUPER_PUNCH",
+    "effect": [
+      {
+        "run_eocs": "EOC_GENERIC_SPELL_MUTATION",
+        "variables": {
+          "prep_time": 0.5,
+          "spell_to_cast": "viltrumite_super_punch",
+          "message_success": { "i18n": true, "str": "You wind up and deliver a devastating Viltrumite punch!" },
+          "message_fail": { "i18n": true, "str": "You are too exhausted to muster the strength for a super punch." }
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_LEARN_STYLE",
+    "eoc_type": "EVENT",
+    "required_event": "character_takes_damage",
+    "condition": {
+      "and": [
+        { "u_has_trait": "TRAIT_VILTRUMITE_BASE" },
+        { "not": { "u_has_martial_art": "style_viltrumite" } }
+      ]
+    },
+    "effect": [
+      { "u_learn_martial_art": "style_viltrumite" },
+      { "u_message": "Your Viltrumite instincts guide your fists.  You adopt the Viltrumite fighting style.", "type": "info" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_ADAPTIVE_STRESS",
+    "eoc_type": "EVENT",
+    "required_event": "character_takes_damage",
+    "effect": [
+      { "math": [ "u_viltrumite_stress", "+=", "5" ] },
+      { "run_eocs": [ "EOC_VILTRUMITE_CHECK_EVOLUTION" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_CHECK_EVOLUTION",
+    "condition": { "math": [ "u_viltrumite_stress", ">=", "500" ] },
+    "effect": [
+      { "u_add_trait": "TRAIT_VILTRUMITE_EVOLVED_1" },
+      { "u_message": "Your Viltrumite blood boils as your body adapts to the trauma.  You have grown stronger.", "type": "good" },
+      { "math": [ "u_viltrumite_stress", "=", "0" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_VILTRUMITE_EVOLUTION_HINT",
+    "condition": { "math": [ "u_viltrumite_stress", "==", "250" ] },
+    "effect": [ { "u_message": "You feel your Viltrumite blood pulsing. Your body is adapting quickly...", "type": "info" } ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "bg_viltrumite_dna",
+    "name": "Viltrumite Heritage",
+    "description": "You are a member of the Viltrum Empire, a race of cosmic conquerors.  Your DNA is biologically superior to any terrestrial organism, granting you immense strength and resilience from birth.  Your destiny is to rule.",
+    "points": 15,
+    "traits": [ "TRAIT_VILTRUMITE_BASE", "MUT_VILTRUMITE_FLIGHT_ACTIVE", "MUT_VILTRUMITE_SUPER_PUNCH" ]
+  },
+  {
+    "type": "martial_art",
+    "id": "style_viltrumite",
+    "name": { "str": "Viltrumite Style" },
+    "description": "The fighting style of the Viltrumite Empire.  Devastatingly brutal hand-to-hand combat that overwhelms opponents through raw superhuman force.  Each strike carries the weight of a trained conqueror, capable of shattering bone and pulping flesh.",
+    "initiate": [ "You adopt the stance of the Viltrumite Empire.", "%s adopts a stance of overwhelming confidence." ],
+    "priority": 1,
+    "arm_block": 8,
+    "leg_block": 6,
+    "force_unarmed": true,
+    "autolearn": [ [ "unarmed", 6 ] ],
+    "static_buffs": [
+      {
+        "id": "buff_viltrumite_stance",
+        "name": "Viltrumite Stance",
+        "description": "Your Viltrumite heritage flows through every movement.  Each blow carries crushing force.\n\n+1.5 bash damage per point of Strength.\nBlocked damage reduced by 50% of Strength.",
+        "unarmed_allowed": true,
+        "flat_bonuses": [
+          { "stat": "hit", "scale": 5.0 },
+          { "stat": "damage", "type": "bash", "scaling-stat": "str", "scale": 1.5 },
+          { "stat": "block", "scaling-stat": "str", "scale": 0.5 }
+        ]
+      },
+      {
+        "id": "buff_viltrumite_brutality",
+        "name": "Overwhelming Force",
+        "description": "Your strikes hit with devastating power.\n\n+50% bash damage.",
+        "unarmed_allowed": true,
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 1.5 }
+        ]
+      }
+    ],
+    "ongethit_buffs": [
+      {
+        "id": "buff_viltrumite_fury",
+        "name": "Viltrumite Fury",
+        "description": "Pain only fuels your anger.  Your next attacks are even more savage.\n\n+30% bash damage per stack.\nLasts 5 turns.  Max 3 stacks.",
+        "unarmed_allowed": true,
+        "buff_duration": 5,
+        "max_stacks": 3,
+        "mult_bonuses": [
+          { "stat": "damage", "type": "bash", "scale": 0.3 }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_viltrumite_strike",
+      "tec_viltrumite_heavy_blow",
+      "tec_viltrumite_devastating",
+      "tec_viltrumite_stun"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_viltrumite_strike",
+    "name": "Viltrumite Strike",
+    "messages": [ "You smash %s with a Viltrumite strike", "<npcname> smashes %s with a Viltrumite strike" ],
+    "unarmed_allowed": true,
+    "crit_ok": true,
+    "weighting": 2,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.8 } ],
+    "attack_vectors": [ "vector_punch" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_viltrumite_heavy_blow",
+    "name": "Heavy Blow",
+    "messages": [ "You deliver a crushing heavy blow to %s", "<npcname> delivers a crushing heavy blow to %s" ],
+    "unarmed_allowed": true,
+    "crit_ok": true,
+    "weighting": 2,
+    "knockback_dist": 2,
+    "knockback_spread": 1,
+    "stun_dur": 1,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
+    "attack_vectors": [ "vector_punch" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_viltrumite_devastating",
+    "name": "Devastating Blow",
+    "messages": [ "You punch clean through %s with a devastating blow", "<npcname> punches clean through %s with a devastating blow" ],
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "weighting": 3,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.5 } ],
+    "flat_bonuses": [
+      { "stat": "arpen", "type": "bash", "scaling-stat": "str", "scale": 0.5 }
+    ],
+    "attack_vectors": [ "vector_punch" ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_viltrumite_stun",
+    "name": "Stunning Blow",
+    "messages": [ "You land a stunning blow to %s's head", "<npcname> lands a stunning blow to %s's head" ],
+    "unarmed_allowed": true,
+    "weighting": 1,
+    "stun_dur": 2,
+    "down_dur": 1,
+    "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.5 } ],
+    "attack_vectors": [ "vector_punch" ]
+  },
+  {
+    "id": "viltrumite_nanite_tool",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "Viltrumite nanite swarm", "str_pl": "Viltrumite nanite swarms" },
+    "description": "A small metallic canister containing a swarm of programmable nanites, technology far beyond Earth's understanding.  When commanded, the nanites flow out and reconfigure into any tool shape needed, from a simple hammer to a precision anvil.  The nanites require a power source to maintain coherence - compatible with Universal Power Supplies.",
+    "weight": "500 g",
+    "volume": "250 ml",
+    "longest_side": "15 cm",
+    "price": "5000 USD",
+    "price_postapoc": "500 USD",
+    "to_hit": { "grip": "solid", "length": "hand", "surface": "any", "balance": "neutral" },
+    "material": [ "superalloy" ],
+    "symbol": ";",
+    "color": "light_cyan",
+    "flags": [ "USE_UPS", "POWERED", "NO_UNLOAD", "NO_RELOAD", "WATER_BREAK", "ELECTRONIC", "ALLOWS_BODY_BLOCK" ],
+    "tool_ammo": [ "battery" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
+    "qualities": [
+      [ "HAMMER", 3 ],
+      [ "HAMMER_FINE", 1 ],
+      [ "HAMMER_SOFT", 1 ],
+      [ "SAW_W", 2 ],
+      [ "AXE", 2 ],
+      [ "DIG", 2 ],
+      [ "PRY", 3 ],
+      [ "PRYING_NAIL", 1 ],
+      [ "SMOOTH", 1 ],
+      [ "ANVIL", 3 ],
+      [ "SAW_M", 2 ],
+      [ "SAW_M_FINE", 1 ],
+      [ "CHISEL", 2 ],
+      [ "CHISEL_WOOD", 1 ],
+      [ "FILE", 2 ],
+      [ "GRIND", 2 ],
+      [ "FINE_GRIND", 1 ],
+      [ "VISE", 2 ],
+      [ "DRILL", 3 ],
+      [ "DRILL_ROCK", 1 ],
+      [ "REAM", 1 ],
+      [ "CUT", 2 ],
+      [ "CUT_FINE", 1 ],
+      [ "FABRIC_CUT", 2 ],
+      [ "WRENCH", 2 ],
+      [ "WRENCH_FINE", 1 ],
+      [ "SCREW", 2 ],
+      [ "SCREW_FINE", 1 ],
+      [ "BUTCHER", 8 ],
+      [ "GLARE", 1 ],
+      [ "HOSE", 1 ],
+      [ "JACK", 1 ],
+      [ "LIFT", 1 ],
+      [ "LOCKPICK", 1 ],
+      [ "PULL", 1 ],
+      [ "WRITE", 1 ],
+      [ "STRIKING_SURFACE", 1 ],
+      [ "BLOW_HOT_AIR", 1 ],
+      [ "SEW", 3 ],
+      [ "SEW_CURVED", 1 ],
+      [ "KNIT", 1 ],
+      [ "LEATHER_AWL", 2 ],
+      [ "COOK", 2 ],
+      [ "BOIL", 2 ],
+      [ "HOTPLATE", 1 ],
+      [ "CHEM", 3 ],
+      [ "DISTILL", 1 ],
+      [ "FINE_DISTILL", 1 ],
+      [ "CONCENTRATE", 1 ],
+      [ "SEPARATE", 1 ],
+      [ "ANALYSIS", 1 ],
+      [ "FILTER", 1 ],
+      [ "EXTRACT", 1 ],
+      [ "SIEVE", 1 ],
+      [ "STRAIN", 1 ],
+      [ "WINNOW", 1 ],
+      [ "SUSPENDING", 1 ],
+      [ "SHEAR", 1 ],
+      [ "CHURN", 1 ],
+      [ "MOP", 1 ],
+      [ "THREAD_CUT", 1 ],
+      [ "THREAD_TAP", 1 ],
+      [ "PRESSURIZATION", 1 ],
+      [ "SNOW_MAKING", 1 ]
+    ],
+    "charged_qualities": [
+      [ "WELD", 2 ],
+      [ "TEMPER", 1 ]
+    ],
+    "use_action": [
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [ "iron", "steel", "budget_steel", "lc_steel", "mc_steel", "hc_steel", "ch_steel", "aluminum", "copper", "bronze", "silver", "gold", "platinum", "superalloy", "lead", "tin", "zinc" ],
+        "skill": "fabrication",
+        "cost_scaling": 0.1,
+        "move_cost": 1000,
+        "tool_quality": 10
+      }
+    ],
+    "charges_per_use": 20,
+    "melee_damage": { "bash": 2 }
+  },
+  {
+    "type": "profession",
+    "id": "prof_viltrumite_scout",
+    "name": { "male": "Viltrumite Scout", "female": "Viltrumite Scout" },
+    "description": "A scout of the Viltrumite Empire, stranded on Earth after a reconnaissance mission.  Your Viltrumite DNA grants you superhuman strength, flight, and resilience.  Your nanite tool can fabricate anything you need to survive and conquer.",
+    "points": 18,
+    "traits": [ "TRAIT_VILTRUMITE_BASE", "MUT_VILTRUMITE_FLIGHT_ACTIVE", "MUT_VILTRUMITE_SUPER_PUNCH" ],
+    "items": {
+      "both": {
+        "entries": [
+          { "item": "viltrumite_nanite_tool", "charges": 500 },
+          { "item": "jumpsuit" },
+          { "item": "boots_steel" },
+          { "item": "socks" }
+        ]
+      },
+      "male": { "entries": [ { "item": "boxer_shorts" } ] },
+      "female": { "entries": [ { "item": "bra" }, { "item": "panties" } ] }
+    }
+  }
+]

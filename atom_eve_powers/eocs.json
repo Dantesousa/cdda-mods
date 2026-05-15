@@ -1,0 +1,74 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ATOM_EVE_FLIGHT_TOGGLE",
+    "effect": [
+      {
+        "if": { "not": { "u_has_effect": "effect_atom_eve_flying" } },
+        "then": [
+          { "u_add_effect": "effect_atom_eve_flying", "duration": "PERMANENT" },
+          { "u_message": "You rise into the air, surrounded by a pink glow.", "type": "good" }
+        ],
+        "else": [
+          { "u_lose_effect": "effect_atom_eve_flying" },
+          { "u_message": "You descend gracefully to the ground.", "type": "info" }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_START_ATOM_EVE_TICK",
+    "eoc_type": "EVENT",
+    "required_event": "game_start",
+    "global": true,
+    "effect": [
+      { "run_eocs": "EOC_ATOM_EVE_FLIGHT_TICK" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ATOM_EVE_FLIGHT_TICK",
+    "recurrence": "3 s",
+    "global": true,
+    "effect": [
+      {
+        "if": { "u_has_trait": "ATOM_EVE" },
+        "then": [
+          {
+            "if": { "u_has_effect": "effect_atom_eve_flying" },
+            "then": [
+              {
+                "if": { "math": [ "u_val('stamina') >= 30" ] },
+                "then": [
+                  { "math": [ "u_val('stamina') -= 30" ] }
+                ],
+                "else": [
+                  { "u_lose_effect": "effect_atom_eve_flying" },
+                  { "u_message": "Exhausted! You lose concentration and fall.", "type": "bad" }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ATOM_EVE_ARMOR_APPLY",
+    "effect": [
+      {
+        "if": { "math": [ "u_val('stamina') >= 200" ] },
+        "then": [
+          { "math": [ "u_val('stamina') -= 200" ] },
+          { "u_add_effect": "effect_atom_eve_armor", "duration": { "math": [ "60 + u_val('intelligence') * 5" ] } },
+          { "u_message": "Pink energy solidifies around you, forming protective armor!", "type": "good" }
+        ],
+        "else": [
+          { "u_message": "Too exhausted to form energy armor.", "type": "bad" }
+        ]
+      }
+    ]
+  }
+]

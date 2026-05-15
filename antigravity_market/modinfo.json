@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "antigravity_market",
+    "name": "Antigravity Market",
+    "authors": [ "Dante" ],
+    "description": "Adds a handheld shopping terminal allowing you to buy items (food, weapons, ammo) using FMCNotes (Free Merchant Certified Notes). Items are delivered instantly.",
+    "category": "items",
+    "dependencies": [ "dda" ]
+  }
+]

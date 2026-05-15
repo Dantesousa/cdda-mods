@@ -1,0 +1,45 @@
+[
+  {
+    "type": "mutation",
+    "id": "ATOM_EVE",
+    "name": "Atom Eve Physiology",
+    "points": 10,
+    "description": "Your biology has been fundamentally altered, granting the ability to manipulate matter and energy at a molecular level. You possess enhanced intelligence, accelerated regeneration, superhuman durability, and the power of flight.",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "enchantments": [ "ENCH_ATOM_EVE_PASSIVES" ],
+    "active": true,
+    "activated_is_setup": true,
+    "activated_eocs": [ "EOC_ATOM_EVE_FLIGHT_TOGGLE" ],
+    "spells_learned": [
+      [ "spell_atom_eve_blast", 1 ],
+      [ "spell_atom_eve_armor", 1 ]
+    ]
+  },
+  {
+    "type": "enchantment",
+    "id": "ENCH_ATOM_EVE_PASSIVES",
+    "condition": "ALWAYS",
+    "values": [
+      { "value": "INTELLIGENCE", "add": 8 },
+      { "value": "REGEN_HP", "multiply": 0.5 },
+      { "value": "REGEN_HP_AWAKE", "add": 5 },
+      { "value": "MAX_STAMINA", "multiply": 1.0 },
+      { "value": "MAX_HP", "add": 60 },
+      { "value": "FALL_DAMAGE", "multiply": -1.0 },
+      { "value": "CARRY_WEIGHT", "multiply": 0.5 },
+      { "value": "MOVE_COST", "add": -10 }
+    ],
+    "incoming_damage_mod": [
+      { "type": "bash", "multiply": -0.40 },
+      { "type": "cut", "multiply": -0.40 },
+      { "type": "bullet", "multiply": -0.30 },
+      { "type": "stab", "multiply": -0.30 },
+      { "type": "heat", "multiply": -0.50 },
+      { "type": "cold", "multiply": -0.50 },
+      { "type": "acid", "multiply": -0.50 },
+      { "type": "electric", "multiply": -0.50 }
+    ]
+  }
+]

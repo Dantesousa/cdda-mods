@@ -1,0 +1,44 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_ACTIVATE_TELEPORT_WATCH",
+    "effect": [
+      { "u_query_omt": { "context_val": "destination" }, "message": "Select teleport destination." },
+      {
+        "if": { "math": [ "has_var(_destination)" ] },
+        "then": [
+          {
+            "if": { "or": [
+              { "u_has_items": { "item": "UPS_off", "charges": 100 } },
+              { "u_has_items": { "item": "UPS_ON", "charges": 100 } },
+              { "u_has_items": { "item": "UPS_OFF", "charges": 100 } }
+            ] },
+            "then": [
+              {
+                "if": { "u_has_items": { "item": "UPS_off", "charges": 100 } },
+                "then": { "u_consume_item": "UPS_off", "charges": 100 },
+                "else": {
+                  "if": { "u_has_items": { "item": "UPS_ON", "charges": 100 } },
+                  "then": { "u_consume_item": "UPS_ON", "charges": 100 },
+                  "else": { "u_consume_item": "UPS_OFF", "charges": 100 }
+                }
+              },
+              {
+                "u_teleport": { "context_val": "destination" },
+                "force_safe": true,
+                "success_message": "Reality folds around you as you are instantly translated to your destination!",
+                "fail_message": "The teleport sequence fails to find a safe anchor point."
+              }
+            ],
+            "else": [
+              { "u_message": "Your UPS doesn't have enough power to activate the quantum drive. Need 100 charges." }
+            ]
+          }
+        ],
+        "else": [
+          { "u_message": "Teleport sequence aborted." }
+        ]
+      }
+    ]
+  }
+]

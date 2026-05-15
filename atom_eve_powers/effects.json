@@ -1,0 +1,38 @@
+[
+  {
+    "type": "effect_type",
+    "id": "effect_atom_eve_flying",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "flags": [ "LEVITATION", "CLIMB_FLYING" ],
+    "enchantments": [
+      { "condition": "ALWAYS", "values": [ { "value": "SPEED", "add": 40 } ] }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_atom_eve_armor",
+    "name": [ "Pink Energy Armor" ],
+    "desc": [ "A shimmering pink energy cocoon protects you from harm." ],
+    "max_duration": 600,
+    "max_intensity": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "SPEED", "add": -10 },
+          { "value": "BONUS_BLOCK", "add": 3 }
+        ],
+        "incoming_damage_mod": [
+          { "type": "bash", "multiply": -0.60 },
+          { "type": "cut", "multiply": -0.60 },
+          { "type": "bullet", "multiply": -0.60 },
+          { "type": "stab", "multiply": -0.60 },
+          { "type": "heat", "multiply": -0.60 },
+          { "type": "cold", "multiply": -0.60 },
+          { "type": "acid", "multiply": -0.60 }
+        ]
+      }
+    ]
+  }
+]

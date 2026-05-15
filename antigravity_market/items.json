@@ -1,0 +1,33 @@
+[
+  {
+    "id": "antigravity_terminal",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "Antigravity Shopping Terminal" },
+    "description": "A rugged handheld terminal with a bright screen, connected to the Antigravity Market network.  Allows you to order supplies using FMCNotes and have them delivered instantly.",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "longest_side": "18 cm",
+    "price": "5000 USD",
+    "price_postapoc": "50 USD",
+    "symbol": ";",
+    "color": "cyan",
+    "use_action": [
+      "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "PORTABLE_GAME",
+      { "type": "effect_on_conditions", "menu_text": "Open Antigravity Market", "effect_on_conditions": [ "EOC_antigravity_market" ] }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "E_FILE_STORAGE",
+        "rigid": true,
+        "max_contains_volume": "1 ml",
+        "max_contains_weight": "1 g",
+        "weight_multiplier": 0.0,
+        "ememory_max": "1 TB"
+      }
+    ],
+    "flags": [ "NO_RELOAD", "NO_UNLOAD", "RECHARGE", "WATCH", "ALLOWS_REMOTE_USE" ]
+  }
+]

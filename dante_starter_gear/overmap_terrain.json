@@ -1,0 +1,22 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "dante_pocket_core",
+    "name": "Dante's Workshop",
+    "sym": "P",
+    "color": "c_cyan",
+    "mondensity": 0,
+    "see_cost": "low",
+    "flags": [ "NO_ROTATE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "dante_void_floor",
+    "name": "Void Floor",
+    "sym": ".",
+    "color": "dark_gray",
+    "mondensity": 0,
+    "see_cost": "low",
+    "flags": [ "NO_ROTATE", "SIDEWALK" ]
+  }
+]

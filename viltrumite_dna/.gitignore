@@ -1,0 +1,7 @@
+# CDDA Cache
+data/cache/
+*.fb
+
+# System
+.DS_Store
+Thumbs.db

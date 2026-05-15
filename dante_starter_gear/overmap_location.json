@@ -1,0 +1,7 @@
+[
+  {
+    "type": "overmap_location",
+    "id": "dante_pocket_location",
+    "terrains": [ "dante_pocket_core" ]
+  }
+]

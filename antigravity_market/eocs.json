@@ -1,0 +1,195 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_antigravity_market",
+    "global": true,
+    "effect": {
+      "run_eoc_selector": [
+        "EOC_market_can_beans",
+        "EOC_market_mre",
+        "EOC_market_water",
+        "EOC_market_knife",
+        "EOC_market_ruger_mini",
+        "EOC_market_ammo_556",
+        "EOC_market_ruger_mag",
+        "EOC_market_glock",
+        "EOC_market_ammo_9mm",
+        "EOC_market_glock_mag",
+        "EOC_market_cancel"
+      ],
+      "names": [
+        "[Food] Canned Beans - 1 FMCNote",
+        "[Food] MRE (Beef) - 2 FMCNotes",
+        "[Drink] Clean Water (4L jug) - 1 FMCNote",
+        "[Weapon] Combat Knife - 2 FMCNotes",
+        "[Weapon] Ruger Mini-14 (5.56) - 8 FMCNotes",
+        "[Ammo] 5.56 NATO (60 rounds) - 4 FMCNotes",
+        "[Mag] Ruger 20rd Magazine - 1 FMCNote",
+        "[Weapon] Glock 19 (9mm) - 5 FMCNotes",
+        "[Ammo] 9mm FMJ (50 rounds) - 3 FMCNotes",
+        "[Mag] Glock 17rd Magazine - 1 FMCNote",
+        "Cancel"
+      ],
+      "hide_failing": false,
+      "allow_cancel": true
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_can_beans",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 1 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "can_beans" },
+      { "u_message": "Purchase successful! Enjoy your canned beans.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money!  You need 1 FMCNote for canned beans.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_mre",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 2 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "mre_beef" },
+      { "u_spawn_item": "mre_potato" },
+      { "u_spawn_item": "mre_chocolate_pudding" },
+      { "u_spawn_item": "mre_chocolate_cake" },
+      { "u_message": "Purchase successful! Enjoy your MRE.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money! You need 2 FMCNotes for an MRE.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_water",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 1 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "water_clean", "container": "jug_plastic", "count": 15 },
+      { "u_message": "Purchase successful! Enjoy your clean water.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money!  You need 1 FMCNote for clean water.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_knife",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 2 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "knife_combat" },
+      { "u_message": "Purchase successful! Stay sharp.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money! You need 2 FMCNotes for a combat knife.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_ruger_mini",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 8 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "ruger_mini" },
+      { "u_message": "Purchase successful! Enjoy your Ruger Mini-14.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money! You need 8 FMCNotes for a Ruger Mini-14.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_ammo_556",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 4 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "556", "count": 60 },
+      { "u_message": "Purchase successful! 60 rounds of 5.56mm delivered.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money! You need 4 FMCNotes for 5.56 ammo.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_ruger_mag",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 1 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "ruger20" },
+      { "u_message": "Purchase successful! Ruger 20rd magazine delivered.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money!  You need 1 FMCNote for a Ruger magazine.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_glock",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 5 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "glock_19" },
+      { "u_message": "Purchase successful! Enjoy your Glock 19.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money! You need 5 FMCNotes for a Glock 19.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_ammo_9mm",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 3 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "9mm", "count": 50 },
+      { "u_message": "Purchase successful! 50 rounds of 9mm delivered.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money!  You need 3 FMCNotes for 9mm ammo.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_glock_mag",
+    "condition": { "u_has_items": { "item": "FMCNote", "count": 1 } },
+    "effect": [
+      { "u_consume_item": "FMCNote" },
+      { "u_spawn_item": "glockmag" },
+      { "u_message": "Purchase successful!  Glock 17rd magazine delivered.", "type": "good" }
+    ],
+    "false_effect": {
+      "u_message": "Not enough money!  You need 1 FMCNote for a Glock magazine.", "type": "bad"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_market_cancel",
+    "effect": {
+      "u_message": "You close the shopping terminal.", "type": "info"
+    }
+  }
+]

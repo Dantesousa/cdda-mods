@@ -1,0 +1,11 @@
+[
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "bg_atom_eve",
+    "name": "Atom Eve Powers",
+    "description": "Your biology has been fundamentally altered, granting the ability to manipulate matter and energy at a molecular level. You possess enhanced intelligence, accelerated regeneration, superhuman durability, and the power of flight.",
+    "points": 10,
+    "traits": [ "ATOM_EVE" ]
+  }
+]

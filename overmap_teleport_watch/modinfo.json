@@ -1,0 +1,9 @@
+{
+  "type": "MOD_INFO",
+  "id": "overmap_teleport_watch",
+  "name": "Overmap Teleport Watch",
+  "authors": [ "Dante" ],
+  "description": "Adds a high-tech UPS-powered smartwatch capable of teleporting the wearer across the overmap.",
+  "category": "items",
+  "dependencies": [ "dda" ]
+}

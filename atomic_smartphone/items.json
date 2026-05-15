@@ -1,0 +1,92 @@
+[
+  {
+    "id": "atomic_smartphone",
+    "copy-from": "smart_phone",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "Atomic Smartphone" },
+    "description": "An advanced smartphone equipped with a micro-atomic battery.  It never needs charging and works indefinitely.",
+    "price": "50000 USD",
+    "charges_per_use": 0,
+    "use_action": [
+      "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "CAMERA",
+      { "type": "mp3", "transform": "atomic_smartphone_music", "message": "You put in the earbuds and start listening to music.", "activate": true },
+      "CALORIES_INTAKE_TRACKER",
+      "PORTABLE_GAME",
+      {
+        "target": "atomic_smartphone_flashlight",
+        "msg": "You activate the flashlight app.",
+        "menu_text": "Turn on flashlight",
+        "need_charges": 0,
+        "type": "transform"
+      },
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "E_FILE_STORAGE",
+        "rigid": true,
+        "max_contains_volume": "1 ml",
+        "max_contains_weight": "1 g",
+        "weight_multiplier": 0.0,
+        "ememory_max": "256 GB"
+      }
+    ],
+    "flags": [ "NO_RELOAD", "NO_UNLOAD", "RECHARGE", "NO_SALVAGE" ]
+  },
+  {
+    "id": "atomic_smartphone_music",
+    "copy-from": "atomic_smartphone",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "Atomic Smartphone - Music" },
+    "description": "This smartphone is playing music, constantly boosting your morale.  You can't hear anything else while listening.",
+    "power_draw": "0 mW",
+    "charges_per_use": 0,
+    "revert_to": "atomic_smartphone",
+    "use_action": [
+      "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "PORTABLE_GAME",
+      { "type": "mp3", "transform": "atomic_smartphone", "message": "You stop listening to music and take your earbuds out.", "activate": false },
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
+    ],
+    "tick_action": [ "MP3_ON" ],
+    "extend": { "flags": [ "TRADER_AVOID", "SPAWN_ACTIVE" ] }
+  },
+  {
+    "id": "atomic_smartphone_flashlight",
+    "copy-from": "atomic_smartphone",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "Atomic Smartphone - Flashlight" },
+    "power_draw": "0 mW",
+    "charges_per_use": 0,
+    "revert_to": "atomic_smartphone",
+    "use_action": [
+      "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "PORTABLE_GAME",
+      { "ammo_scale": 0, "target": "atomic_smartphone", "msg": "You deactivate the flashlight app.", "menu_text": "Turn off flashlight", "type": "transform" },
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
+    ],
+    "light": 20,
+    "extend": { "flags": [ "TRADER_AVOID", "SPAWN_ACTIVE" ] }
+  },
+  {
+    "type": "recipe",
+    "result": "atomic_smartphone",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_ELECTRONIC",
+    "subcategory": "CSC_ELECTRONIC_TOOLS",
+    "skill_used": "electronics",
+    "difficulty": 6,
+    "time": "30 m",
+    "autolearn": true,
+    "qualities": [ { "id": "SCREW_FINE", "level": 1 } ],
+    "tools": [ [ [ "soldering_iron", 10 ], [ "soldering_iron_portable", 10 ] ] ],
+    "components": [ [ [ "smart_phone", 1 ] ], [ [ "heavy_atomic_battery_cell", 1 ], [ "plut_slurry", 5 ] ] ]
+  }
+]

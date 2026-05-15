@@ -1,0 +1,9 @@
+{
+  "type": "MOD_INFO",
+  "id": "atom_eve_powers",
+  "name": "Atom Eve Powers",
+  "authors": [ "Dante" ],
+  "description": "Adds Atom Eve-inspired superpowers: energy manipulation, flight, regeneration, and enhanced abilities.",
+  "category": "mutations",
+  "dependencies": [ "dda" ]
+}
