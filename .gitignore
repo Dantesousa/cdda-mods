@@ -3,3 +3,6 @@
 Thumbs.db
 *.swp
 *~
+
+# Agent instructions (private)
+AGENTS.md
