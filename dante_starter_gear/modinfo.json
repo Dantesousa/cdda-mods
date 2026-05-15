@@ -3,7 +3,7 @@
   "id": "dante_starter_gear",
   "name": "Dante's Starter Gear",
   "authors": [ "Dante" ],
-  "description": "Spawns a pre-loaded briefcase (with teleport watch, atomic smartphone, and antigravity terminal inside) and a dimensional warp stone in the evac shelter at game start.  The warp stone grants access to a persistent 24x24 high-tech pocket dimension workshop.",
+  "description": "Spawns a pre-loaded briefcase with all of Dante's custom gear inside: teleport watch, atomic smartphone, antigravity terminal, and Viltrumite nanite swarm — plus a dimensional warp stone and storage crystal for the pocket dimension workshop.",
   "category": "items",
-  "dependencies": [ "dda", "atomic_smartphone", "antigravity_market", "overmap_teleport_watch" ]
+  "dependencies": [ "dda", "atomic_smartphone", "antigravity_market", "overmap_teleport_watch", "pocket_dimension", "nanite_tool" ]
 }

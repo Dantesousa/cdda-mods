@@ -5,52 +5,7 @@
     "subtypes": [ "ARMOR" ],
     "copy-from": "briefcase",
     "name": { "str": "Dante's briefcase" },
-    "description": "A sleek black briefcase with 'D.S.' embossed on the leather handle.  It's already packed with a teleport watch, an atomic smartphone, and an antigravity terminal.",
+    "description": "A sleek black briefcase with 'D.S.' embossed on the leather handle.  It's already packed with a teleport watch, an atomic smartphone, an antigravity terminal, and a Viltrumite nanite swarm.",
     "//": "Custom pre-loaded briefcase for Dante's starter gear mod. Relies on item group to spawn with contents."
-  },
-  {
-    "id": "dante_warp_stone",
-    "type": "ITEM",
-    "subtypes": [ "TOOL" ],
-    "name": { "str": "Dante's warp stone" },
-    "description": "A smooth, palm-sized crystal humming with dimensional energy.  One use opens a portal to your personal pocket dimension workshop; another use returns you to your former location.",
-    "weight": "0 g",
-    "volume": "0 ml",
-    "price": "0 USD",
-    "price_postapoc": "0 USD",
-    "material": [ "stone" ],
-    "symbol": "O",
-    "color": "magenta",
-    "flags": [ "UNBREAKABLE", "ZERO_WEIGHT" ],
-    "use_action": {
-      "type": "effect_on_conditions",
-      "description": "Shift dimensions",
-      "effect_on_conditions": [ "EOC_DIMENSION_TOGGLE" ]
-    }
-  },
-  {
-    "id": "dante_storage_crystal",
-    "type": "ITEM",
-    "subtypes": [ "GENERIC" ],
-    "name": { "str": "dimensional storage crystal" },
-    "description": "A palm-sized crystal humming with spatial energy.  It can store vast amounts of matter within a pocket dimension, collapsing volume and weight into nothingness.",
-    "weight": "0 g",
-    "volume": "0 ml",
-    "price": "0 USD",
-    "price_postapoc": "0 USD",
-    "material": [ "glass" ],
-    "symbol": "*",
-    "color": "magenta",
-    "flags": [ "UNBREAKABLE", "ZERO_WEIGHT" ],
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "max_contains_volume": "500 L",
-        "max_contains_weight": "300 kg",
-        "max_item_length": "500 cm",
-        "moves": 150,
-        "rigid": false
-      }
-    ]
   }
 ]
