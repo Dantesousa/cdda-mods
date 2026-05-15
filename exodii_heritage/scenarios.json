@@ -1,0 +1,16 @@
+[
+  {
+    "type": "scenario",
+    "id": "exodii_crash",
+    "name": "Exodii Crash Landing",
+    "points": 0,
+    "description": "You were an Exodii dimensional scout — a full-conversion cyborg from another world — when your portal generator malfunctioned mid-transit.  The dimensional rift collapsed, violently ejecting you into this unfamiliar Earth.  Your scout frame absorbed most of the impact, but your portal device is destroyed.  Stranded and alone, you must survive in this hostile new world.",
+    "start_name": "Crash Site",
+    "allowed_locs": [ "sloc_field", "sloc_forest" ],
+    "professions": [ "exodii_scout" ],
+    "reveal_locale": false,
+    "distance_initial_visibility": 0,
+    "eoc": [ "EOC_EXODII_CRASH_INTRO", "EOC_EXODII_GRANT_FRAME" ],
+    "flags": [ "LONE_START" ]
+  }
+]

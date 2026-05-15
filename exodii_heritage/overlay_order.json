@@ -1,0 +1,8 @@
+[
+  {
+    "type": "overlay_order",
+    "overlay_ordering": [
+      { "id": [ "EXODII_SCOUT_FRAME" ], "order": 10000 }
+    ]
+  }
+]

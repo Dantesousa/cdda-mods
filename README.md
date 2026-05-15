@@ -72,6 +72,14 @@ Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força
 - Arquivos: `all_data.json`
 - Dependências: `dda`, `nanite_tool`
 
+### 9. Exodii Heritage
+**ID:** `exodii_heritage`
+
+Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensional Exodii, um ciborgue de conversão completa de outro mundo que sofreu pane no gerador de portal e caiu na Nova Inglaterra. Inclui frame de scout com armadura integrada, biónicos pré-instalados e equipamento Exodii.
+
+- Arquivos: `scenarios.json`, `professions.json`, `mutations.json`, `eocs.json`, `overlay_order.json`
+- Dependências: `dda`
+
 ---
 
 ## 🔗 Dependências Entre Mods
@@ -84,6 +92,7 @@ dda (base game)
 ├── pocket_dimension
 ├── nanite_tool
 │   └── viltrumite_dna
+├── exodii_heritage
 └── dante_starter_gear
     ├── atomic_smartphone
     ├── antigravity_market

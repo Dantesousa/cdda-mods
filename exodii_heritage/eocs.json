@@ -1,0 +1,19 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EXODII_CRASH_INTRO",
+    "effect": [
+      {
+        "u_message": "The dimensional rift tears itself apart around you, hurling your scout frame through the void.  You crash-land hard in an unfamiliar wilderness.  Your portal generator is little more than molten slag now.  Stranded in this strange new Earth, survival is your only objective.",
+        "type": "info"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_EXODII_GRANT_FRAME",
+    "effect": [
+      { "u_add_trait": "EXODII_SCOUT_FRAME" }
+    ]
+  }
+]

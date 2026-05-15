@@ -1,0 +1,38 @@
+[
+  {
+    "type": "mutation",
+    "id": "EXODII_SCOUT_FRAME",
+    "flags": [ "Exodii_Body" ],
+    "name": { "str": "Exodii Scout Frame" },
+    "points": 0,
+    "visibility": 4,
+    "ugliness": 4,
+    "mixed_effect": true,
+    "starting_trait": false,
+    "valid": true,
+    "purifiable": false,
+    "description": "Your body has been replaced with a rugged Exodii scout frame — a bipedal walker chassis designed for dimensional reconnaissance.  Your brain and vital organs are shielded inside a durable ceramic-alloy shell.  Its modular design still accommodates wearing gear over the integrated armor, letting you layer additional protection on top of the enhanced servos underneath.",
+    "types": [ "Cyberframe", "Cybernetic" ],
+    "enchantments": [
+      {
+        "values": [
+          { "value": "MAX_HP", "add": 20 },
+          { "value": "STRENGTH", "add": 4 },
+          { "value": "DEXTERITY", "add": 4 },
+          { "value": "CARRY_WEIGHT", "multiply": 2 }
+        ]
+      }
+    ],
+    "armor": [
+      {
+        "parts": [ "torso", "head", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "mouth" ],
+        "cut": 30,
+        "bash": 30,
+        "stab": 30,
+        "bullet": 25,
+        "acid": 25,
+        "electric": 5
+      }
+    ]
+  }
+]

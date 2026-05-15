@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "exodii_heritage",
+    "name": "Exodii Heritage",
+    "authors": [ "Dante" ],
+    "description": "Start as an Exodii dimensional scout — a full-conversion cyborg from another world who crash-landed in New England.  Begin with a powerful cybernetic scout frame, pre-installed bionics, and Exodii weaponry.",
+    "category": "scenarios",
+    "dependencies": [ "dda" ]
+  }
+]
