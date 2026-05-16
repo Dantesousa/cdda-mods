@@ -11,16 +11,27 @@
             "if": { "or": [
               { "u_has_items": { "item": "UPS_off", "charges": 100 } },
               { "u_has_items": { "item": "UPS_ON", "charges": 100 } },
-              { "u_has_items": { "item": "UPS_OFF", "charges": 100 } }
+              { "u_has_items": { "item": "UPS_OFF", "charges": 100 } },
+              { "and": [
+                { "u_has_bionics": "bio_ups" },
+                { "math": [ "u_val('power') >= energy('100 kJ')" ] }
+              ] }
             ] },
             "then": [
               {
-                "if": { "u_has_items": { "item": "UPS_off", "charges": 100 } },
-                "then": { "u_consume_item": "UPS_off", "charges": 100 },
+                "if": { "and": [
+                { "u_has_bionics": "bio_ups" },
+                  { "math": [ "u_val('power') >= energy('100 kJ')" ] }
+                ] },
+                "then": { "math": [ "u_val('power') -= energy('100 kJ')" ] },
                 "else": {
-                  "if": { "u_has_items": { "item": "UPS_ON", "charges": 100 } },
-                  "then": { "u_consume_item": "UPS_ON", "charges": 100 },
-                  "else": { "u_consume_item": "UPS_OFF", "charges": 100 }
+                  "if": { "u_has_items": { "item": "UPS_off", "charges": 100 } },
+                  "then": { "u_consume_item": "UPS_off", "charges": 100 },
+                  "else": {
+                    "if": { "u_has_items": { "item": "UPS_ON", "charges": 100 } },
+                    "then": { "u_consume_item": "UPS_ON", "charges": 100 },
+                    "else": { "u_consume_item": "UPS_OFF", "charges": 100 }
+                  }
                 }
               },
               {
@@ -31,7 +42,7 @@
               }
             ],
             "else": [
-              { "u_message": "Your UPS doesn't have enough power to activate the quantum drive. Need 100 charges." }
+              { "u_message": "Your UPS doesn't have enough power to activate the quantum drive. Need 100 charges or bio_ups with 100 kJ bionic power." }
             ]
           }
         ],
