@@ -8,16 +8,7 @@
     "traits": [ "CBM_Interface" ],
     "CBMs": [
       "bio_power_storage",
-      "bio_power_storage_mkII",
-      "bio_cable",
-      "bio_flashlight",
-      "bio_tools",
-      "bio_sunglasses",
-      "bio_armor_eyes",
-      "bio_targeting",
-      "bio_infrared",
-      "bio_painkiller",
-      "bio_blade"
+      "bio_power_storage_mkII"
     ],
     "skills": [
       { "level": 4, "name": "gun" },
