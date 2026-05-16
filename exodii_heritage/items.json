@@ -1,0 +1,40 @@
+[
+  {
+    "id": "exodii_bio_backpack",
+    "type": "ITEM",
+    "subtypes": [ "ARMOR" ],
+    "category": "armor",
+    "name": { "str": "Exodii dimensional backpack" },
+    "description": "An integrated dimensional storage matrix in your torso.  It provides a stable 30-liter pocket dimension for carrying items.",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "dark_gray",
+    "flags": [ "INTEGRATED", "UNBREAKABLE", "BELTED", "TRADER_AVOID" ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "30 L",
+        "max_contains_weight": "40 kg",
+        "max_item_length": "60 cm",
+        "moves": 300
+      }
+    ],
+    "armor": [ { "encumbrance": 5, "coverage": 10, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+  },
+  {
+    "id": "bio_exodii_backpack",
+    "copy-from": "bionic_general_npc_usable",
+    "type": "ITEM",
+    "subtypes": [ "BIONIC_ITEM" ],
+    "name": { "str": "Exodii Dimensional Backpack CBM" },
+    "description": "A fist-sized crystalline matrix that, when installed, creates a stable dimensional pocket within the host's body.  Exodii scouts use these for extended reconnaissance missions.",
+    "price": "4 kUSD",
+    "price_postapoc": "800 USD",
+    "weight": "800 g",
+    "difficulty": 6
+  }
+]

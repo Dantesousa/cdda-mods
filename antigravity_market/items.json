@@ -13,9 +13,6 @@
     "symbol": ";",
     "color": "cyan",
     "use_action": [
-      "E_FILE_DEVICE",
-      "EBOOKSAVE",
-      "PORTABLE_GAME",
       { "type": "effect_on_conditions", "menu_text": "Open Antigravity Market", "effect_on_conditions": [ "EOC_antigravity_market" ] }
     ],
     "pocket_data": [

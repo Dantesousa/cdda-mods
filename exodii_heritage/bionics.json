@@ -1,0 +1,13 @@
+[
+  {
+    "id": "bio_exodii_backpack",
+    "type": "bionic",
+    "name": { "str": "Exodii Dimensional Backpack" },
+    "description": "An Exodii dimensional storage matrix implanted in your torso.  It creates a stable pocket dimension that functions as a 30-liter backpack.  The matrix is fused with your nervous system and cannot be removed without specialized Exodii equipment.",
+    "occupied_bodyparts": [ [ "torso", 15 ] ],
+    "passive_pseudo_items": [ "exodii_bio_backpack" ],
+    "cant_remove_reason": "The dimensional matrix has fused with %1$s's spinal column.  Removing it would collapse the pocket dimension explosively.",
+    "enchantments": [ { "values": [ { "value": "CARRY_WEIGHT", "add": 10000 } ] } ],
+    "flags": [ "BIONIC_SHOCKPROOF" ]
+  }
+]

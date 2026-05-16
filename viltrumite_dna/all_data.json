@@ -197,6 +197,7 @@
     "id": "EOC_VILTRUMITE_ADAPTIVE_STRESS",
     "eoc_type": "EVENT",
     "required_event": "character_takes_damage",
+    "condition": { "u_has_trait": "TRAIT_VILTRUMITE_BASE" },
     "effect": [
       { "math": [ "u_viltrumite_stress", "+=", "5" ] },
       { "run_eocs": [ "EOC_VILTRUMITE_CHECK_EVOLUTION" ] }
@@ -205,7 +206,12 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_VILTRUMITE_CHECK_EVOLUTION",
-    "condition": { "math": [ "u_viltrumite_stress", ">=", "500" ] },
+    "condition": {
+      "and": [
+        { "u_has_trait": "TRAIT_VILTRUMITE_BASE" },
+        { "math": [ "u_viltrumite_stress", ">=", "500" ] }
+      ]
+    },
     "effect": [
       { "u_add_trait": "TRAIT_VILTRUMITE_EVOLVED_1" },
       { "u_message": "Your Viltrumite blood boils as your body adapts to the trauma.  You have grown stronger.", "type": "good" },
@@ -215,7 +221,12 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_VILTRUMITE_EVOLUTION_HINT",
-    "condition": { "math": [ "u_viltrumite_stress", "==", "250" ] },
+    "condition": {
+      "and": [
+        { "u_has_trait": "TRAIT_VILTRUMITE_BASE" },
+        { "math": [ "u_viltrumite_stress", "==", "250" ] }
+      ]
+    },
     "effect": [ { "u_message": "You feel your Viltrumite blood pulsing. Your body is adapting quickly...", "type": "info" } ]
   },
   {

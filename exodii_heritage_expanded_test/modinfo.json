@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "exodii_heritage_expanded_test",
+    "name": "Exodii Heritage Expanded (TEST)",
+    "authors": [ "Dante" ],
+    "description": "TEST MOD — Adiciona um menu de seleção de bionics pós-spawn para o cenário Exodii Crash Landing. Use junto com exodii_heritage.",
+    "category": "scenarios",
+    "dependencies": [ "dda", "exodii_heritage" ]
+  }
+]

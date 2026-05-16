@@ -681,7 +681,7 @@
     "id": "EOC_EXODII_BIONIC_GIVE_WATER_EXTRACT",
     "condition": { "math": [ "u_exodii_points", ">", "0" ] },
     "effect": [
-      { "u_add_bionic": "bio_water_extract" },
+      { "u_add_bionic": "bio_water_extractor" },
       { "math": [ "u_exodii_points", "-=", "1" ] },
       { "u_message": "Water Extraction Unit installed.", "popup": true },
       { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }

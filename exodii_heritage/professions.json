@@ -8,7 +8,8 @@
     "traits": [ "CBM_Interface" ],
     "CBMs": [
       "bio_power_storage",
-      "bio_power_storage_mkII"
+      "bio_power_storage_mkII",
+      "bio_exodii_backpack"
     ],
     "skills": [
       { "level": 4, "name": "gun" },
