@@ -16,7 +16,8 @@
       "bio_armor_eyes",
       "bio_targeting",
       "bio_infrared",
-      "bio_painkiller"
+      "bio_painkiller",
+      "bio_blade"
     ],
     "skills": [
       { "level": 4, "name": "gun" },
