@@ -2,11 +2,8 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_NANOPRINTER_CONSOLE_MAIN",
-    "//": "Main console interface - checks power and shows menu",
+    "//": "Main console interface - shows crafting menu",
     "global": true,
-    "condition": {
-      "u_has_powered_appliance": "f_nanoprinter"
-    },
     "effect": {
       "run_eoc_selector": [
         "EOC_NANOPRINTER_PRINT_BANDAGE",
@@ -30,11 +27,6 @@
         "Fabricate 1 extension cable for power connections.",
         "Close the console interface."
       ]
-    },
-    "false_effect": {
-      "u_message": "The console screen is dark. The nanoprinter is not connected to power.",
-      "popup": true,
-      "type": "bad"
     }
   },
   {
