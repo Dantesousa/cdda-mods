@@ -48,7 +48,7 @@ Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tec
 
 **Mod de teste para sistema de fabricação.** Adiciona o **Nanoprinter** — um appliance molecular que sintetiza itens básicos a partir de matéria-prima (plastic, metal, organic chunks). Requer conexão à power grid. Inclui console com interface de menu EOC para selecionar receitas.
 
-- Arquivos: `items.json`, `furniture.json`, `eocs.json`
+- Arquivos: `items.json`, `furniture.json`, `eocs.json`, `recipes.json`
 - Dependências: `dda`
 - **Itens fabricáveis:** bandages, water bottles, ration packs, extension cables
 
@@ -68,7 +68,7 @@ Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força
 - Arquivos: `all_data.json`
 - Dependências: `dda`, `dante_gadgets`
 
-### 7. Exodii Heritage
+### 8. Exodii Heritage
 **ID:** `exodii_heritage`
 
 Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensional Exodii, um ciborgue de conversão completa de outro mundo que sofreu pane no gerador de portal e caiu na Nova Inglaterra. Inclui frame de scout com armadura integrada, biónicos pré-instalados e equipamento Exodii.
