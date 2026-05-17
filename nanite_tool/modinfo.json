@@ -1,9 +1,0 @@
-{
-  "type": "MOD_INFO",
-  "id": "nanite_tool",
-  "name": "Nanite Tool",
-  "authors": ["Dante"],
-  "description": "Adds a programmable nanite swarm that can reconfigure into any tool shape needed, from a simple hammer to a precision anvil.",
-  "category": "items",
-  "dependencies": ["dda"]
-}

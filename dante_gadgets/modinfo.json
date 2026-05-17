@@ -1,0 +1,9 @@
+{
+  "type": "MOD_INFO",
+  "id": "dante_gadgets",
+  "name": "Dante's Gadgets",
+  "authors": ["Dante"],
+  "description": "A collection of portable high-tech gadgets: Viltrumite nanite swarm, quantum teleport watch, and atomic smartphone.",
+  "category": "items",
+  "dependencies": ["dda"]
+}

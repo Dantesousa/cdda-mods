@@ -5,5 +5,5 @@
   "authors": [ "Dante" ],
   "description": "Spawns a pre-loaded briefcase with all of Dante's custom gear inside: teleport watch, atomic smartphone, antigravity terminal, and Viltrumite nanite swarm — plus a dimensional warp stone and storage crystal for the pocket dimension workshop.",
   "category": "items",
-  "dependencies": [ "dda", "atomic_smartphone", "antigravity_market", "overmap_teleport_watch", "pocket_dimension", "nanite_tool" ]
+  "dependencies": [ "dda", "dante_gadgets", "antigravity_market", "pocket_dimension" ]
 }
