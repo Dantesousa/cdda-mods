@@ -8,7 +8,7 @@
         "########################",
         "#......................#",
         "#..RRRR....BBBB........#",
-        "#..RRRR..............C.#",
+        "#..RRRR......NNC.......#",
         "#......................#",
         "#....WWWWWWWWWWWWWW....#",
         "#....W............W....#",
@@ -39,7 +39,8 @@
         "X": "f_dante_return_portal",
         "B": "f_metal_bench",
         "R": "f_rack",
-        "C": "f_console"
+        "C": "f_nanoprinter_console",
+        "N": "f_nanoprinter"
       }
     }
   },
@@ -51,7 +52,7 @@
         "########################",
         "#......................#",
         "#..RRRR....BBBB........#",
-        "#..RRRR..............C.#",
+        "#..RRRR......NNC.......#",
         "#......................#",
         "#....WWWWWWWWWWWWWW....#",
         "#....W............W....#",
@@ -80,13 +81,15 @@
         "R": "t_strconc_floor",
         "B": "t_strconc_floor",
         "C": "t_strconc_floor",
+        "N": "t_strconc_floor",
         "X": "t_strconc_floor"
       },
       "furniture": {
         "X": "f_dante_return_portal",
         "B": "f_metal_bench",
         "R": "f_rack",
-        "C": "f_console"
+        "C": "f_nanoprinter_console",
+        "N": "f_nanoprinter"
       }
     }
   },

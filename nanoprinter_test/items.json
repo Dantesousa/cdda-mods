@@ -1,0 +1,59 @@
+[
+  {
+    "type": "ITEM",
+    "id": "nanoprinter",
+    "name": "nanoprinter",
+    "description": "A compact molecular fabrication unit. Deploys to form a permanent appliance that can synthesize basic items from raw materials. Requires connection to a power grid to operate.",
+    "weight": "15 kg",
+    "volume": "12500 ml",
+    "price": "50000 USD",
+    "price_postapoc": "500 USD",
+    "material": [ "steel", "plastic" ],
+    "symbol": ";",
+    "color": "cyan",
+    "flags": [ "SINGLE_USE" ],
+    "use_action": {
+      "type": "deploy_appliance",
+      "base": "f_nanoprinter"
+    }
+  },
+  {
+    "type": "ITEM",
+    "id": "plastic_chunk",
+    "name": "plastic chunk",
+    "description": "A raw chunk of processed plastic suitable for molecular fabrication.",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "1 USD",
+    "material": [ "plastic" ],
+    "symbol": "*",
+    "color": "white"
+  },
+  {
+    "type": "ITEM",
+    "id": "metal_chunk",
+    "name": "metal chunk",
+    "description": "A raw chunk of processed metal suitable for molecular fabrication.",
+    "weight": "200 g",
+    "volume": "250 ml",
+    "price": "2 USD",
+    "price_postapoc": "2 USD",
+    "material": [ "steel" ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "type": "ITEM",
+    "id": "organic_chunk",
+    "name": "organic chunk",
+    "description": "A raw chunk of processed organic material suitable for molecular fabrication.",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "1 USD",
+    "material": [ "flesh" ],
+    "symbol": "*",
+    "color": "brown"
+  }
+]

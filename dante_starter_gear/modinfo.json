@@ -3,7 +3,7 @@
   "id": "dante_starter_gear",
   "name": "Dante's Starter Gear",
   "authors": [ "Dante" ],
-  "description": "Spawns a pre-loaded briefcase with all of Dante's custom gear inside: teleport watch, atomic smartphone, antigravity terminal, and Viltrumite nanite swarm — plus a dimensional warp stone and storage crystal for the pocket dimension workshop.",
+  "description": "Spawns a pre-loaded briefcase with all of Dante's custom gear inside: teleport watch, atomic smartphone, antigravity terminal, and Viltrumite nanite swarm — plus a dimensional warp stone, storage crystal, and nanoprinter for the pocket dimension workshop.",
   "category": "items",
-  "dependencies": [ "dda", "dante_gadgets", "antigravity_market", "pocket_dimension" ]
+  "dependencies": [ "dda", "dante_gadgets", "antigravity_market", "pocket_dimension", "nanoprinter_test" ]
 }
