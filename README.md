@@ -24,12 +24,15 @@ Adiciona superpoderes inspirados na **Atom Eve** (Invincible): manipulação de 
 - Arquivos: `mutation.json`, `effects.json`, `eocs.json`, `spells.json`, `professions.json`
 - Dependências: `dda`
 
-### 3. Atomic Smartphone
-**ID:** `atomic_smartphone`
+### 3. Dante's Gadgets
+**ID:** `dante_gadgets`
 
-Adiciona um smartphone com bateria **atômica (infinita)**, similar ao antigo celular atômico do jogo. Nunca mais se preocupe com bateria.
+Coleção de dispositivos portáteis de alta tecnologia:
+- **Viltrumite Nanite Swarm** — enxame de nanites que se reconfigura em qualquer ferramenta (UPS)
+- **Quantum Teleport Watch** — smartwatch que teletransporta pelo overmap (UPS)
+- **Atomic Smartphone** — smartphone com bateria atômica infinita, música, lanterna e link de energia
 
-- Arquivos: `items.json`
+- Arquivos: `items.json`, `eocs.json`
 - Dependências: `dda`
 
 ### 4. Dante's Pocket Dimension
@@ -43,36 +46,20 @@ Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tec
 ### 5. Dante's Starter Gear
 **ID:** `dante_starter_gear`
 
-**Mod central da coleção.** Spawna uma maleta pré-carregada no início do jogo contendo todos os itens dos outros mods: relógio de teletransporte, smartphone atômico, terminal antigravidade e nanite swarm — além da pedra dimensional e do cristal de armazenamento da pocket dimension.
+**Mod central da coleção.** Spawna uma maleta pré-carregada no início do jogo contendo todos os itens dos outros mods: gadgets portáteis, terminal antigravidade, pedra dimensional e cristal de armazenamento.
 
 - Arquivos: `items.json`, `itemgroups.json`, `eocs.json`
-- Dependências: `dda`, `atomic_smartphone`, `antigravity_market`, `overmap_teleport_watch`, `pocket_dimension`, `nanite_tool`
+- Dependências: `dda`, `dante_gadgets`, `antigravity_market`, `pocket_dimension`
 
-### 6. Nanite Tool
-**ID:** `nanite_tool`
-
-Adiciona um enxame de nanites programáveis que se reconfiguram em qualquer ferramenta necessária — de um martelo simples a uma bigorna de precisão. Requer bateria (UPS) para operar.
-
-- Arquivos: `items.json`
-- Dependências: `dda`
-
-### 7. Overmap Teleport Watch
-**ID:** `overmap_teleport_watch`
-
-Adiciona um smartwatch high-tech alimentado por **UPS** capaz de teletransportar o usuário através do overmap. Permite viagens rápidas entre locais explorados.
-
-- Arquivos: `items.json`, `eocs.json`
-- Dependências: `dda`
-
-### 8. Viltrumite Heritage
+### 6. Viltrumite Heritage
 **ID:** `viltrumite_dna`
 
 Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força, voo e uma biologia adaptativa que fica mais forte após sofrer dano. Inclui arte marcial Viltrumita e sistema de evolução adaptativa.
 
 - Arquivos: `all_data.json`
-- Dependências: `dda`, `nanite_tool`
+- Dependências: `dda`, `dante_gadgets`
 
-### 9. Exodii Heritage
+### 7. Exodii Heritage
 **ID:** `exodii_heritage`
 
 Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensional Exodii, um ciborgue de conversão completa de outro mundo que sofreu pane no gerador de portal e caiu na Nova Inglaterra. Inclui frame de scout com armadura integrada, biónicos pré-instalados e equipamento Exodii.
@@ -84,21 +71,14 @@ Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensiona
 
 ## 🔗 Dependências Entre Mods
 
-```
+```text
 dda (base game)
-├── atomic_smartphone
+├── dante_gadgets
 ├── antigravity_market
-├── overmap_teleport_watch
 ├── pocket_dimension
-├── nanite_tool
-│   └── viltrumite_dna
-├── exodii_heritage
-└── dante_starter_gear
-    ├── atomic_smartphone
-    ├── antigravity_market
-    ├── overmap_teleport_watch
-    ├── pocket_dimension
-    └── nanite_tool
+│   └── dante_starter_gear
+├── viltrumite_dna          ← depende de dante_gadgets
+└── exodii_heritage
 ```
 
 > **Nota:** Ative `dante_starter_gear` para começar com todos os itens da coleção — as dependências serão carregadas automaticamente.
