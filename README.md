@@ -83,12 +83,18 @@ Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensiona
 ```text
 dda (base game)
 ├── dante_gadgets
+│   └── viltrumite_dna
 ├── antigravity_market
-├── pocket_dimension          ← depende de nanoprinter_test
 ├── nanoprinter_test
-├── viltrumite_dna            ← depende de dante_gadgets
+├── pocket_dimension
+│   └── nanoprinter_test
 └── exodii_heritage
-    └── dante_starter_gear    ← depende de dante_gadgets, antigravity_market, pocket_dimension, nanoprinter_test
+
+dante_starter_gear (central mod)
+├── dante_gadgets
+├── antigravity_market
+├── pocket_dimension
+└── nanoprinter_test
 ```
 
 > **Nota:** Ative `dante_starter_gear` para começar com todos os itens da coleção — as dependências serão carregadas automaticamente.
