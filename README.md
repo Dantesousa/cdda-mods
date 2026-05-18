@@ -38,7 +38,7 @@ Coleção de dispositivos portáteis de alta tecnologia:
 ### 4. Dante's Pocket Dimension
 **ID:** `pocket_dimension`
 
-Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tech totalmente equipada, acessada via uma pedra dimensional. Inclui warp stone, cristal de armazenamento dimensional e portal de retorno.
+Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tech totalmente murada, acessada via uma pedra dimensional. Toda área fora da oficina é preenchida com paredes sólidas, impedindo exploração externa. Inclui warp stone, cristal de armazenamento dimensional e portal de retorno.
 
 - Arquivos: `items.json`, `eocs.json`, `furniture.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
 - Dependências: `dda`

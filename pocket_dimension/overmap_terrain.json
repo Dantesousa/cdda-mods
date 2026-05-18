@@ -12,8 +12,8 @@
   {
     "type": "overmap_terrain",
     "id": "dante_void_floor",
-    "name": "Void Floor",
-    "sym": ".",
+    "name": "Void Barrier",
+    "sym": "#",
     "color": "dark_gray",
     "mondensity": 0,
     "see_cost": "low",
