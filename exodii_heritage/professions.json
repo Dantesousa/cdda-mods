@@ -26,7 +26,7 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "pamd68", "ammo-item": "123ln", "charges": 30 },
+          { "item": "pamd68", "ammo-item": "123ln", "charges": 30, "mods": [ "shoulder_strap" ] },
           { "item": "123ln", "charges": 60 },
           { "item": "exodii_prybar" },
           { "item": "exodii_wire_kit" },

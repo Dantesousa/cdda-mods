@@ -19,7 +19,7 @@
         "pocket_type": "CONTAINER",
         "max_contains_volume": "30 L",
         "max_contains_weight": "40 kg",
-        "max_item_length": "60 cm",
+        "max_item_length": "120 cm",
         "moves": 300
       }
     ],
