@@ -4,17 +4,36 @@
     "id": "EOC_EXODII_BIONIC_MENU_START",
     "eoc_type": "EVENT",
     "required_event": "game_start",
-    "condition": { "u_has_profession": "exodii_scout" },
+    "condition": {
+      "u_has_profession": "exodii_scout"
+    },
     "effect": [
-      { "math": [ "u_exodii_points", "=", "10" ] },
-      { "u_message": "Your dormant Exodii memory banks contain fragmentary schematics for additional bionic installations.  What protocols would you like to activate?", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "math": [
+          "u_exodii_points",
+          "=",
+          "10"
+        ]
+      },
+      {
+        "u_message": "Your dormant Exodii memory banks contain fragmentary schematics for additional bionic installations.  What protocols would you like to activate?",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_MAIN_MENU",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
       {
         "run_eoc_selector": [
@@ -27,12 +46,24 @@
           "EOC_EXODII_BIONIC_CAT_POWER",
           "EOC_EXODII_BIONIC_FINISH"
         ],
-        "names": [ "Combat Systems", "Defense Systems", "Sensory Systems", "Utility Systems", "Movement Systems", "Medical Systems", "Power Systems", "Finish Activation" ],
+        "names": [
+          "Combat Systems",
+          "Defense Systems",
+          "Sensory Systems",
+          "Utility Systems",
+          "Movement Systems",
+          "Medical Systems",
+          "Power Systems",
+          "Finish Activation"
+        ],
         "title": "=== EXODII BIONIC ACTIVATION ==="
       }
     ],
     "false_effect": [
-      { "u_message": "All available Exodii protocols have been exhausted.", "popup": true }
+      {
+        "u_message": "All available Exodii protocols have been exhausted.",
+        "popup": true
+      }
     ]
   },
   {
@@ -56,7 +87,22 @@
           "EOC_EXODII_BIONIC_GIVE_ODS",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Monomolecular Blade", "Bionic Claws", "Shotgun Arm", "Finger-Mounted Laser", "EMP Projector", "Chain Lightning", "Electroshock Unit", "Super Stun Gun", "Flashbang Generator", "Sonic Resonator", "Shockwave Generator", "Close Quarters Battle", "Offensive Defense System", "Back" ],
+        "names": [
+          "Monomolecular Blade",
+          "Bionic Claws",
+          "Shotgun Arm",
+          "Finger-Mounted Laser",
+          "EMP Projector",
+          "Chain Lightning",
+          "Electroshock Unit",
+          "Super Stun Gun",
+          "Flashbang Generator",
+          "Sonic Resonator",
+          "Shockwave Generator",
+          "Close Quarters Battle",
+          "Offensive Defense System",
+          "Back"
+        ],
         "title": "Combat Systems"
       }
     ]
@@ -78,7 +124,18 @@
           "EOC_EXODII_BIONIC_GIVE_RADSCRUBBER",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Subdermal Mesh (Arms)", "Subdermal Mesh (Legs)", "Subdermal Mesh (Torso)", "Subdermal Mesh (Head)", "Subdermal Carbon Filament", "Titanium Skeletal Bracing", "Dielectric Capacitance", "Active Defense System", "Radiation Scrubber", "Back" ],
+        "names": [
+          "Subdermal Mesh (Arms)",
+          "Subdermal Mesh (Legs)",
+          "Subdermal Mesh (Torso)",
+          "Subdermal Mesh (Head)",
+          "Subdermal Carbon Filament",
+          "Titanium Skeletal Bracing",
+          "Dielectric Capacitance",
+          "Active Defense System",
+          "Radiation Scrubber",
+          "Back"
+        ],
         "title": "Defense Systems"
       }
     ]
@@ -104,7 +161,22 @@
           "EOC_EXODII_BIONIC_GIVE_SUNGLASSES",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Implanted Night Vision", "Infrared Vision", "Integrated AR System", "Targeting System", "Enhanced Hearing", "Telescopic Eyes", "Ocular Amplifiers", "Subaquatic Navigation", "Integrated Dosimeter", "Internal Chronometer", "Enhanced Memory Banks", "Recoil Compensators", "Anti-Glare Compensators", "Back" ],
+        "names": [
+          "Implanted Night Vision",
+          "Infrared Vision",
+          "Integrated AR System",
+          "Targeting System",
+          "Enhanced Hearing",
+          "Telescopic Eyes",
+          "Ocular Amplifiers",
+          "Subaquatic Navigation",
+          "Integrated Dosimeter",
+          "Internal Chronometer",
+          "Enhanced Memory Banks",
+          "Recoil Compensators",
+          "Anti-Glare Compensators",
+          "Back"
+        ],
         "title": "Sensory Systems"
       }
     ]
@@ -134,7 +206,26 @@
           "EOC_EXODII_BIONIC_GIVE_PURIFIER",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Integrated Multitool", "Cranial Flashlight", "Fingerpick Lock", "Finger-Hack", "Finger Lighter", "Internal Climate Control", "Water Evaporator", "Water Extraction Unit", "Internal UPS", "Subdermal Radio", "Active Cloaking System", "Scent Mask", "Expanded Digestive System", "Recycler Unit", "Respirator", "Synthetic Lungs", "Air Filtration System", "Back" ],
+        "names": [
+          "Integrated Multitool",
+          "Cranial Flashlight",
+          "Fingerpick Lock",
+          "Finger-Hack",
+          "Finger Lighter",
+          "Internal Climate Control",
+          "Water Evaporator",
+          "Water Extraction Unit",
+          "Internal UPS",
+          "Subdermal Radio",
+          "Active Cloaking System",
+          "Scent Mask",
+          "Expanded Digestive System",
+          "Recycler Unit",
+          "Respirator",
+          "Synthetic Lungs",
+          "Air Filtration System",
+          "Back"
+        ],
         "title": "Utility Systems"
       }
     ]
@@ -155,7 +246,17 @@
           "EOC_EXODII_BIONIC_GIVE_TIME_FREEZE",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Synaptic Accelerator", "Wired Reflexes", "Hydraulic Muscles", "Joint Servo", "Uncanny Dodge", "Probability Travel", "Teleportation Unit", "Time Dilation", "Back" ],
+        "names": [
+          "Synaptic Accelerator",
+          "Wired Reflexes",
+          "Hydraulic Muscles",
+          "Joint Servo",
+          "Uncanny Dodge",
+          "Probability Travel",
+          "Teleportation Unit",
+          "Time Dilation",
+          "Back"
+        ],
         "title": "Movement Systems"
       }
     ]
@@ -177,7 +278,18 @@
           "EOC_EXODII_BIONIC_GIVE_FITNESS",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Repair Nanobots", "Leukocyte Breeder", "Adrenaline Pump", "Sensory Dulling", "Blood Filter", "Blood Analysis", "Soporific Induction", "Synaptic Regeneration", "Calorie Tracker", "Back" ],
+        "names": [
+          "Repair Nanobots",
+          "Leukocyte Breeder",
+          "Adrenaline Pump",
+          "Sensory Dulling",
+          "Blood Filter",
+          "Blood Analysis",
+          "Soporific Induction",
+          "Synaptic Regeneration",
+          "Calorie Tracker",
+          "Back"
+        ],
         "title": "Medical Systems"
       }
     ]
@@ -198,7 +310,17 @@
           "EOC_EXODII_BIONIC_GIVE_FURNACE",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
-        "names": [ "Battery System", "Cable Charger", "Ethanol Burner", "Metabolic Interchange", "Torsion Ratchet", "Gasoline Fuel Cell", "Lamplight Fuel Cell", "Internal Furnace", "Back" ],
+        "names": [
+          "Battery System",
+          "Cable Charger",
+          "Ethanol Burner",
+          "Metabolic Interchange",
+          "Torsion Ratchet",
+          "Gasoline Fuel Cell",
+          "Lamplight Fuel Cell",
+          "Internal Furnace",
+          "Back"
+        ],
         "title": "Power Systems"
       }
     ]
@@ -207,861 +329,2320 @@
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_FINISH",
     "effect": [
-      { "u_message": "Exodii protocol activation sequence complete.", "popup": true }
+      {
+        "u_message": "Exodii protocol activation sequence complete.",
+        "popup": true
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_BLADE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_blade" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Monomolecular Blade installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_blade"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Monomolecular Blade installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CLAWS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_claws" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Bionic Claws installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_claws"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Bionic Claws installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SHOTGUN",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_shotgun" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Shotgun Arm installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_shotgun"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Shotgun Arm installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_LASER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_laser" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Finger-Mounted Laser installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_laser"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Finger-Mounted Laser installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_EMP",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_emp_armgun" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "EMP Projector installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_emp_armgun"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "EMP Projector installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CHAIN_LIGHTNING",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_chain_lightning" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Chain Lightning installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_chain_lightning"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Chain Lightning installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SHOCK",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_shock" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Electroshock Unit installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_shock"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Electroshock Unit installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TASER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_taser" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Super Stun Gun installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_taser"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Super Stun Gun installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FLASHBANG",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_flashbang" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Flashbang Generator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_flashbang"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Flashbang Generator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_RESONATOR",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_resonator" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Sonic Resonator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_resonator"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Sonic Resonator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SHOCKWAVE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_shockwave" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Shockwave Generator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_shockwave"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Shockwave Generator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CQB",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_cqb" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Close Quarters Battle installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_cqb"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Close Quarters Battle installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ODS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ods" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Offensive Defense System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ods"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Offensive Defense System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ARMOR_ARMS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_armor_arms" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Mesh (Arms) installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_armor_arms"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Mesh (Arms) installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ARMOR_LEGS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_armor_legs" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Mesh (Legs) installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_armor_legs"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Mesh (Legs) installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ARMOR_TORSO",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_armor_torso" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Mesh (Torso) installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_armor_torso"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Mesh (Torso) installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ARMOR_HEAD",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_armor_head" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Mesh (Head) installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_armor_head"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Mesh (Head) installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CARBON",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_carbon" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Carbon Filament installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_carbon"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Carbon Filament installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_WEIGHT",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_weight" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Titanium Skeletal Bracing installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_weight"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Titanium Skeletal Bracing installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FARADAY",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_faraday" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Dielectric Capacitance installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_faraday"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Dielectric Capacitance installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ADS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ads" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Active Defense System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ads"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Active Defense System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_RADSCRUBBER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_radscrubber" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Radiation Scrubber installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_radscrubber"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Radiation Scrubber installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_NIGHT_VISION",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_night_vision" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Implanted Night Vision installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_night_vision"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Implanted Night Vision installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_INFRARED",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_infrared" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Infrared Vision installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_infrared"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Infrared Vision installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_AR",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ar" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Integrated AR System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ar"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Integrated AR System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TARGETING",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_targeting" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Targeting System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_targeting"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Targeting System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_EARS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ears" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Enhanced Hearing installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ears"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Enhanced Hearing installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_EYE_OPTIC",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_eye_optic" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Telescopic Eyes installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_eye_optic"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Telescopic Eyes installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_EYE_ENHANCER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_eye_enhancer" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Ocular Amplifiers installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_eye_enhancer"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Ocular Amplifiers installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SONAR",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_sonar" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subaquatic Navigation installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_sonar"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subaquatic Navigation installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_GEIGER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_geiger" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Integrated Dosimeter installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_geiger"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Integrated Dosimeter installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_WATCH",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_watch" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Internal Chronometer installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_watch"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Internal Chronometer installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_MEMORY",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_memory" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Enhanced Memory Banks installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_memory"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Enhanced Memory Banks installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_RECOIL",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_recoil" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Recoil Compensators installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_recoil"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Recoil Compensators installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SUNGLASSES",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_sunglasses" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Anti-Glare Compensators installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_sunglasses"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Anti-Glare Compensators installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TOOLS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_tools" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Integrated Multitool installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_tools"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Integrated Multitool installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FLASHLIGHT",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_flashlight" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Cranial Flashlight installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_flashlight"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Cranial Flashlight installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_LOCKPICK",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_lockpick" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Fingerpick Lock installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_lockpick"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Fingerpick Lock installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FINGERHACK",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_fingerhack" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Finger-Hack installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_fingerhack"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Finger-Hack installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_LIGHTER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_lighter" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Finger Lighter installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_lighter"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Finger Lighter installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CLIMATE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_climate" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Internal Climate Control installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_climate"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Internal Climate Control installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_EVAP",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_evap" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Water Evaporator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_evap"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Water Evaporator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_WATER_EXTRACT",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_water_extractor" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Water Extraction Unit installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_water_extractor"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Water Extraction Unit installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_UPS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ups" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Internal UPS installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ups"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Internal UPS installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_RADIO",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_radio" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Subdermal Radio installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_radio"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Subdermal Radio installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CLOAK",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_cloak" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Active Cloaking System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_cloak"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Active Cloaking System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SCENT_MASK",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_scent_mask" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Scent Mask installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_scent_mask"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Scent Mask installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_DIGESTION",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_digestion" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Expanded Digestive System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_digestion"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Expanded Digestive System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_RECYCLER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_recycler" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Recycler Unit installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_recycler"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Recycler Unit installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_GILLS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_gills" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Respirator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_gills"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Respirator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SYNLUNGS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_synlungs" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Synthetic Lungs installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_synlungs"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Synthetic Lungs installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_PURIFIER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_purifier" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Air Filtration System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_purifier"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Air Filtration System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SPEED",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_speed" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Synaptic Accelerator installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_speed"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Synaptic Accelerator installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_DEX",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_dex" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Wired Reflexes installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_dex"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Wired Reflexes installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_HYDRAULICS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_hydraulics" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Hydraulic Muscles installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_hydraulics"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Hydraulic Muscles installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_JOINT",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_joint" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Joint Servo installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_joint"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Joint Servo installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_DODGE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_dodge" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Uncanny Dodge installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_dodge"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Uncanny Dodge installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_PROBABILITY",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_probability_travel" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Probability Travel installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_probability_travel"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Probability Travel installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TELEPORT",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_teleport" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Teleportation Unit installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_teleport"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Teleportation Unit installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TIME_FREEZE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_time_freeze" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Time Dilation installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_time_freeze"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Time Dilation installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_NANOBOTS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_nanobots" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Repair Nanobots installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_nanobots"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Repair Nanobots installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_LEUKOCYTE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_leukocyte" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Leukocyte Breeder installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_leukocyte"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Leukocyte Breeder installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ADRENALINE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_adrenaline" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Adrenaline Pump installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_adrenaline"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Adrenaline Pump installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_PAINKILLER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_painkiller" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Sensory Dulling installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_painkiller"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Sensory Dulling installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_BLOOD_FILTER",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_blood_filter" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Blood Filter installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_blood_filter"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Blood Filter installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_BLOOD_ANAL",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_blood_anal" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Blood Analysis installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_blood_anal"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Blood Analysis installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SOPORIFIC",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_soporific" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Soporific Induction installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_soporific"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Soporific Induction installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_SYNAPTIC",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_synaptic" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Synaptic Regeneration installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_synaptic"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Synaptic Regeneration installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FITNESS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_fitness" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Calorie Tracker installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_fitness"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Calorie Tracker installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
+      }
     ]
-  }
-,
+  },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_BATTERIES",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_batteries" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Battery System installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_batteries"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Battery System installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_CABLE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_cable" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Cable Charger installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_cable"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Cable Charger installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_ETHANOL",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_ethanol" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Ethanol Burner installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_ethanol"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Ethanol Burner installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_METABOLICS",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_metabolics" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Metabolic Interchange installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_metabolics"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Metabolic Interchange installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_TORSION",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_torsion" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Torsion Ratchet installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_torsion"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Torsion Ratchet installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_GASOLINE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_gasoline" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Gasoline Fuel Cell installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_gasoline"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Gasoline Fuel Cell installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_LAMPOIL",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_lampoil" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Lamplight Fuel Cell installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_lampoil"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Lamplight Fuel Cell installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_EXODII_BIONIC_GIVE_FURNACE",
-    "condition": { "math": [ "u_exodii_points", ">", "0" ] },
+    "condition": {
+      "math": [
+        "u_exodii_points",
+        ">",
+        "0"
+      ]
+    },
     "effect": [
-      { "u_add_bionic": "bio_furnace" },
-      { "math": [ "u_exodii_points", "-=", "1" ] },
-      { "u_message": "Internal Furnace installed.", "popup": true },
-      { "run_eocs": "EOC_EXODII_BIONIC_MAIN_MENU" }
+      {
+        "u_add_bionic": "bio_furnace"
+      },
+      {
+        "math": [
+          "u_exodii_points",
+          "-=",
+          "1"
+        ]
+      },
+      {
+        "u_message": "Internal Furnace installed.",
+        "popup": true
+      },
+      {
+        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
+      }
     ]
   }
 ]
