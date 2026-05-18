@@ -307,7 +307,6 @@
           "EOC_EXODII_BIONIC_GIVE_TORSION",
           "EOC_EXODII_BIONIC_GIVE_GASOLINE",
           "EOC_EXODII_BIONIC_GIVE_LAMPOIL",
-          "EOC_EXODII_BIONIC_GIVE_FURNACE",
           "EOC_EXODII_BIONIC_MAIN_MENU"
         ],
         "names": [
@@ -318,7 +317,6 @@
           "Torsion Ratchet",
           "Gasoline Fuel Cell",
           "Lamplight Fuel Cell",
-          "Internal Furnace",
           "Back"
         ],
         "title": "Power Systems"
@@ -330,8 +328,15 @@
     "id": "EOC_EXODII_BIONIC_FINISH",
     "effect": [
       {
+        "math": [
+          "u_exodii_points",
+          "=",
+          "0"
+        ]
+      },
+      {
         "u_message": "Exodii protocol activation sequence complete.",
-        "popup": true
+        "type": "good"
       }
     ]
   },
@@ -1937,7 +1942,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_dex"
+        "u_add_bionic": "bio_dex_enhancer"
       },
       {
         "math": [
@@ -1997,7 +2002,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_joint"
+        "u_add_bionic": "bio_jointservo"
       },
       {
         "math": [
@@ -2027,7 +2032,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_dodge"
+        "u_add_bionic": "bio_uncanny_dodge"
       },
       {
         "math": [
@@ -2357,7 +2362,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_synaptic"
+        "u_add_bionic": "bio_synaptic_regen"
       },
       {
         "math": [
@@ -2387,7 +2392,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_fitness"
+        "u_add_bionic": "bio_fitnessband"
       },
       {
         "math": [
@@ -2537,7 +2542,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_torsion"
+        "u_add_bionic": "bio_torsionratchet"
       },
       {
         "math": [
@@ -2567,7 +2572,7 @@
     },
     "effect": [
       {
-        "u_add_bionic": "bio_gasoline"
+        "u_add_bionic": "bio_fuel_cell_gasoline"
       },
       {
         "math": [
