@@ -85,7 +85,8 @@
           "EOC_EXODII_BIONIC_GIVE_SHOCKWAVE",
           "EOC_EXODII_BIONIC_GIVE_CQB",
           "EOC_EXODII_BIONIC_GIVE_ODS",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Monomolecular Blade",
@@ -101,7 +102,8 @@
           "Shockwave Generator",
           "Close Quarters Battle",
           "Offensive Defense System",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Combat Systems"
       }
@@ -122,7 +124,8 @@
           "EOC_EXODII_BIONIC_GIVE_FARADAY",
           "EOC_EXODII_BIONIC_GIVE_ADS",
           "EOC_EXODII_BIONIC_GIVE_RADSCRUBBER",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Subdermal Mesh (Arms)",
@@ -134,7 +137,8 @@
           "Dielectric Capacitance",
           "Active Defense System",
           "Radiation Scrubber",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Defense Systems"
       }
@@ -159,7 +163,8 @@
           "EOC_EXODII_BIONIC_GIVE_MEMORY",
           "EOC_EXODII_BIONIC_GIVE_RECOIL",
           "EOC_EXODII_BIONIC_GIVE_SUNGLASSES",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Implanted Night Vision",
@@ -175,7 +180,8 @@
           "Enhanced Memory Banks",
           "Recoil Compensators",
           "Anti-Glare Compensators",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Sensory Systems"
       }
@@ -204,7 +210,8 @@
           "EOC_EXODII_BIONIC_GIVE_GILLS",
           "EOC_EXODII_BIONIC_GIVE_SYNLUNGS",
           "EOC_EXODII_BIONIC_GIVE_PURIFIER",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Integrated Multitool",
@@ -224,7 +231,8 @@
           "Respirator",
           "Synthetic Lungs",
           "Air Filtration System",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Utility Systems"
       }
@@ -244,7 +252,8 @@
           "EOC_EXODII_BIONIC_GIVE_PROBABILITY",
           "EOC_EXODII_BIONIC_GIVE_TELEPORT",
           "EOC_EXODII_BIONIC_GIVE_TIME_FREEZE",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Synaptic Accelerator",
@@ -255,7 +264,8 @@
           "Probability Travel",
           "Teleportation Unit",
           "Time Dilation",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Movement Systems"
       }
@@ -276,7 +286,8 @@
           "EOC_EXODII_BIONIC_GIVE_SOPORIFIC",
           "EOC_EXODII_BIONIC_GIVE_SYNAPTIC",
           "EOC_EXODII_BIONIC_GIVE_FITNESS",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Repair Nanobots",
@@ -288,7 +299,8 @@
           "Soporific Induction",
           "Synaptic Regeneration",
           "Calorie Tracker",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Medical Systems"
       }
@@ -307,7 +319,8 @@
           "EOC_EXODII_BIONIC_GIVE_TORSION",
           "EOC_EXODII_BIONIC_GIVE_GASOLINE",
           "EOC_EXODII_BIONIC_GIVE_LAMPOIL",
-          "EOC_EXODII_BIONIC_MAIN_MENU"
+          "EOC_EXODII_BIONIC_MAIN_MENU",
+          "EOC_EXODII_BIONIC_FINISH"
         ],
         "names": [
           "Battery System",
@@ -317,7 +330,8 @@
           "Torsion Ratchet",
           "Gasoline Fuel Cell",
           "Lamplight Fuel Cell",
-          "Back"
+          "Back",
+          "Finish Activation"
         ],
         "title": "Power Systems"
       }
@@ -364,9 +378,6 @@
       {
         "u_message": "Monomolecular Blade installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -394,9 +405,6 @@
       {
         "u_message": "Bionic Claws installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -424,9 +432,6 @@
       {
         "u_message": "Shotgun Arm installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -454,9 +459,6 @@
       {
         "u_message": "Finger-Mounted Laser installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -484,9 +486,6 @@
       {
         "u_message": "EMP Projector installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -514,9 +513,6 @@
       {
         "u_message": "Chain Lightning installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -544,9 +540,6 @@
       {
         "u_message": "Electroshock Unit installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -574,9 +567,6 @@
       {
         "u_message": "Super Stun Gun installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -604,9 +594,6 @@
       {
         "u_message": "Flashbang Generator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -634,9 +621,6 @@
       {
         "u_message": "Sonic Resonator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -664,9 +648,6 @@
       {
         "u_message": "Shockwave Generator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -694,9 +675,6 @@
       {
         "u_message": "Close Quarters Battle installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -724,9 +702,6 @@
       {
         "u_message": "Offensive Defense System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_COMBAT"
       }
     ]
   },
@@ -754,9 +729,6 @@
       {
         "u_message": "Subdermal Mesh (Arms) installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -784,9 +756,6 @@
       {
         "u_message": "Subdermal Mesh (Legs) installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -814,9 +783,6 @@
       {
         "u_message": "Subdermal Mesh (Torso) installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -844,9 +810,6 @@
       {
         "u_message": "Subdermal Mesh (Head) installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -874,9 +837,6 @@
       {
         "u_message": "Subdermal Carbon Filament installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -904,9 +864,6 @@
       {
         "u_message": "Titanium Skeletal Bracing installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -934,9 +891,6 @@
       {
         "u_message": "Dielectric Capacitance installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -964,9 +918,6 @@
       {
         "u_message": "Active Defense System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -994,9 +945,6 @@
       {
         "u_message": "Radiation Scrubber installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_DEFENSE"
       }
     ]
   },
@@ -1024,9 +972,6 @@
       {
         "u_message": "Implanted Night Vision installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1054,9 +999,6 @@
       {
         "u_message": "Infrared Vision installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1084,9 +1026,6 @@
       {
         "u_message": "Integrated AR System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1114,9 +1053,6 @@
       {
         "u_message": "Targeting System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1144,9 +1080,6 @@
       {
         "u_message": "Enhanced Hearing installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1174,9 +1107,6 @@
       {
         "u_message": "Telescopic Eyes installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1204,9 +1134,6 @@
       {
         "u_message": "Ocular Amplifiers installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1234,9 +1161,6 @@
       {
         "u_message": "Subaquatic Navigation installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1264,9 +1188,6 @@
       {
         "u_message": "Integrated Dosimeter installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1294,9 +1215,6 @@
       {
         "u_message": "Internal Chronometer installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1324,9 +1242,6 @@
       {
         "u_message": "Enhanced Memory Banks installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1354,9 +1269,6 @@
       {
         "u_message": "Recoil Compensators installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1384,9 +1296,6 @@
       {
         "u_message": "Anti-Glare Compensators installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_SENSORY"
       }
     ]
   },
@@ -1414,9 +1323,6 @@
       {
         "u_message": "Integrated Multitool installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1444,9 +1350,6 @@
       {
         "u_message": "Cranial Flashlight installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1474,9 +1377,6 @@
       {
         "u_message": "Fingerpick Lock installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1504,9 +1404,6 @@
       {
         "u_message": "Finger-Hack installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1534,9 +1431,6 @@
       {
         "u_message": "Finger Lighter installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1564,9 +1458,6 @@
       {
         "u_message": "Internal Climate Control installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1594,9 +1485,6 @@
       {
         "u_message": "Water Evaporator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1624,9 +1512,6 @@
       {
         "u_message": "Water Extraction Unit installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1654,9 +1539,6 @@
       {
         "u_message": "Internal UPS installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1684,9 +1566,6 @@
       {
         "u_message": "Subdermal Radio installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1714,9 +1593,6 @@
       {
         "u_message": "Active Cloaking System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1744,9 +1620,6 @@
       {
         "u_message": "Scent Mask installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1774,9 +1647,6 @@
       {
         "u_message": "Expanded Digestive System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1804,9 +1674,6 @@
       {
         "u_message": "Recycler Unit installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1834,9 +1701,6 @@
       {
         "u_message": "Respirator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1864,9 +1728,6 @@
       {
         "u_message": "Synthetic Lungs installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1894,9 +1755,6 @@
       {
         "u_message": "Air Filtration System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_UTILITY"
       }
     ]
   },
@@ -1924,9 +1782,6 @@
       {
         "u_message": "Synaptic Accelerator installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -1954,9 +1809,6 @@
       {
         "u_message": "Wired Reflexes installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -1984,9 +1836,6 @@
       {
         "u_message": "Hydraulic Muscles installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2014,9 +1863,6 @@
       {
         "u_message": "Joint Servo installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2044,9 +1890,6 @@
       {
         "u_message": "Uncanny Dodge installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2074,9 +1917,6 @@
       {
         "u_message": "Probability Travel installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2104,9 +1944,6 @@
       {
         "u_message": "Teleportation Unit installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2134,9 +1971,6 @@
       {
         "u_message": "Time Dilation installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MOVEMENT"
       }
     ]
   },
@@ -2164,9 +1998,6 @@
       {
         "u_message": "Repair Nanobots installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2194,9 +2025,6 @@
       {
         "u_message": "Leukocyte Breeder installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2224,9 +2052,6 @@
       {
         "u_message": "Adrenaline Pump installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2254,9 +2079,6 @@
       {
         "u_message": "Sensory Dulling installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2284,9 +2106,6 @@
       {
         "u_message": "Blood Filter installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2314,9 +2133,6 @@
       {
         "u_message": "Blood Analysis installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2344,9 +2160,6 @@
       {
         "u_message": "Soporific Induction installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2374,9 +2187,6 @@
       {
         "u_message": "Synaptic Regeneration installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2404,9 +2214,6 @@
       {
         "u_message": "Calorie Tracker installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_MEDICAL"
       }
     ]
   },
@@ -2434,9 +2241,6 @@
       {
         "u_message": "Battery System installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2464,9 +2268,6 @@
       {
         "u_message": "Cable Charger installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2494,9 +2295,6 @@
       {
         "u_message": "Ethanol Burner installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2524,9 +2322,6 @@
       {
         "u_message": "Metabolic Interchange installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2554,9 +2349,6 @@
       {
         "u_message": "Torsion Ratchet installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2584,9 +2376,6 @@
       {
         "u_message": "Gasoline Fuel Cell installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2614,9 +2403,6 @@
       {
         "u_message": "Lamplight Fuel Cell installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   },
@@ -2644,9 +2430,6 @@
       {
         "u_message": "Internal Furnace installed.",
         "popup": true
-      },
-      {
-        "run_eocs": "EOC_EXODII_BIONIC_CAT_POWER"
       }
     ]
   }
