@@ -26,11 +26,12 @@
     "items": {
       "both": {
         "entries": [
-          { "item": "pamd68", "ammo-item": "123ln", "charges": 30, "mods": [ "shoulder_strap" ] },
+          { "item": "pamd68", "ammo-item": "123ln", "charges": 30 },
           { "item": "123ln", "charges": 60 },
           { "item": "exodii_prybar" },
           { "item": "exodii_wire_kit" },
           { "item": "exodii_digger" },
+          { "item": "shoulder_strap" },
           { "group": "charged_smart_phone" }
         ]
       }
