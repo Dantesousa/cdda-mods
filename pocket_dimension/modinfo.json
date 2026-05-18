@@ -1,9 +1,15 @@
-{
-  "type": "MOD_INFO",
-  "id": "pocket_dimension",
-  "name": "Dante's Pocket Dimension",
-  "authors": [ "Dante" ],
-  "description": "Adds a personal 24x24 high-tech pocket dimension workshop accessed via a dimensional warp stone.  The pocket dimension is a persistent instanced location with a return portal. Includes Nanoprinter fabrication system.",
-  "category": "items",
-  "dependencies": [ "dda", "nanoprinter_test" ]
-}
+[
+  {
+    "type": "MOD_INFO",
+    "id": "pocket_dimension",
+    "name": "Dante's Pocket Dimension",
+    "authors": [
+      "Dante"
+    ],
+    "description": "Adds a personal 24x24 high-tech pocket dimension workshop accessed via a dimensional warp stone.  The pocket dimension is a persistent instanced location with a return portal.",
+    "category": "items",
+    "dependencies": [
+      "dda"
+    ]
+  }
+]

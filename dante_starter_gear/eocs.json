@@ -4,7 +4,6 @@
     "id": "EOC_SPAWN_STARTER_GEAR",
     "eoc_type": "EVENT",
     "required_event": "game_start",
-    "global": true,
     "effect": [
       { "u_spawn_item": "briefcase_dante", "use_item_group": true },
       { "u_spawn_item": "dante_warp_stone" },

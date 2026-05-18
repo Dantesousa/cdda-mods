@@ -6,11 +6,8 @@
     "entries": [
       {
         "item": "briefcase_dante",
-        "contents-item": [ "atomic_smartphone", "teleport_watch", "antigravity_terminal", "viltrumite_nanite_tool", "nanoprinter" ]
-      },
-      { "item": "plastic_chunk", "count": 5 },
-      { "item": "metal_chunk", "count": 5 },
-      { "item": "organic_chunk", "count": 5 }
+        "contents-item": [ "atomic_smartphone", "teleport_watch", "antigravity_terminal", "viltrumite_nanite_tool" ]
+      }
     ]
   }
 ]

@@ -38,29 +38,20 @@ Coleção de dispositivos portáteis de alta tecnologia:
 ### 4. Dante's Pocket Dimension
 **ID:** `pocket_dimension`
 
-Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tech totalmente equipada, acessada via uma pedra dimensional. Inclui warp stone, cristal de armazenamento dimensional, portal de retorno, e sistema **Nanoprinter** para fabricação de itens básicos.
+Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tech totalmente equipada, acessada via uma pedra dimensional. Inclui warp stone, cristal de armazenamento dimensional e portal de retorno.
 
 - Arquivos: `items.json`, `eocs.json`, `furniture.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
-- Dependências: `dda`, `nanoprinter_test`
-
-### 5. Nanoprinter Test
-**ID:** `nanoprinter_test`
-
-**Mod de teste para sistema de fabricação.** Adiciona o **Nanoprinter** — um appliance molecular que sintetiza itens básicos a partir de matéria-prima (plastic, metal, organic chunks). Requer conexão à power grid. Inclui console com interface de menu EOC para selecionar receitas.
-
-- Arquivos: `items.json`, `furniture.json`, `eocs.json`, `recipes.json`
 - Dependências: `dda`
-- **Itens fabricáveis:** bandages, water bottles, ration packs, extension cables
 
-### 6. Dante's Starter Gear
+### 5. Dante's Starter Gear
 **ID:** `dante_starter_gear`
 
-**Mod central da coleção.** Spawna uma maleta pré-carregada no início do jogo contendo todos os itens dos outros mods: gadgets portáteis, terminal antigravidade, pedra dimensional, cristal de armazenamento, **Nanoprinter e matéria-prima inicial**.
+**Mod central da coleção.** Spawna uma maleta pré-carregada no início do jogo contendo todos os itens dos outros mods: gadgets portáteis, terminal antigravidade, pedra dimensional e cristal de armazenamento.
 
 - Arquivos: `items.json`, `itemgroups.json`, `eocs.json`
-- Dependências: `dda`, `dante_gadgets`, `antigravity_market`, `pocket_dimension`, `nanoprinter_test`
+- Dependências: `dda`, `dante_gadgets`, `antigravity_market`, `pocket_dimension`
 
-### 7. Viltrumite Heritage
+### 6. Viltrumite Heritage
 **ID:** `viltrumite_dna`
 
 Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força, voo e uma biologia adaptativa que fica mais forte após sofrer dano. Inclui arte marcial Viltrumita e sistema de evolução adaptativa.
@@ -68,7 +59,7 @@ Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força
 - Arquivos: `all_data.json`
 - Dependências: `dda`, `dante_gadgets`
 
-### 8. Exodii Heritage
+### 7. Exodii Heritage
 **ID:** `exodii_heritage`
 
 Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensional Exodii, um ciborgue de conversão completa de outro mundo que sofreu pane no gerador de portal e caiu na Nova Inglaterra. Inclui frame de scout com armadura integrada, biónicos pré-instalados e equipamento Exodii.
@@ -85,16 +76,13 @@ dda (base game)
 ├── dante_gadgets
 │   └── viltrumite_dna
 ├── antigravity_market
-├── nanoprinter_test
 ├── pocket_dimension
-│   └── nanoprinter_test
 └── exodii_heritage
 
 dante_starter_gear (central mod)
 ├── dante_gadgets
 ├── antigravity_market
-├── pocket_dimension
-└── nanoprinter_test
+└── pocket_dimension
 ```
 
 > **Nota:** Ative `dante_starter_gear` para começar com todos os itens da coleção — as dependências serão carregadas automaticamente.

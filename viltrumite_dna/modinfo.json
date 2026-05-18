@@ -1,9 +1,16 @@
-{
-  "type": "MOD_INFO",
-  "id": "viltrumite_dna",
-  "name": "Viltrumite Heritage",
-  "authors": ["Dante"],
-  "description": "Adds the Viltrumite genetic trait, granting super strength, flight, and an adaptive biology that grows stronger after taking damage.",
-  "category": "mutations",
-  "dependencies": ["dda", "dante_gadgets"]
-}
+[
+  {
+    "type": "MOD_INFO",
+    "id": "viltrumite_dna",
+    "name": "Viltrumite Heritage",
+    "authors": [
+      "Dante"
+    ],
+    "description": "Adds the Viltrumite genetic trait, granting super strength, flight, and an adaptive biology that grows stronger after taking damage.",
+    "category": "mutations",
+    "dependencies": [
+      "dda",
+      "dante_gadgets"
+    ]
+  }
+]
