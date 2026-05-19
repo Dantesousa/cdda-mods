@@ -1,8 +1,8 @@
 # Dante's CDDA Mod Collection
 
-Coleção de mods pessoais para **Cataclysm: Dark Days Ahead**, criados por Dante.
+Personal mod collection for **Cataclysm: Dark Days Ahead**, created by Dante.
 
-Todos os mods funcionam com a versão estável mais recente do CDDA.
+All mods work with the latest stable version of CDDA.
 
 ---
 
@@ -11,65 +11,65 @@ Todos os mods funcionam com a versão estável mais recente do CDDA.
 ### 1. Antigravity Market
 **ID:** `antigravity_market`
 
-Adiciona um terminal de compras portátil que permite comprar itens (comida, armas, munição) usando **FMCNotes** (Free Merchant Certified Notes). Os itens são entregues instantaneamente.
+Adds a portable shopping terminal that lets you buy items (food, weapons, ammo) using **FMCNotes** (Free Merchant Certified Notes). Items are delivered instantly.
 
-- Arquivos: `items.json`, `eocs.json`
-- Dependências: `dda`
+- Files: `items.json`, `eocs.json`
+- Dependencies: `dda`
 
 ### 2. Atom Eve Powers
 **ID:** `atom_eve_powers`
 
-Adiciona superpoderes inspirados na **Atom Eve** (Invincible): manipulação de energia, voo, regeneração e habilidades aprimoradas.
+Adds superpowers inspired by **Atom Eve** (Invincible): energy manipulation, flight, regeneration, and enhanced abilities.
 
-- Arquivos: `mutation.json`, `effects.json`, `eocs.json`, `spells.json`, `professions.json`
-- Dependências: `dda`
+- Files: `mutation.json`, `effects.json`, `eocs.json`, `spells.json`, `professions.json`
+- Dependencies: `dda`
 
 ### 3. Dante's Gadgets
 **ID:** `dante_gadgets`
 
-Coleção de dispositivos portáteis de alta tecnologia:
-- **Viltrumite Nanite Swarm** — enxame de nanites que se reconfigura em qualquer ferramenta (UPS)
-- **Quantum Teleport Watch** — smartwatch que teletransporta pelo overmap (UPS)
-- **Atomic Smartphone** — smartphone com bateria atômica infinita, música, lanterna e link de energia
+Collection of high-tech portable devices:
+- **Viltrumite Nanite Swarm** — nanite swarm that reconfigures into any tool (UPS-powered)
+- **Quantum Teleport Watch** — smartwatch that teleports across the overmap (UPS-powered)
+- **Atomic Smartphone** — smartphone with infinite atomic battery, music player, flashlight, and power link
 
-- Arquivos: `items.json`, `eocs.json`
-- Dependências: `dda`
+- Files: `items.json`, `eocs.json`
+- Dependencies: `dda`
 
 ### 4. Dante's Pocket Dimension
 **ID:** `pocket_dimension`
 
-Adiciona uma **dimensão compacta persistente** (24x24) — uma oficina high-tech totalmente murada, acessada via uma pedra dimensional. Toda área fora da oficina é preenchida com paredes sólidas, impedindo exploração externa. Inclui warp stone, cristal de armazenamento dimensional e portal de retorno.
+Adds a **persistent compact dimension** (24x24) — a fully walled high-tech workshop, accessed via a dimensional warp stone. All area outside the workshop is filled with solid walls, preventing external exploration. Includes warp stone, dimensional storage crystal, and return portal.
 
-- Arquivos: `items.json`, `eocs.json`, `furniture.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
-- Dependências: `dda`
+- Files: `items.json`, `eocs.json`, `furniture.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
+- Dependencies: `dda`
 
 ### 5. Dante's Starter Gear
 **ID:** `dante_starter_gear`
 
-**Mod central da coleção.** Spawna uma maleta pré-carregada no início do jogo contendo todos os itens dos outros mods: gadgets portáteis, terminal antigravidade, pedra dimensional e cristal de armazenamento.
+**Central mod of the collection.** Spawns a pre-loaded briefcase at game start containing all items from the other mods: portable gadgets, antigravity terminal, dimensional stone, and storage crystal.
 
-- Arquivos: `items.json`, `itemgroups.json`, `eocs.json`
-- Dependências: `dda`, `dante_gadgets`, `antigravity_market`, `pocket_dimension`
+- Files: `items.json`, `itemgroups.json`, `eocs.json`
+- Dependencies: `dda`, `dante_gadgets`, `antigravity_market`, `pocket_dimension`
 
 ### 6. Viltrumite Heritage
 **ID:** `viltrumite_dna`
 
-Adiciona o traço genético **Viltrumita** (Invincible), concedendo super-força, voo e uma biologia adaptativa que fica mais forte após sofrer dano. Inclui arte marcial Viltrumita e sistema de evolução adaptativa.
+Adds the **Viltrumite** genetic trait (Invincible), granting super-strength, flight, and adaptive biology that grows stronger after taking damage. Includes Viltrumite martial art and adaptive evolution system.
 
-- Arquivos: `all_data.json`
-- Dependências: `dda`, `dante_gadgets`
+- Files: `all_data.json`
+- Dependencies: `dda`, `dante_gadgets`
 
 ### 7. Exodii Heritage
 **ID:** `exodii_heritage`
 
-Adiciona o cenário **Exodii Crash Landing** — comece como um scout dimensional Exodii, um ciborgue de conversão completa de outro mundo que sofreu pane no gerador de portal e caiu na Nova Inglaterra. Inclui frame de scout com armadura integrada, biónicos pré-instalados e equipamento Exodii.
+Adds the **Exodii Crash Landing** scenario — start as an Exodii dimensional scout, a full-conversion cyborg from another world who suffered a portal generator failure and crash-landed in New England. Includes scout frame with integrated armor, pre-installed bionics, and Exodii equipment.
 
-- Arquivos: `scenarios.json`, `professions.json`, `mutations.json`, `eocs.json`, `overlay_order.json`
-- Dependências: `dda`
+- Files: `scenarios.json`, `professions.json`, `mutations.json`, `eocs.json`, `overlay_order.json`
+- Dependencies: `dda`
 
 ---
 
-## 🔗 Dependências Entre Mods
+## 🔗 Mod Dependencies
 
 ```text
 dda (base game)
@@ -85,18 +85,18 @@ dante_starter_gear (central mod)
 └── pocket_dimension
 ```
 
-> **Nota:** Ative `dante_starter_gear` para começar com todos os itens da coleção — as dependências serão carregadas automaticamente.
+> **Note:** Enable `dante_starter_gear` to start with all collection items — dependencies will be loaded automatically.
 
 ---
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-1. Copie a pasta do(s) mod(s) desejado(s) para `data/mods/` do seu CDDA
-2. Ative no launcher ou no menu de mods ao criar um novo mundo
-3. Para o **Starter Gear**: crie uma nova partida com o mod ativo — a maleta e os itens estarão no abrigo de evacuação
+1. Copy the desired mod folder(s) to your CDDA `data/mods/` directory
+2. Enable them in the launcher or mod menu when creating a new world
+3. For **Starter Gear**: create a new game with the mod active — the briefcase and items will be in the evac shelter
 
 ---
 
-## 🛠️ Autor
+## 🛠️ Author
 
 - **Dante** — [Dantesousa](https://github.com/Dantesousa)
