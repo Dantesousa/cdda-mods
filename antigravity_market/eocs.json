@@ -70,7 +70,7 @@
     "condition": { "u_has_items": { "item": "FMCNote", "count": 1 } },
     "effect": [
       { "u_consume_item": "FMCNote" },
-      { "u_spawn_item": "water_clean", "container": "jug_plastic", "count": 15 },
+      { "u_spawn_item": "water_clean", "container": "jug_plastic", "charges": 15 },
       { "u_message": "Purchase successful! Enjoy your clean water.", "type": "good" }
     ],
     "false_effect": {
