@@ -1,0 +1,18 @@
+[
+  {
+    "id": "arcane_pocket_spell",
+    "type": "SPELL",
+    "name": { "str": "Arcane Translocation" },
+    "description": "Opens a dimensional gate to your personal arcane pocket dimension.  Cast again to return to the exact spot where you cast the spell.",
+    "effect": "effect_on_condition",
+    "effect_str": "EOC_ARCANE_POCKET_TOGGLE",
+    "energy_source": "MANA",
+    "base_energy_cost": 100,
+    "final_energy_cost": 50,
+    "difficulty": 3,
+    "max_level": 5,
+    "shape": "blast",
+    "valid_targets": [ "self" ],
+    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ]
+  }
+]

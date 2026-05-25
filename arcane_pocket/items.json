@@ -1,0 +1,20 @@
+[
+  {
+    "id": "arcane_scroll_translocation",
+    "type": "ITEM",
+    "subtypes": [ "GENERIC" ],
+    "name": { "str": "spell scroll: Arcane Translocation", "str_pl": "spell scrolls: Arcane Translocation" },
+    "description": "A parchment inscribed with an intricate arcane diagram.  Studying it teaches you to fold space and access your personal pocket dimension.",
+    "weight": "1 g",
+    "volume": "1 ml",
+    "price": "200 USD",
+    "price_postapoc": "5 USD",
+    "material": [ "paper" ],
+    "symbol": "?",
+    "color": "magenta",
+    "use_action": {
+      "type": "learn_spell",
+      "spells": [ "arcane_pocket_spell" ]
+    }
+  }
+]

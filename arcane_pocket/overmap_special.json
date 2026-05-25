@@ -1,0 +1,18 @@
+[
+  {
+    "type": "overmap_special",
+    "id": "arcane_pocket_special",
+    "overmaps": [
+      { "point": [ 0, 0, 0 ], "overmap": "arcane_pocket_core" }
+    ],
+    "locations": [ "arcane_pocket_location" ],
+    "city_distance": [ 0, -1 ],
+    "occurrences": [ 100, 100 ],
+    "flags": [
+      "ARCANE_DIMENSION",
+      "EXTRADIMENSIONAL",
+      "GLOBALLY_UNIQUE",
+      "SAFE_AT_WORLDGEN"
+    ]
+  }
+]

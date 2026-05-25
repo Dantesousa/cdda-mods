@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "arcane_pocket",
+    "name": "Arcane Pocket Dimension",
+    "authors": [ "Dante" ],
+    "description": "Adds a personal 30x30 arcane pocket dimension accessible via a magical translocation spell.  The pocket dimension is a persistent instanced location with a return portal.",
+    "category": "items",
+    "dependencies": [ "dda", "magiclysm" ]
+  }
+]

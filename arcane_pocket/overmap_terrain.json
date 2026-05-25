@@ -1,0 +1,22 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "arcane_pocket_core",
+    "name": "Arcane Pocket Dimension",
+    "sym": "P",
+    "color": "c_magenta",
+    "mondensity": 0,
+    "see_cost": "low",
+    "flags": [ "NO_ROTATE" ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "arcane_void_floor",
+    "name": "Arcane Void",
+    "sym": "#",
+    "color": "dark_gray",
+    "mondensity": 0,
+    "see_cost": "low",
+    "flags": [ "NO_ROTATE", "SIDEWALK" ]
+  }
+]
