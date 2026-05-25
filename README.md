@@ -1,6 +1,6 @@
 # Dante's CDDA Mod Collection
 
-Personal mod collection for **Cataclysm: Dark Days Ahead**, created by Dante.
+Personal mod collection for **Cataclysm: Dark Days Ahead**, created by Me.
 
 All mods work with the latest stable version of CDDA.
 
