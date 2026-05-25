@@ -84,7 +84,6 @@
     "type": "mapgen",
     "om_terrain": [ "arcane_void_floor" ],
     "object": {
-      "mapgensize": [ 24, 24 ],
       "fill_ter": "t_rock_wall",
       "rows": [
         "########################",
