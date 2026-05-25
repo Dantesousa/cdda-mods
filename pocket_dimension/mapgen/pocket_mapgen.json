@@ -3,6 +3,7 @@
     "type": "mapgen",
     "om_terrain": [ "dante_pocket_core" ],
     "object": {
+      "mapgensize": [ 24, 24 ],
       "fill_ter": "t_strconc_floor",
       "rows": [
         "########################",
@@ -91,6 +92,7 @@
     "type": "mapgen",
     "om_terrain": [ "dante_void_floor" ],
     "object": {
+      "mapgensize": [ 24, 24 ],
       "fill_ter": "t_wall_metal",
       "rows": [
         "########################",
