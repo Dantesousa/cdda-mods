@@ -64,8 +64,16 @@ Adds the **Viltrumite** genetic trait (Invincible), granting super-strength, fli
 
 Adds the **Exodii Crash Landing** scenario — start as an Exodii dimensional scout, a full-conversion cyborg from another world who suffered a portal generator failure and crash-landed in New England. Includes scout frame with integrated armor, pre-installed bionics, and Exodii equipment.
 
-- Files: `scenarios.json`, `professions.json`, `mutations.json`, `eocs.json`, `overlay_order.json`
+- Files: `scenarios.json`, `professions.json`, `mutations.json`, `eocs.json`, `overlay_order.json`, `exodii_scout_frame.png`, `tile_config.json`
 - Dependencies: `dda`
+
+### 8. Arcane Pocket Dimension
+**ID:** `arcane_pocket`
+
+Adds a personal **30×30 arcane pocket dimension** accessible via a magical translocation spell (requires Magiclysm). A persistent instanced dimension with a return portal, racks, and benches. Features a shimmering arcane portal for returning to the material world.
+
+- Files: `items.json`, `spells.json`, `eocs.json`, `furniture.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
+- Dependencies: `dda`, `magiclysm`
 
 ---
 
