@@ -11,7 +11,6 @@
     "starting_trait": false,
     "valid": true,
     "purifiable": false,
-    "overlay_ui": "overlay_mutation_EXODII_SCOUT_FRAME",
     "description": "Your body has been replaced with a rugged Exodii scout frame — a bipedal walker chassis designed for dimensional reconnaissance.  Your brain and vital organs are shielded inside a durable ceramic-alloy shell.  Its modular design still accommodates wearing gear over the integrated armor, letting you layer additional protection on top of the enhanced servos underneath.",
     "types": [ "Cyberframe", "Cybernetic" ],
     "enchantments": [
