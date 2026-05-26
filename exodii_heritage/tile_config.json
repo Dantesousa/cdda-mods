@@ -1,0 +1,22 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "ChibiUltica"
+    ],
+    "tiles-new": [
+      {
+        "file": "exodii_scout_frame.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "overlay_mutation_EXODII_SCOUT_FRAME",
+            "fg": 0
+          }
+        ]
+      }
+    ]
+  }
+]
