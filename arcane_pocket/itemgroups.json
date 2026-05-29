@@ -1,0 +1,40 @@
+[
+  {
+    "type": "item_group",
+    "id": "arcane_library_books",
+    "subtype": "distribution",
+    "items": [
+      { "item": "wizard_beginner", "prob": 15 },
+      { "item": "wizard_beginner_old", "prob": 10 },
+      { "item": "wizard_advanced", "prob": 8 },
+      { "item": "wizard_utility", "prob": 10 },
+      { "item": "priest_beginner", "prob": 12 },
+      { "item": "priest_advanced", "prob": 8 },
+      { "item": "pyro", "prob": 10 },
+      { "item": "tome_of_storms", "prob": 8 },
+      { "item": "tome_of_wind", "prob": 8 },
+      { "item": "tome_electric", "prob": 8 },
+      { "item": "biomancer_spellbook", "prob": 8 },
+      { "item": "druid_spellbook", "prob": 10 },
+      { "item": "magus_spellbook", "prob": 10 },
+      { "item": "eshaper_spellbook", "prob": 8 },
+      { "item": "eshaper_spellbook_melee", "prob": 6 },
+      { "item": "eshaper_spellbook_tool", "prob": 6 },
+      { "item": "magus_spellbook_move", "prob": 6 },
+      { "item": "summon_undead_spellbook", "prob": 5 },
+      { "item": "forbidden_tome", "prob": 3 },
+      { "item": "necronomicon", "prob": 2 },
+      { "item": "animist_spirits", "prob": 8 },
+      { "item": "animist_shadows", "prob": 6 },
+      { "item": "light_manipulation_spellbook", "prob": 8 },
+      { "item": "generic_spellbook", "prob": 12 },
+      { "item": "bioelectricity", "prob": 8 },
+      { "item": "winter_grasp", "prob": 6 },
+      { "item": "translocate_spellbook", "prob": 5 },
+      { "item": "plant_spellbook", "prob": 8 },
+      { "item": "basic_pyromancy", "prob": 10 },
+      { "item": "stone_powers_spellbook", "prob": 6 },
+      { "item": "pirate_spellbook", "prob": 4 }
+    ]
+  }
+]

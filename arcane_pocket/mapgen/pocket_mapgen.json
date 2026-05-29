@@ -1,47 +1,66 @@
 [
   {
     "type": "mapgen",
-    "om_terrain": [ "arcane_pocket_core" ],
+    "om_terrain": [
+      "arcane_pocket_core"
+    ],
     "object": {
       "fill_ter": "t_rock_floor",
       "rows": [
         "########################",
         "#......................#",
-        "#..RRRR....BBBB........#",
-        "#..RRRR................#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
-        "#....WWWWWWWWWWWWWW....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....WWWWWWWWWWWWWW....#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
-        "#.........X............#",
+        "#.TT..TT......TT..TT...#",
+        "#......................#",
+        "#.PP..........PP.......#",
         "#......................#",
         "#......................#",
         "#......................#",
-        "#..........RR..........#",
-        "#..........RR..........#",
+        "#...........X..........#",
         "#......................#",
         "#......................#",
+        "#.PP..........PP.......#",
         "#......................#",
+        "#.TT..TT......TT..TT...#",
         "#......................#",
+        "#.SSSS..SSSS..SSSS.....#",
+        "#......................#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
         "########################"
       ],
       "terrain": {
         "#": "t_rock_wall",
         ".": "t_rock_floor",
-        "W": "t_rock_wall",
-        "R": "t_rock_floor",
-        "B": "t_rock_floor",
+        "S": "t_rock_floor",
+        "T": "t_rock_floor",
+        "P": "t_rock_floor",
         "X": "t_rock_floor"
       },
       "furniture": {
-        "X": "f_arcane_return_portal",
-        "B": "f_metal_bench",
-        "R": "f_rack"
+        "S": "f_bookcase",
+        "T": "f_table",
+        "P": "f_statue",
+        "X": "f_arcane_return_portal"
+      },
+      "items": {
+        "S": [
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          },
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          },
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          }
+        ]
       }
     }
   },
@@ -52,47 +71,66 @@
       "rows": [
         "########################",
         "#......................#",
-        "#..RRRR....BBBB........#",
-        "#..RRRR................#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
-        "#....WWWWWWWWWWWWWW....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....W............W....#",
-        "#....WWWWWWWWWWWWWW....#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
-        "#.........X............#",
+        "#.TT..TT......TT..TT...#",
+        "#......................#",
+        "#.PP..........PP.......#",
         "#......................#",
         "#......................#",
         "#......................#",
-        "#..........RR..........#",
-        "#..........RR..........#",
+        "#...........X..........#",
         "#......................#",
         "#......................#",
+        "#.PP..........PP.......#",
         "#......................#",
+        "#.TT..TT......TT..TT...#",
         "#......................#",
+        "#.SSSS..SSSS..SSSS.....#",
+        "#......................#",
+        "#.SSSS..SSSS..SSSS.....#",
         "#......................#",
         "########################"
       ],
       "terrain": {
         "#": "t_rock_wall",
         ".": "t_rock_floor",
-        "W": "t_rock_wall",
-        "R": "t_rock_floor",
-        "B": "t_rock_floor",
+        "S": "t_rock_floor",
+        "T": "t_rock_floor",
+        "P": "t_rock_floor",
         "X": "t_rock_floor"
       },
       "furniture": {
-        "X": "f_arcane_return_portal",
-        "B": "f_metal_bench",
-        "R": "f_rack"
+        "S": "f_bookcase",
+        "T": "f_table",
+        "P": "f_statue",
+        "X": "f_arcane_return_portal"
+      },
+      "items": {
+        "S": [
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          },
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          },
+          {
+            "item": "arcane_library_books",
+            "chance": 100
+          }
+        ]
       }
     }
   },
   {
     "type": "mapgen",
-    "om_terrain": [ "arcane_void_floor" ],
+    "om_terrain": [
+      "arcane_void_floor"
+    ],
     "object": {
       "fill_ter": "t_rock_wall",
       "rows": [
