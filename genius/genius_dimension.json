@@ -332,7 +332,16 @@
                 "W": "t_concrete_wall",
                 "B": "t_genius_mind_floor",
                 "S": "t_genius_mind_floor"
-            }
+            },
+            "furniture": {
+                "B": "f_bookcase"
+            },
+            "place_items": [
+                { "item": "book_school", "x": [ 8, 15 ], "y": [ 7, 7 ], "chance": 90, "repeat": [ 2, 4 ] },
+                { "item": "book_school", "x": [ 8, 15 ], "y": [ 16, 16 ], "chance": 90, "repeat": [ 2, 4 ] },
+                { "item": "book_survival", "x": [ 8, 15 ], "y": [ 7, 7 ], "chance": 60, "repeat": [ 1, 2 ] },
+                { "item": "cookbooks", "x": [ 8, 15 ], "y": [ 16, 16 ], "chance": 60, "repeat": [ 1, 2 ] }
+            ]
         }
     }
 ]
