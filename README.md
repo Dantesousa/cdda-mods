@@ -67,6 +67,14 @@ Adds a personal **24×24 arcane pocket dimension** accessible via a magical tran
 - Files: `items.json`, `spells.json`, `eocs.json`, `furniture.json`, `itemgroups.json`, `region_settings.json`, `overmap_terrain.json`, `overmap_location.json`, `overmap_special.json`, `mapgen/`
 - Dependencies: `dda`, `magiclysm`
 
+### 8. Genius Mutation
+**ID:** `genius`
+
+Adds a **hyper-learning mutation line** (Spark → Bright → Brilliant → Transcendent) with instant activated powers: conjure light, food, and blades from thought. The Transcendent menu materializes components and building supplies, summons thought servants and a thought toolbox, and opens a persistent **Mind Palace** dimension to build in.
+
+- Files: `modinfo.json`, `genius.json`, `genius_powers.json`, `genius_dimension.json`, `genius_servants.json`
+- Dependencies: `dda`
+
 ---
 
 ## 📦 Archived Mods
@@ -90,7 +98,8 @@ dda (base game)
 ├── antigravity_market
 ├── pocket_dimension
 ├── exodii_heritage
-└── arcane_pocket (requires magiclysm)
+├── arcane_pocket (requires magiclysm)
+└── genius
 
 dante_starter_gear (central mod)
 ├── dante_gadgets
