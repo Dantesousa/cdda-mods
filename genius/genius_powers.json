@@ -1,0 +1,1604 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "genius_mote",
+    "name": "coherent thought",
+    "default": "genius_mote"
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "AMMO"
+    ],
+    "id": "genius_mote",
+    "name": {
+      "str_sp": "mote charge"
+    },
+    "description": "A knot of coherent thought.  Burns steady and clean.",
+    "symbol": "~",
+    "volume": "1 ml",
+    "weight": "1 mg",
+    "color": "light_blue",
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "ammo_type": "genius_mote"
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL"
+    ],
+    "id": "genius_mote_lit",
+    "name": {
+      "str": "thought-mote"
+    },
+    "description": "A mote of your own coherent thought, hanging in the air and giving off steady light.  It will burn out in a few hours.",
+    "weight": "25 g",
+    "volume": "25 ml",
+    "price": "0 USD",
+    "material": [
+      "bone"
+    ],
+    "symbol": ";",
+    "color": "light_blue",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "genius_mote": 250
+        },
+        "rigid": true
+      }
+    ],
+    "turns_per_charge": 45,
+    "revert_to": "genius_mote_husk",
+    "revert_msg": "The thought-mote gutters out.",
+    "light": 12,
+    "flags": [
+      "TRADER_AVOID",
+      "SLEEP_IGNORE",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "SPAWN_ACTIVE"
+    ]
+  },
+  {
+    "type": "ITEM",
+    "id": "genius_mote_husk",
+    "name": {
+      "str": "spent thought"
+    },
+    "description": "The cold cinder of a burned-out thought.  Useless now.",
+    "weight": "10 g",
+    "volume": "10 ml",
+    "price": "0 USD",
+    "material": [
+      "bone"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "COMESTIBLE"
+    ],
+    "id": "genius_ration",
+    "name": {
+      "str_sp": "thought-loaf"
+    },
+    "description": "Bread you remembered so hard it became real.  Nourishing and deeply satisfying, and it goes down like cool spring water, but it unravels back into stray notions within half a day.",
+    "material": [
+      "wheat"
+    ],
+    "weight": "200 g",
+    "volume": "250 ml",
+    "price": "0 USD",
+    "symbol": "%",
+    "color": "yellow",
+    "spoils_in": "12 hours",
+    "comestible_type": "FOOD",
+    "calories": 400,
+    "quench": 100,
+    "fun": 15
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL"
+    ],
+    "category": "weapons",
+    "id": "genius_blade",
+    "copy-from": "machete",
+    "name": {
+      "str": "mindforged blade"
+    },
+    "description": "A blade of ossified thought.  Keen enough for real work, though no master smith would call it great.",
+    "price": "0 USD",
+    "price_postapoc": "0 cent",
+    "looks_like": "longsword",
+    "weapon_category": [
+      "LONG_SWORDS"
+    ],
+    "material": [
+      "bone"
+    ],
+    "color": "light_blue",
+    "melee_damage": {
+      "cut": 14
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "SHEATH_SWORD",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_genius_clarity",
+    "name": [
+      "Perfect Clarity"
+    ],
+    "desc": [
+      "Your mind runs like a cooled engine.  Everything is obvious."
+    ],
+    "rating": "good",
+    "max_duration": "15 minutes",
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "INTELLIGENCE",
+            "add": 4
+          },
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": 0.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "effect_genius_strain",
+    "name": [
+      "Mental Strain"
+    ],
+    "desc": [
+      "Your head throbs from forcing thoughts into matter.  Conjure less, rest more."
+    ],
+    "rating": "bad",
+    "max_duration": "4 hours",
+    "max_intensity": 5,
+    "show_intensity": true,
+    "show_in_info": true,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "INTELLIGENCE",
+            "add": -2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_DONE",
+    "effect": [
+      {
+        "u_message": "You release the half-formed thought.",
+        "type": "neutral"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_CLARITY",
+    "effect": [
+      {
+        "u_add_effect": "effect_genius_clarity",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "The world goes quiet and obvious.",
+        "type": "good"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_TRANSCENDENT_MENU",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_CLARITY",
+          "EOC_GENIUS_MATERIALIZE_MENU",
+          "EOC_GENIUS_MATERIALIZE_BUILD_MENU",
+          "EOC_GENIUS_SUMMON_SERVANT",
+          "EOC_GENIUS_SUMMON_TOOLBOX",
+          "EOC_GENIUS_MIND_ENTER",
+          "EOC_GENIUS_MIND_EXIT",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "hide_failing": true,
+        "names": [
+          "Perfect Clarity",
+          "Materialize Components",
+          "Materialize Building Supplies",
+          "Summon Servant",
+          "Summon Toolbox",
+          "Enter Mind Palace",
+          "Exit Mind Palace",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MATERIALIZE_MENU",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_MAT_STEEL_CHUNK",
+          "EOC_GENIUS_MAT_SCRAP",
+          "EOC_GENIUS_MAT_COPPER",
+          "EOC_GENIUS_MAT_WIRE",
+          "EOC_GENIUS_MAT_E_SCRAP",
+          "EOC_GENIUS_MAT_CIRCUIT",
+          "EOC_GENIUS_MAT_PROCESSOR",
+          "EOC_GENIUS_MAT_RAM",
+          "EOC_GENIUS_MAT_POWER_SUPPLY",
+          "EOC_GENIUS_MAT_SOLDER_WIRE",
+          "EOC_GENIUS_MAT_CHARCOAL",
+          "EOC_GENIUS_MAT_LYE",
+          "EOC_GENIUS_MAT_DUCT_TAPE",
+          "EOC_GENIUS_MAT_LEATHER",
+          "EOC_GENIUS_MAT_FUR",
+          "EOC_GENIUS_MAT_NAIL",
+          "EOC_GENIUS_MAT_SPRING",
+          "EOC_GENIUS_MAT_PIPE",
+          "EOC_GENIUS_MAT_PLASTIC_CHUNK",
+          "EOC_GENIUS_MAT_THREAD",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "names": [
+          "Steel Chunk x4",
+          "Scrap x6",
+          "Copper x4",
+          "Wire x6",
+          "E Scrap x4",
+          "Circuit x2",
+          "Processor x1",
+          "Ram x2",
+          "Power Supply x1",
+          "Solder Wire x6",
+          "Charcoal x6",
+          "Lye x2",
+          "Duct Tape x2",
+          "Leather x4",
+          "Fur x4",
+          "Nail x12",
+          "Spring x4",
+          "Pipe x2",
+          "Plastic Chunk x4",
+          "Thread x6",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_STEEL_CHUNK",
+    "effect": [
+      {
+        "u_spawn_item": "steel_chunk",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Steel remembers being ore.  You remind it.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SCRAP",
+    "effect": [
+      {
+        "u_spawn_item": "scrap",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Scrap metal condenses out of the air.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_COPPER",
+    "effect": [
+      {
+        "u_spawn_item": "copper",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Copper wire unspools from nothing.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_WIRE",
+    "effect": [
+      {
+        "u_spawn_item": "wire",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Wire draws itself through your fingers.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_E_SCRAP",
+    "effect": [
+      {
+        "u_spawn_item": "e_scrap",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Dead circuits precipitate around you.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_CIRCUIT",
+    "effect": [
+      {
+        "u_spawn_item": "circuit",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A etched circuit resolves out of static.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PROCESSOR",
+    "effect": [
+      {
+        "u_spawn_item": "processor",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A processor.  You thought very carefully about this one.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_RAM",
+    "effect": [
+      {
+        "u_spawn_item": "RAM",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Memory sticks, remembered into being.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_POWER_SUPPLY",
+    "effect": [
+      {
+        "u_spawn_item": "power_supply",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A power supply hums into existence.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SOLDER_WIRE",
+    "effect": [
+      {
+        "u_spawn_item": "solder_wire",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Solder wire coils at your feet.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_CHARCOAL",
+    "effect": [
+      {
+        "u_spawn_item": "charcoal",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Charcoal.  Easy.  Barely worth thinking about.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_LYE",
+    "effect": [
+      {
+        "u_spawn_item": "lye",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Lye powder sifts down like snow.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_DUCT_TAPE",
+    "effect": [
+      {
+        "u_spawn_item": "duct_tape",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Two rolls of duct tape.  Civilization in a tube.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_LEATHER",
+    "effect": [
+      {
+        "u_spawn_item": "leather",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Leather stretches itself flat before you.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_FUR",
+    "effect": [
+      {
+        "u_spawn_item": "fur",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Fur, warm as if just shed.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_NAIL",
+    "effect": [
+      {
+        "u_spawn_item": "nail",
+        "count": 12
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A fistful of nails.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SPRING",
+    "effect": [
+      {
+        "u_spawn_item": "spring",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Springs boing into being.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PIPE",
+    "effect": [
+      {
+        "u_spawn_item": "pipe",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Pipes clang onto the ground.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PLASTIC_CHUNK",
+    "effect": [
+      {
+        "u_spawn_item": "plastic_chunk",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Plastic chunks, fresh from the idea of oil.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_THREAD",
+    "effect": [
+      {
+        "u_spawn_item": "thread",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Thread spools itself.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MATERIALIZE_BUILD_MENU",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_BLD_2X4",
+          "EOC_GENIUS_BLD_LOG",
+          "EOC_GENIUS_BLD_WOOD_PANEL",
+          "EOC_GENIUS_BLD_WOOD_BEAM",
+          "EOC_GENIUS_BLD_NAIL",
+          "EOC_GENIUS_BLD_ROCK",
+          "EOC_GENIUS_BLD_REBAR",
+          "EOC_GENIUS_BLD_BRICK",
+          "EOC_GENIUS_BLD_ROPE",
+          "EOC_GENIUS_BLD_GLASS",
+          "EOC_GENIUS_BLD_TARP",
+          "EOC_GENIUS_BLD_STICK",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "names": [
+          "2X4 x6",
+          "Log x4",
+          "Wood Panel x2",
+          "Wood Beam x2",
+          "Nail x12",
+          "Rock x6",
+          "Rebar x2",
+          "Brick x6",
+          "Rope 30 x2",
+          "Glass Sheet x2",
+          "Tarp x1",
+          "Stick x8",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_2X4",
+    "effect": [
+      {
+        "u_spawn_item": "2x4",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Six lengths of two-by-four.  Framing for a new world.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_LOG",
+    "effect": [
+      {
+        "u_spawn_item": "log",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Logs, still smelling of sap that never existed.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_WOOD_PANEL",
+    "effect": [
+      {
+        "u_spawn_item": "wood_panel",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Wood panels, grain and all.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_WOOD_BEAM",
+    "effect": [
+      {
+        "u_spawn_item": "wood_beam",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Heavy beams.  Your shoulders ache just looking at them.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_NAIL",
+    "effect": [
+      {
+        "u_spawn_item": "nail",
+        "count": 12
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A fistful of nails.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_ROCK",
+    "effect": [
+      {
+        "u_spawn_item": "rock",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Rocks.  Simple, honest rocks.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_REBAR",
+    "effect": [
+      {
+        "u_spawn_item": "rebar",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Rebar, straight as an equation.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_BRICK",
+    "effect": [
+      {
+        "u_spawn_item": "brick",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Bricks, warm from the kiln of your mind.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_ROPE",
+    "effect": [
+      {
+        "u_spawn_item": "rope_30",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Thirty feet of rope, coiled and ready.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_GLASS",
+    "effect": [
+      {
+        "u_spawn_item": "glass_sheet",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Glass sheets.  Try not to think about breaking them.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_TARP",
+    "effect": [
+      {
+        "u_spawn_item": "tarp",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A tarp.  Shelter is a thought away.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_BLD_STICK",
+    "effect": [
+      {
+        "u_spawn_item": "stick",
+        "count": 8
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Sticks.  Every project starts with sticks.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MIND_ENTER",
+    "effect": [
+      {
+        "u_add_effect": "blind",
+        "duration": 0
+      },
+      {
+        "u_add_effect": "effect_temporary_levitation",
+        "duration": 0
+      },
+      {
+        "u_location_variable": {
+          "global_val": "genius_mind_exit"
+        }
+      },
+      {
+        "u_travel_to_dimension": "genius_mind_dimension",
+        "npc_travel_radius": 0,
+        "npc_travel_filter": "none",
+        "fail_message": "The door in your mind refuses to open.",
+        "success_message": "You step sideways into your own head."
+      },
+      {
+        "if": {
+          "math": [
+            "u_genius_palace_set",
+            "==",
+            "0"
+          ]
+        },
+        "then": [
+          {
+            "u_location_variable": {
+              "context_val": "genius_palace_stamp"
+            }
+          },
+          {
+            "mapgen_update": "genius_mind_palace_stamp",
+            "target_var": {
+              "context_val": "genius_palace_stamp"
+            }
+          },
+          {
+            "math": [
+              "u_genius_palace_set",
+              "=",
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "u_location_variable": {
+          "context_val": "genius_mind_arrival"
+        },
+        "terrain": "t_genius_mind_floor",
+        "target_max_radius": 30,
+        "passable_only": true
+      },
+      {
+        "u_teleport": {
+          "context_val": "genius_mind_arrival"
+        }
+      },
+      {
+        "u_message": "You are home.  This place is yours.",
+        "type": "good"
+      }
+    ],
+    "condition": {
+      "not": {
+        "current_dimension": "genius_mind_dimension"
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MIND_EXIT",
+    "effect": [
+      {
+        "u_add_effect": "blind",
+        "duration": 0
+      },
+      {
+        "u_add_effect": "effect_temporary_levitation",
+        "duration": 0
+      },
+      {
+        "u_travel_to_dimension": "default",
+        "npc_travel_radius": 0,
+        "npc_travel_filter": "none",
+        "fail_message": "You feel a prickle at the edge of your senses.",
+        "success_message": "The palace folds away behind your eyes."
+      },
+      {
+        "u_teleport": {
+          "global_val": "genius_mind_exit"
+        }
+      },
+      {
+        "u_message": "Back where you left.",
+        "type": "neutral"
+      }
+    ],
+    "condition": {
+      "current_dimension": "genius_mind_dimension"
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_CONJURE_MOTE",
+    "effect": [
+      {
+        "u_spawn_item": "genius_mote_lit",
+        "suppress_message": true
+      },
+      {
+        "u_message": "You condense a mote of coherent thought.  It hangs in the air, glowing.",
+        "type": "neutral"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_CONJURE_LOAF",
+    "effect": [
+      {
+        "u_spawn_item": "genius_ration",
+        "suppress_message": true
+      },
+      {
+        "u_message": "You remember bread so hard it becomes real.",
+        "type": "neutral"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_CONJURE_BLADE",
+    "effect": [
+      {
+        "u_spawn_item": "genius_blade",
+        "suppress_message": true
+      },
+      {
+        "u_message": "You think a blade into being.  It hums faintly.",
+        "type": "neutral"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_SUMMON_SERVANT",
+    "effect": [
+      {
+        "u_spawn_npc": "genius_servant",
+        "traits": [
+          "PALE",
+          "SAPROVORE",
+          "CANNIBAL",
+          "NOPAIN"
+        ],
+        "real_count": [
+          1,
+          2
+        ],
+        "min_radius": 2,
+        "max_radius": 4,
+        "spawn_message": "A servant pulls itself out of your thoughts.",
+        "spawn_message_plural": "Servants pull themselves out of your thoughts."
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL"
+    ],
+    "id": "genius_omnitoolbox",
+    "name": {
+      "str": "thought toolbox",
+      "str_pl": "thought toolboxes"
+    },
+    "description": "A toolbox you remembered so hard it became real.  It holds the shape of every hand tool you have ever held, all at once.  Light, unbreakable, and always exactly what the job needs.  (Stations still need building: forge, anvil, oven, workbench.)",
+    "weight": "1500 g",
+    "volume": "1500 ml",
+    "longest_side": "32 cm",
+    "price": "0 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "light_blue",
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "GRASS_CUT",
+        2
+      ],
+      [
+        "CUT_FINE",
+        5
+      ],
+      [
+        "SHEAR",
+        1
+      ],
+      [
+        "LEATHER_AWL",
+        2
+      ],
+      [
+        "SEW_CURVED",
+        1
+      ],
+      [
+        "FISHING_ROD",
+        2
+      ],
+      [
+        "FISH_TRAP",
+        1
+      ],
+      [
+        "TREE_TAP",
+        1
+      ],
+      [
+        "SMOOTH",
+        2
+      ],
+      [
+        "HACK",
+        2
+      ],
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "HAMMER_SOFT",
+        1
+      ],
+      [
+        "SAW_W",
+        2
+      ],
+      [
+        "SAW_M",
+        2
+      ],
+      [
+        "SAW_M_FINE",
+        2
+      ],
+      [
+        "COOK",
+        3
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "CONTAIN",
+        2
+      ],
+      [
+        "SIEVE",
+        2
+      ],
+      [
+        "WINNOW",
+        2
+      ],
+      [
+        "STRAIN",
+        2
+      ],
+      [
+        "AXE",
+        4
+      ],
+      [
+        "DIG",
+        3
+      ],
+      [
+        "WRENCH",
+        2
+      ],
+      [
+        "WRENCH_FINE",
+        1
+      ],
+      [
+        "SCREW",
+        1
+      ],
+      [
+        "SCREW_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        5
+      ],
+      [
+        "DRILL",
+        2
+      ],
+      [
+        "PRY",
+        4
+      ],
+      [
+        "PRYING_NAIL",
+        1
+      ],
+      [
+        "PUNCH",
+        2
+      ],
+      [
+        "WRITE",
+        3
+      ],
+      [
+        "JACK",
+        2
+      ],
+      [
+        "SELF_JACK",
+        2
+      ],
+      [
+        "CHISEL",
+        3
+      ],
+      [
+        "CHISEL_WOOD",
+        3
+      ],
+      [
+        "SEW",
+        4
+      ],
+      [
+        "KNIT",
+        1
+      ],
+      [
+        "PULL",
+        2
+      ],
+      [
+        "GRIND",
+        2
+      ],
+      [
+        "FINE_GRIND",
+        1
+      ],
+      [
+        "REAM",
+        2
+      ],
+      [
+        "FILE",
+        2
+      ],
+      [
+        "LOCKPICK",
+        5
+      ],
+      [
+        "SUSPENDING",
+        2
+      ],
+      [
+        "ROPE",
+        2
+      ],
+      [
+        "SURFACE",
+        3
+      ],
+      [
+        "FABRIC_CUT",
+        2
+      ],
+      [
+        "CUT_GLASS",
+        1
+      ],
+      [
+        "MOP",
+        1
+      ],
+      [
+        "THREAD_CUT",
+        2
+      ],
+      [
+        "THREAD_TAP",
+        2
+      ],
+      [
+        "STRIKING_SURFACE",
+        1
+      ]
+    ],
+    "flags": [
+      "UNBREAKABLE",
+      "TRADER_AVOID",
+      "BELT_CLIP"
+    ],
+    "melee_damage": {
+      "bash": 4
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_SUMMON_TOOLBOX",
+    "effect": [
+      {
+        "u_spawn_item": "genius_omnitoolbox",
+        "suppress_message": true
+      },
+      {
+        "u_message": "You remember every toolbox you have ever opened, all at once.  It is heavy with possibility.",
+        "type": "neutral"
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      }
+    ]
+  }
+]

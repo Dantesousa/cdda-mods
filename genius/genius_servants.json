@@ -1,0 +1,106 @@
+[
+  {
+    "type": "item_group",
+    "id": "NC_GENIUS_SERVANT_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "tank_top",
+        "prob": 100
+      },
+      {
+        "item": "shorts",
+        "prob": 100
+      },
+      {
+        "item": "socks",
+        "prob": 100
+      },
+      {
+        "item": "sneakers",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_GENIUS_SERVANT_carry",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "backpack",
+        "prob": 100
+      },
+      {
+        "item": "water_clean",
+        "prob": 100,
+        "count": [
+          1,
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_GENIUS_SERVANT",
+    "name": {
+      "str": "thought servant"
+    },
+    "job_description": "A servant shaped out of stray thoughts, made to carry and to build.",
+    "common": false,
+    "bonus_bravery": 10,
+    "bonus_aggression": 5,
+    "bonus_altruism": 5,
+    "bonus_collector": -5,
+    "bonus_str": 2,
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "constant": 1
+        }
+      },
+      {
+        "skill": "fabrication",
+        "bonus": 5
+      },
+      {
+        "skill": "mechanics",
+        "bonus": 3
+      },
+      {
+        "skill": "tailor",
+        "bonus": 3
+      },
+      {
+        "skill": "cooking",
+        "bonus": 2
+      }
+    ],
+    "worn_override": "NC_GENIUS_SERVANT_worn",
+    "carry_override": "NC_GENIUS_SERVANT_carry"
+  },
+  {
+    "type": "npc",
+    "id": "genius_servant",
+    "name_suffix": "servant",
+    "class": "NC_GENIUS_SERVANT",
+    "attitude": 3,
+    "mission": "NULL",
+    "chat": "TALK_DONE",
+    "faction": "your_followers",
+    "age": 30,
+    "height": 175,
+    "str": 8,
+    "dex": 7,
+    "int": 6,
+    "per": 7,
+    "personality": {
+      "aggression": 5,
+      "bravery": 10,
+      "collector": -5,
+      "altruism": 5
+    }
+  }
+]

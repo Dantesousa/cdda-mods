@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "genius",
+    "name": "Genius Mutation",
+    "authors": ["Dante"],
+    "description": "A new mutation line for hyper-fast learning: reading, practice and combat XP.",
+    "category": "content",
+    "dependencies": ["dda"]
+  }
+]

@@ -1,0 +1,338 @@
+[
+    {
+        "type": "weather_generator",
+        "id": "genius_mind_weather",
+        "copy-from": "default",
+        "weather_black_list": [
+            "early_portal_storm",
+            "portal_storm"
+        ]
+    },
+    {
+        "type": "region_settings_ravine",
+        "id": "genius_mind_ravines",
+        "copy-from": "default",
+        "num_ravines": 0
+    },
+    {
+        "type": "dimension",
+        "id": "genius_mind_dimension",
+        "region_layout": "genius_mind_layout"
+    },
+    {
+        "type": "dimension_region_layout",
+        "id": "genius_mind_layout",
+        "generation_mode": "UNIFORM",
+        "uniform_region": "genius_mind_region"
+    },
+    {
+        "type": "region_settings",
+        "id": "genius_mind_region",
+        "copy-from": "default",
+        "rivers": null,
+        "lakes": null,
+        "ocean": null,
+        "forests": null,
+        "ravines": "genius_mind_ravines",
+        "forest_trails": null,
+        "forest_composition": "no_forests",
+        "highways": null,
+        "cities": "no_cities",
+        "map_extras": "genius_mind_extras",
+        "npc_spawntime": 0,
+        "neighbor_connections": false,
+        "place_roads": false,
+        "default_oter": [
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "genius_void",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "open_air",
+            "genius_void"
+        ],
+        "default_groundcover": [
+            [
+                "t_region_groundcover",
+                1
+            ]
+        ],
+        "feature_flag_settings": {
+            "blacklist": [],
+            "whitelist": [
+                "GENIUS_MIND"
+            ]
+        },
+        "weather": "genius_mind_weather"
+    },
+    {
+        "type": "region_settings_map_extras",
+        "id": "genius_mind_extras",
+        "extras": []
+    },
+    {
+        "type": "overmap_terrain",
+        "id": "genius_void",
+        "name": "mind void",
+        "sym": "#",
+        "color": "dark_gray",
+        "see_cost": "all_clear",
+        "flags": [
+            "NO_ROTATE"
+        ]
+    },
+    {
+        "type": "overmap_terrain",
+        "id": "genius_mindscape",
+        "name": "mindscape meadow",
+        "sym": ".",
+        "color": "green",
+        "see_cost": "all_clear",
+        "flags": [
+            "NO_ROTATE"
+        ]
+    },
+    {
+        "type": "overmap_terrain",
+        "id": "genius_mind_plaza",
+        "name": "Mind Palace",
+        "sym": "O",
+        "color": "light_blue",
+        "see_cost": "all_clear",
+        "flags": [
+            "NO_ROTATE"
+        ]
+    },
+    {
+        "type": "mapgen",
+        "om_terrain": [
+            "genius_mind_plaza"
+        ],
+        "object": {
+            "fill_ter": "t_rock",
+            "rows": [
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXWWWWWWWWWWWWWWXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,BBBBBBBB,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,SS,,,,,WXXXXX",
+                "XXXXXW,,,,,SS,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,BBBBBBBB,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXWWWWWWWWWWWWWWXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX"
+            ],
+            "terrain": {
+                "X": "t_rock",
+                ",": "t_genius_mind_floor",
+                "W": "t_concrete_wall"
+            },
+            "furniture": {
+                "B": "f_bookcase",
+                "S": "f_statue"
+            }
+        }
+    },
+    {
+        "type": "mapgen",
+        "om_terrain": [
+            "genius_void"
+        ],
+        "object": {
+            "fill_ter": "t_rock",
+            "rows": [
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX"
+            ],
+            "terrain": {
+                "X": "t_rock"
+            }
+        }
+    },
+    {
+        "type": "mapgen",
+        "om_terrain": [
+            "genius_mindscape"
+        ],
+        "object": {
+            "fill_ter": "t_grass",
+            "rows": [
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................",
+                "........................"
+            ],
+            "terrain": {
+                ".": "t_grass"
+            }
+        }
+    },
+    {
+        "type": "overmap_terrain",
+        "id": "genius_mind_door",
+        "name": "Mind Gate",
+        "sym": "D",
+        "color": "light_blue",
+        "see_cost": "all_clear",
+        "flags": [
+            "NO_ROTATE"
+        ]
+    },
+    {
+        "type": "mapgen",
+        "om_terrain": [
+            "genius_mind_door"
+        ],
+        "object": {
+            "fill_ter": "t_rock",
+            "rows": [
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXXDXXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX",
+                "XXXXXXXXXXXX,XXXXXXXXXXX"
+            ],
+            "terrain": {
+                "X": "t_rock",
+                ",": "t_concrete",
+                "D": "t_door_metal_c"
+            }
+        }
+    },
+    {
+        "type": "terrain",
+        "id": "t_genius_mind_floor",
+        "copy-from": "t_concrete",
+        "name": "glowing mind floor",
+        "description": "Concrete floor that glows with a soft, sourceless light, your mind keeping the dark at bay.",
+        "light_emitted": 120
+    },
+    {
+        "type": "mapgen",
+        "update_mapgen_id": "genius_mind_palace_stamp",
+        "object": {
+            "rows": [
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXWWWWWWWWWWWWWWXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,BBBBBBBB,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,SS,,,,,WXXXXX",
+                "XXXXXW,,,,,SS,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXW,,BBBBBBBB,,WXXXXX",
+                "XXXXXW,,,,,,,,,,,,WXXXXX",
+                "XXXXXWWWWWWWWWWWWWWXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX",
+                "XXXXXXXXXXXXXXXXXXXXXXXX"
+            ],
+            "terrain": {
+                "X": "t_rock",
+                ",": "t_genius_mind_floor",
+                "W": "t_concrete_wall",
+                "B": "t_genius_mind_floor",
+                "S": "t_genius_mind_floor"
+            }
+        }
+    }
+]

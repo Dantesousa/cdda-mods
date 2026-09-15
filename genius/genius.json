@@ -1,0 +1,290 @@
+[
+  {
+    "type": "vitamin",
+    "id": "mutagen_genius",
+    "vit_type": "counter",
+    "name": {
+      "str": "Genius Primer"
+    },
+    "excess": "mutagen",
+    "min": 0,
+    "max": 5000,
+    "rate": "1 h",
+    "disease_excess": [
+      [
+        100,
+        500
+      ],
+      [
+        501,
+        2199
+      ],
+      [
+        2200,
+        5000
+      ]
+    ]
+  },
+  {
+    "type": "mutation_category",
+    "id": "GENIUS",
+    "name": "Genius",
+    "threshold_mut": "THRESH_GENIUS",
+    "mutagen_message": "Your thoughts accelerate.  The world suddenly feels… slow.",
+    "memorial_message": "Became a genius.",
+    "threshold_min": 1000,
+    "vitamin": "mutagen_genius",
+    "base_removal_chance": 20
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_GENIUS",
+    "name": {
+      "str": "Genius (Post-Threshold)"
+    },
+    "points": 1,
+    "valid": false,
+    "purifiable": false,
+    "description": "You have crossed the Genius threshold.  Your mind operates on another level.",
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "GENIUS_SPARK",
+    "name": {
+      "str": "Genius Spark"
+    },
+    "points": 4,
+    "valid": true,
+    "starting_trait": true,
+    "active": true,
+    "cost": 300,
+    "stamina": true,
+    "description": "Your mind works noticeably faster.  You learn from practice and books much quicker than others.",
+    "cancels": [
+      "SLOWLEARNER",
+      "SLOWREADER"
+    ],
+    "category": [
+      "GENIUS"
+    ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": 0.5
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 2
+          },
+          {
+            "value": "READING_SPEED_MULTIPLIER",
+            "multiply": -0.4
+          }
+        ]
+      }
+    ],
+    "activated_eocs": [
+      "EOC_GENIUS_CONJURE_MOTE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GENIUS_BRIGHT",
+    "name": {
+      "str": "Bright Mind"
+    },
+    "points": 4,
+    "valid": true,
+    "description": "Chapters that took others a day take you an hour.  Combat drills sink in almost instantly.",
+    "active": true,
+    "cost": 300,
+    "stamina": true,
+    "prereqs": [
+      "GENIUS_SPARK"
+    ],
+    "category": [
+      "GENIUS"
+    ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": 1.0
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 4
+          },
+          {
+            "value": "READING_SPEED_MULTIPLIER",
+            "multiply": -0.6
+          }
+        ]
+      }
+    ],
+    "activated_eocs": [
+      "EOC_GENIUS_CONJURE_LOAF"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GENIUS_BRILLIANT",
+    "name": {
+      "str": "Brilliant Mind"
+    },
+    "points": 5,
+    "valid": true,
+    "description": "You devour books in minutes and master techniques from a single demonstration.",
+    "active": true,
+    "cost": 300,
+    "stamina": true,
+    "prereqs": [
+      "GENIUS_BRIGHT"
+    ],
+    "category": [
+      "GENIUS"
+    ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": 1.5
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 6
+          },
+          {
+            "value": "READING_SPEED_MULTIPLIER",
+            "multiply": -0.8
+          }
+        ]
+      }
+    ],
+    "activated_eocs": [
+      "EOC_GENIUS_CONJURE_BLADE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GENIUS_TRANSCENDENT",
+    "name": {
+      "str": "Transcendent Intellect"
+    },
+    "points": 6,
+    "valid": true,
+    "purifiable": false,
+    "description": "Ten times the Fast Learner.  Books are skimmed in moments; every swing teaches a lesson.",
+    "active": true,
+    "cost": 500,
+    "stamina": true,
+    "activated_eocs": [
+      "EOC_GENIUS_TRANSCENDENT_MENU"
+    ],
+    "prereqs": [
+      "GENIUS_BRILLIANT"
+    ],
+    "threshreq": [
+      "THRESH_GENIUS"
+    ],
+    "category": [
+      "GENIUS"
+    ],
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          {
+            "value": "LEARNING_FOCUS",
+            "multiply": 2.0
+          },
+          {
+            "value": "INTELLIGENCE",
+            "add": 10
+          },
+          {
+            "value": "READING_SPEED_MULTIPLIER",
+            "multiply": -0.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ITEM",
+    "subtypes": [
+      "COMESTIBLE"
+    ],
+    "id": "genius_serum",
+    "copy-from": "mutagen_flavor",
+    "name": {
+      "str_sp": "genius serum"
+    },
+    "description": "A shimmering nootropic cocktail.  Drinking it pushes your mind toward the Genius line.",
+    "price": "5000 USD",
+    "looks_like": "mutagen",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "You drink the %s.",
+      "vitamins": [
+        [
+          "mutagen_genius",
+          225
+        ],
+        [
+          "mutagen",
+          125
+        ]
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "genius_serum",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "cooking",
+    "difficulty": 5,
+    "time": "30 m",
+    "autolearn": true,
+    "tools": [
+      [
+        [
+          "hotplate",
+          20
+        ],
+        [
+          "chemistry_set",
+          20
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "bleach",
+          2
+        ],
+        [
+          "ammonia_liquid",
+          2
+        ]
+      ],
+      [
+        [
+          "water_clean",
+          2
+        ]
+      ]
+    ]
+  }
+]
