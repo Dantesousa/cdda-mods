@@ -223,8 +223,11 @@
       {
         "run_eoc_selector": [
           "EOC_GENIUS_CLARITY",
-          "EOC_GENIUS_MATERIALIZE_MENU",
-          "EOC_GENIUS_MATERIALIZE_BUILD_MENU",
+          "EOC_GENIUS_MENU_METALS",
+          "EOC_GENIUS_MENU_ELEC",
+          "EOC_GENIUS_MENU_CHEM",
+          "EOC_GENIUS_MENU_FABRIC",
+          "EOC_GENIUS_MENU_BUILD",
           "EOC_GENIUS_SUMMON_SERVANT",
           "EOC_GENIUS_SUMMON_TOOLBOX",
           "EOC_GENIUS_MIND_ENTER",
@@ -233,10 +236,26 @@
         ],
         "allow_cancel": true,
         "hide_failing": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k"
+        ],
         "names": [
           "Perfect Clarity",
-          "Materialize Components",
-          "Materialize Building Supplies",
+          "Conjure Metals",
+          "Conjure Electronics",
+          "Conjure Chemicals and Supplies",
+          "Conjure Fabric and Leather",
+          "Conjure Building Supplies",
           "Summon Servant",
           "Summon Toolbox",
           "Enter Mind Palace",
@@ -248,7 +267,7 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_GENIUS_MATERIALIZE_MENU",
+    "id": "EOC_GENIUS_MENU_METALS",
     "effect": [
       {
         "run_eoc_selector": [
@@ -256,46 +275,228 @@
           "EOC_GENIUS_MAT_SCRAP",
           "EOC_GENIUS_MAT_COPPER",
           "EOC_GENIUS_MAT_WIRE",
+          "EOC_GENIUS_MAT_PIPE",
+          "EOC_GENIUS_MAT_FITTINGS",
+          "EOC_GENIUS_MAT_SHEET",
+          "EOC_GENIUS_MAT_SHEET_SM",
+          "EOC_GENIUS_MAT_NAIL",
+          "EOC_GENIUS_MAT_NUTS",
+          "EOC_GENIUS_MAT_SPRING",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l"
+        ],
+        "names": [
+          "Steel Chunk x4",
+          "Scrap x6",
+          "Copper x4",
+          "Wire x6",
+          "Pipe x2",
+          "Pipe Fittings x2",
+          "Sheet Metal x2",
+          "Small Sheet Metal x4",
+          "Nail x12",
+          "Nuts and Bolts x6",
+          "Spring x4",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_ELEC",
+    "effect": [
+      {
+        "run_eoc_selector": [
           "EOC_GENIUS_MAT_E_SCRAP",
           "EOC_GENIUS_MAT_CIRCUIT",
           "EOC_GENIUS_MAT_PROCESSOR",
           "EOC_GENIUS_MAT_RAM",
           "EOC_GENIUS_MAT_POWER_SUPPLY",
           "EOC_GENIUS_MAT_SOLDER_WIRE",
-          "EOC_GENIUS_MAT_CHARCOAL",
-          "EOC_GENIUS_MAT_LYE",
-          "EOC_GENIUS_MAT_DUCT_TAPE",
-          "EOC_GENIUS_MAT_LEATHER",
-          "EOC_GENIUS_MAT_FUR",
-          "EOC_GENIUS_MAT_NAIL",
-          "EOC_GENIUS_MAT_SPRING",
-          "EOC_GENIUS_MAT_PIPE",
-          "EOC_GENIUS_MAT_PLASTIC_CHUNK",
-          "EOC_GENIUS_MAT_THREAD",
+          "EOC_GENIUS_MAT_AMPLIFIER",
+          "EOC_GENIUS_MAT_CABLE",
+          "EOC_GENIUS_MAT_SOLAR",
           "EOC_GENIUS_MENU_DONE"
         ],
         "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j"
+        ],
         "names": [
-          "Steel Chunk x4",
-          "Scrap x6",
-          "Copper x4",
-          "Wire x6",
           "E Scrap x4",
           "Circuit x2",
           "Processor x1",
           "Ram x2",
           "Power Supply x1",
           "Solder Wire x6",
+          "Amplifier x1",
+          "Cable x4",
+          "Solar Cell x1",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_CHEM",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_MAT_CHARCOAL",
+          "EOC_GENIUS_MAT_LYE",
+          "EOC_GENIUS_MAT_DUCT_TAPE",
+          "EOC_GENIUS_MAT_GLUE",
+          "EOC_GENIUS_MAT_PAPER",
+          "EOC_GENIUS_MAT_PLASTIC_CHUNK",
+          "EOC_GENIUS_MAT_PSHEET",
+          "EOC_GENIUS_MAT_CLAY",
+          "EOC_GENIUS_MAT_RUBBER",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j"
+        ],
+        "names": [
           "Charcoal x6",
-          "Lye x2",
+          "Lye Powder x2",
           "Duct Tape x2",
+          "Strong Glue x2",
+          "Paper x6",
+          "Plastic Chunk x4",
+          "Plastic Sheet x2",
+          "Clay Lump x6",
+          "Rubber Chunk x4",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_FABRIC",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_MAT_LEATHER",
+          "EOC_GENIUS_MAT_FUR",
+          "EOC_GENIUS_MAT_HIDE",
+          "EOC_GENIUS_MAT_PELT",
+          "EOC_GENIUS_MAT_THREAD",
+          "EOC_GENIUS_MAT_COTTON",
+          "EOC_GENIUS_MAT_PATCH",
+          "EOC_GENIUS_MAT_KEVLAR",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i"
+        ],
+        "names": [
           "Leather x4",
           "Fur x4",
-          "Nail x12",
-          "Spring x4",
-          "Pipe x2",
-          "Plastic Chunk x4",
+          "Tanned Hide x2",
+          "Tanned Pelt x2",
           "Thread x6",
+          "Cotton Sheet x2",
+          "Cotton Patchwork x2",
+          "Kevlar Scrap x2",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_BUILD",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_BLD_2X4",
+          "EOC_GENIUS_BLD_LOG",
+          "EOC_GENIUS_BLD_WOOD_PANEL",
+          "EOC_GENIUS_BLD_WOOD_BEAM",
+          "EOC_GENIUS_BLD_NAIL",
+          "EOC_GENIUS_BLD_ROCK",
+          "EOC_GENIUS_BLD_REBAR",
+          "EOC_GENIUS_BLD_BRICK",
+          "EOC_GENIUS_BLD_ROPE",
+          "EOC_GENIUS_BLD_GLASS",
+          "EOC_GENIUS_BLD_TARP",
+          "EOC_GENIUS_BLD_STICK",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l",
+          "m"
+        ],
+        "names": [
+          "2X4 x6",
+          "Log x4",
+          "Wood Panel x2",
+          "Wood Beam x2",
+          "Nail x12",
+          "Rock x6",
+          "Rebar x2",
+          "Brick x6",
+          "Rope 30 x2",
+          "Glass Sheet x2",
+          "Tarp x1",
+          "Stick x8",
           "Release Thought"
         ]
       }
@@ -322,7 +523,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -347,7 +548,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -372,7 +573,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -397,7 +598,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -422,7 +623,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -447,7 +648,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -472,7 +673,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -497,7 +698,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -522,7 +723,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -547,7 +748,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
       }
     ]
   },
@@ -572,7 +773,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
       }
     ]
   },
@@ -597,7 +798,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
       }
     ]
   },
@@ -622,7 +823,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
       }
     ]
   },
@@ -647,7 +848,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
       }
     ]
   },
@@ -672,7 +873,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
       }
     ]
   },
@@ -697,7 +898,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -722,7 +923,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -747,7 +948,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
       }
     ]
   },
@@ -772,7 +973,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
       }
     ]
   },
@@ -797,46 +998,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_MENU"
-      }
-    ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_GENIUS_MATERIALIZE_BUILD_MENU",
-    "effect": [
-      {
-        "run_eoc_selector": [
-          "EOC_GENIUS_BLD_2X4",
-          "EOC_GENIUS_BLD_LOG",
-          "EOC_GENIUS_BLD_WOOD_PANEL",
-          "EOC_GENIUS_BLD_WOOD_BEAM",
-          "EOC_GENIUS_BLD_NAIL",
-          "EOC_GENIUS_BLD_ROCK",
-          "EOC_GENIUS_BLD_REBAR",
-          "EOC_GENIUS_BLD_BRICK",
-          "EOC_GENIUS_BLD_ROPE",
-          "EOC_GENIUS_BLD_GLASS",
-          "EOC_GENIUS_BLD_TARP",
-          "EOC_GENIUS_BLD_STICK",
-          "EOC_GENIUS_MENU_DONE"
-        ],
-        "allow_cancel": true,
-        "names": [
-          "2X4 x6",
-          "Log x4",
-          "Wood Panel x2",
-          "Wood Beam x2",
-          "Nail x12",
-          "Rock x6",
-          "Rebar x2",
-          "Brick x6",
-          "Rope 30 x2",
-          "Glass Sheet x2",
-          "Tarp x1",
-          "Stick x8",
-          "Release Thought"
-        ]
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
       }
     ]
   },
@@ -861,7 +1023,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -886,7 +1048,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -911,7 +1073,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -936,7 +1098,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -961,7 +1123,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -986,7 +1148,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1011,7 +1173,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1036,7 +1198,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1061,7 +1223,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1086,7 +1248,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1111,7 +1273,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1136,7 +1298,7 @@
         "type": "good"
       },
       {
-        "run_eocs": "EOC_GENIUS_MATERIALIZE_BUILD_MENU"
+        "run_eocs": "EOC_GENIUS_MENU_BUILD"
       }
     ]
   },
@@ -1598,6 +1760,431 @@
       {
         "u_add_effect": "winded",
         "duration": "10 minutes"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_FITTINGS",
+    "effect": [
+      {
+        "u_spawn_item": "pipe_fittings",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Pipe fittings, threaded true.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SHEET",
+    "effect": [
+      {
+        "u_spawn_item": "sheet_metal",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Sheet metal, flat with promise.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SHEET_SM",
+    "effect": [
+      {
+        "u_spawn_item": "sheet_metal_small",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Small sheets for small jobs.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_NUTS",
+    "effect": [
+      {
+        "u_spawn_item": "nuts_bolts",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Nuts and bolts, matched pairs.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_METALS"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_CABLE",
+    "effect": [
+      {
+        "u_spawn_item": "cable",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Cable, coiled and patient.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_AMPLIFIER",
+    "effect": [
+      {
+        "u_spawn_item": "amplifier",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "An amplifier, humming faintly.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_SOLAR",
+    "effect": [
+      {
+        "u_spawn_item": "solar_cell",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A solar cell, still warm from some sun.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_ELEC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_GLUE",
+    "effect": [
+      {
+        "u_spawn_item": "glue_strong",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Strong glue.  Do not think about your fingers.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PAPER",
+    "effect": [
+      {
+        "u_spawn_item": "paper",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Paper, blank and obedient.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PSHEET",
+    "effect": [
+      {
+        "u_spawn_item": "plastic_sheet",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Plastic sheeting, crinkling into being.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_CLAY",
+    "effect": [
+      {
+        "u_spawn_item": "clay_lump",
+        "count": 6
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Clay, cool and willing.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_RUBBER",
+    "effect": [
+      {
+        "u_spawn_item": "chunk_rubber",
+        "count": 4
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Rubber chunks, bouncing back.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_CHEM"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_HIDE",
+    "effect": [
+      {
+        "u_spawn_item": "tanned_hide",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Tanned hide, supple as memory.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PELT",
+    "effect": [
+      {
+        "u_spawn_item": "tanned_pelt",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Tanned pelt, soft with winter.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_COTTON",
+    "effect": [
+      {
+        "u_spawn_item": "sheet_cotton",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Cotton sheeting, clean and square.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_PATCH",
+    "effect": [
+      {
+        "u_spawn_item": "cotton_patchwork",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Patchwork, stitched from scraps of thought.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MAT_KEVLAR",
+    "effect": [
+      {
+        "u_spawn_item": "scrap_kevlar",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Kevlar scraps, stubborn as ever.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_FABRIC"
       }
     ]
   }
