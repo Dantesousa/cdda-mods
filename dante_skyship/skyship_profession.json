@@ -7,5 +7,23 @@
     "points": 4,
     "skills": [ { "level": 3, "name": "mechanics" } ],
     "proficiencies": [ "prof_aircraft_mechanic", "prof_helicopter_pilot" ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "hobby_sky_pilot",
+    "name": "Helicopter Piloting",
+    "description": "You trained to fly helicopters before the world ended.  You can take the controls of any rotorcraft.",
+    "points": 0,
+    "proficiencies": [ "prof_helicopter_pilot" ]
+  },
+  {
+    "type": "profession",
+    "subtype": "hobby",
+    "id": "hobby_sky_mechanic",
+    "name": "Airframe and Powerplant Mechanic",
+    "description": "You certified airframes and powerplants before the world ended.  Rotorcraft you install, repair or strip stay flightworthy.",
+    "points": 0,
+    "proficiencies": [ "prof_aircraft_mechanic" ]
   }
 ]
