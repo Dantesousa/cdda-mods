@@ -30,7 +30,7 @@
         "XXXXXXXXXXXXXXXXXXXXXXXX"
       ],
       "terrain": {
-        "X": "t_open_air",
+        "X": "t_grass",
         "W": "t_metal_wall",
         ".": "t_metal_floor",
         "H": "t_sky_helm",
@@ -57,7 +57,7 @@
         "XXXXXXXXXXXXXXXXXXXXXXXX",
         "XXXXRRRRRRRRRRRRRRRRXXXX",
         "XXXXR..............RXXXX",
-        "XXXXR.....HH.......RXXXX",
+        "XXXXR..............RXXXX",
         "XXXXR..............RXXXX",
         "XXXXR..............RXXXX",
         "XXXXR..............RXXXX",
@@ -79,8 +79,7 @@
       "terrain": {
         "X": "t_open_air",
         "R": "t_metal_flat_roof",
-        ".": "t_open_air",
-        "H": "t_sky_helm"
+        ".": "t_open_air"
       }
     }
   },

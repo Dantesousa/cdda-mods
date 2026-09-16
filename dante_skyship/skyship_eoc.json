@@ -19,6 +19,7 @@
     "type": "effect_on_condition",
     "id": "EOC_SKY_QUERY",
     "effect": [
+      { "u_lose_var": "ship_new" },
       { "u_query_omt": { "global_val": "ship_new" }, "message": "Select Destination:" },
       { "u_location_variable": { "global_val": "ship" } },
       { "math": [ "ship_new.z = 0" ] },
@@ -164,6 +165,13 @@
       { "mapgen_update": "sky_deck", "target_var": { "global_val": "ship_new" } },
       { "math": [ "ship_new.z += 1" ] },
       { "mapgen_update": "sky_roof", "target_var": { "global_val": "ship_new" } },
+      {
+        "u_location_variable": { "context_val": "sky_spawn" },
+        "terrain": "t_metal_floor",
+        "target_max_radius": 30,
+        "passable_only": true
+      },
+      { "u_teleport": { "context_val": "sky_spawn" } },
       { "assign_mission": "MISSION_sky_location" },
       { "u_lose_var": "ship_new" }
     ]

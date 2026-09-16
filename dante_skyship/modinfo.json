@@ -4,7 +4,7 @@
     "id": "dante_skyship",
     "name": "Dante Skyship",
     "authors": [ "Dante" ],
-    "description": "A player-piloted skyship HQ: plot a course on the helm console and jump the whole ship across the overmap.",
+    "description": "A player-piloted skyship HQ: plot a course on the helm console and jump the whole ship across the overmap. Lands in open fields; don't build around the ship or leave loot on the floor before a jump.",
     "category": "content",
     "dependencies": [ "dda" ]
   }
