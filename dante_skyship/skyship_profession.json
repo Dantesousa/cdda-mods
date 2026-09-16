@@ -1,0 +1,11 @@
+[
+  {
+    "type": "profession",
+    "id": "prof_sky_mechanic",
+    "name": { "male": "Aeronautical Mechanic", "female": "Aeronautical Mechanic" },
+    "description": "You certified airframes and powerplants before the world ended, and you can still feel a rotor's health through a wrench.  Helicopters you touch stay flightworthy.",
+    "points": 4,
+    "skills": [ { "level": 3, "name": "mechanics" } ],
+    "proficiencies": [ "prof_aircraft_mechanic", "prof_helicopter_pilot" ]
+  }
+]
