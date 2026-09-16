@@ -3,7 +3,7 @@
     "type": "start_location",
     "id": "skyship_start",
     "name": "Skyship Deck",
-    "terrain": [ "field" ]
+    "terrain": [ "sky_deck_om" ]
   },
   {
     "type": "scenario",

@@ -162,9 +162,9 @@
     "effect": [
       { "u_location_variable": { "global_val": "ship_new" } },
       { "math": [ "ship_new.z = 0" ] },
-      { "mapgen_update": "sky_deck", "target_var": { "global_val": "ship_new" } },
       { "math": [ "ship_new.z += 1" ] },
       { "mapgen_update": "sky_roof", "target_var": { "global_val": "ship_new" } },
+      { "math": [ "ship_new.z -= 1" ] },
       {
         "u_location_variable": { "context_val": "sky_spawn" },
         "terrain": "t_metal_floor",

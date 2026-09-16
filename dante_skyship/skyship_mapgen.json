@@ -1,8 +1,56 @@
 [
   {
     "type": "mapgen",
+    "om_terrain": [ "sky_deck_om" ],
+    "object": {
+      "rows": [
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXWWWWWWWWWWWWWWWWXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW.....HH.......WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..bb..........WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..cccc.....l..WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXWWWWWWWDDWWWWWWWXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX"
+      ],
+      "terrain": {
+        "X": "t_grass",
+        "W": "t_wall_metal",
+        ".": "t_metal_floor",
+        "H": "t_sky_helm",
+        "D": "t_door_metal_c",
+        "b": "t_metal_floor",
+        "c": "t_metal_floor",
+        "l": "t_metal_floor"
+      },
+      "furniture": {
+        "b": "f_bed",
+        "c": "f_metal_crate_c",
+        "l": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
     "update_mapgen_id": "sky_deck",
     "object": {
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "rows": [
         "XXXXXXXXXXXXXXXXXXXXXXXX",
         "XXXXXXXXXXXXXXXXXXXXXXXX",
@@ -50,6 +98,7 @@
     "type": "mapgen",
     "update_mapgen_id": "sky_roof",
     "object": {
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "rows": [
         "XXXXXXXXXXXXXXXXXXXXXXXX",
         "XXXXXXXXXXXXXXXXXXXXXXXX",
@@ -87,6 +136,7 @@
     "type": "mapgen",
     "update_mapgen_id": "sky_left",
     "object": {
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "rows": [
         "XXXXXXXXXXXXXXXXXXXXXXXX",
         "XXXXXXXXXXXXXXXXXXXXXXXX",
@@ -122,6 +172,7 @@
     "type": "mapgen",
     "update_mapgen_id": "sky_left_air",
     "object": {
+      "flags": [ "ERASE_ALL_BEFORE_PLACING_TERRAIN" ],
       "rows": [
         "XXXXXXXXXXXXXXXXXXXXXXXX",
         "XXXXXXXXXXXXXXXXXXXXXXXX",

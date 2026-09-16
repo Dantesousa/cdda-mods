@@ -1,0 +1,21 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "sky_deck_om",
+    "name": "skyship",
+    "sym": "S",
+    "color": "light_blue",
+    "see_cost": "all_clear",
+    "flags": [ "NO_ROTATE" ]
+  },
+  {
+    "type": "overmap_special",
+    "id": "sky_start_home",
+    "overmaps": [ { "point": [ 0, 0, 0 ], "overmap": "sky_deck_om" } ],
+    "locations": [ "wilderness" ],
+    "city_distance": [ 3, -1 ],
+    "city_sizes": [ 0, -1 ],
+    "occurrences": [ 1, 1 ],
+    "flags": [ "CLASSIC" ]
+  }
+]
