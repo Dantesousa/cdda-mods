@@ -1,0 +1,18 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_sky_helm",
+    "name": "skyship helm console",
+    "description": "A helm console wired into the skyship's jump drive.  Examine it to plot a course.",
+    "looks_like": "t_intercom",
+    "move_cost": 0,
+    "coverage": 65,
+    "flags": [ "NOITEM", "SUPPORTS_ROOF", "NO_SCENT", "TRANSPARENT", "SHORT" ],
+    "symbol": "o",
+    "color": "light_blue",
+    "examine_action": {
+      "type": "effect_on_condition",
+      "effect_on_conditions": [ "EOC_SKY_CONTROL" ]
+    }
+  }
+]

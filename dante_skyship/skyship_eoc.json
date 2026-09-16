@@ -1,0 +1,171 @@
+[
+  {
+    "id": "MISSION_sky_location",
+    "type": "mission_definition",
+    "name": { "str": "Skyship transponder" },
+    "goal": "MGOAL_NULL",
+    "description": "The location of your skyship.",
+    "difficulty": 0,
+    "value": 0,
+    "invisible_on_complete": true,
+    "start": { "assign_mission_target": { "var": { "global_val": "ship_new" } } }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_CONTROL",
+    "effect": { "open_dialogue": { "topic": "SKY_HELM" } }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_QUERY",
+    "effect": [
+      { "u_query_omt": { "global_val": "ship_new" }, "message": "Select Destination:" },
+      { "u_location_variable": { "global_val": "ship" } },
+      { "math": [ "ship_new.z = 0" ] },
+      {
+        "if": {
+          "and": [
+            { "math": [ "has_var(ship_new)" ] },
+            { "overmap_at_point": "field", "point": { "global_val": "ship_new" } },
+            { "math": [ "distance('u', ship_new) >= 190" ] }
+          ]
+        },
+        "then": [ { "math": [ "ship_can_travel = 1" ] } ],
+        "else": [ { "math": [ "ship_can_travel = 0" ] } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_FLY",
+    "effect": [
+      { "turn_cost": "4 s" },
+      { "u_add_effect": "blind_no_msg", "duration": "3s" },
+      { "remove_active_mission": "MISSION_sky_location" },
+      { "assign_mission": "MISSION_sky_location" },
+      { "math": [ "ship_new.z = 0" ] },
+      {
+        "copy_location": { "global_val": "ship" },
+        "new_loc": { "global_val": "ship_new" },
+        "time_in_future": "infinite",
+        "key": "tp_key"
+      },
+      { "alter_timed_events": "tp_key" },
+      { "run_eocs": "EOC_SKY_TELEPORTS", "time_in_future": "1s" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_TELEPORTS",
+    "effect": [
+      { "run_eocs": "EOC_SKY_veh" },
+      { "run_eocs": "EOC_SKY_npc" },
+      { "run_eocs": "EOC_SKY_mon" },
+      { "run_eocs": "EOC_SKY_zone" },
+      { "run_eocs": "EOC_SKY_TP" },
+      { "run_eocs": "EOC_SKY_CLEANUP", "time_in_future": "1s" },
+      { "run_eocs": "EOC_SKY_VER", "time_in_future": "1s" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_veh",
+    "effect": [
+      {
+        "u_run_vehicle_eocs": [ "EOC_SKY_TP" ],
+        "vehicle_range": 24,
+        "z_min": { "math": [ "ship.z" ] },
+        "z_max": { "math": [ "ship.z" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_npc",
+    "effect": [
+      {
+        "u_run_npc_eocs": [ "EOC_SKY_TP" ],
+        "npc_range": 24,
+        "local": true,
+        "z_min": { "math": [ "ship.z" ] },
+        "z_max": { "math": [ "ship.z" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_mon",
+    "effect": [
+      {
+        "u_run_monster_eocs": [ "EOC_SKY_TP" ],
+        "monster_range": 24,
+        "z_min": { "math": [ "ship.z" ] },
+        "z_max": { "math": [ "ship.z" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_zone",
+    "effect": [
+      {
+        "u_run_fixed_zone_eocs": [ "EOC_SKY_TP" ],
+        "zone_range": 24,
+        "z_min": { "math": [ "ship.z" ] },
+        "z_max": { "math": [ "ship.z" ] }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_TP",
+    "effect": [
+      { "u_location_variable": { "context_val": "my_pos" } },
+      { "math": [ "_new_ship_x = 12*round(ship_new.x/ 12) - _my_pos.x + ( (_my_pos.x%24 + 24)%24 -12 )" ] },
+      { "math": [ "_new_ship_y = 12*round(ship_new.y/ 12) - _my_pos.y + ( (_my_pos.y%24 + 24)%24 - 12)" ] },
+      { "math": [ "_my_pos.z = ship_new.z" ] },
+      { "math": [ "_my_pos.x += _new_ship_x" ] },
+      { "math": [ "_my_pos.y += _new_ship_y" ] },
+      { "u_teleport": { "context_val": "my_pos" }, "force": true }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_VER",
+    "effect": [
+      { "u_location_variable": { "context_val": "my_pos" } },
+      { "u_location_variable": { "context_val": "my_pos2" }, "target_params": { "var": { "context_val": "my_pos" } } },
+      { "location_variable_adjust": { "context_val": "my_pos2" }, "x_adjust": 12, "y_adjust": 3 },
+      { "u_teleport": { "context_val": "my_pos2" } },
+      { "u_teleport": { "context_val": "my_pos" } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_CLEANUP",
+    "effect": [
+      { "mapgen_update": "sky_deck", "target_var": { "global_val": "ship_new" } },
+      { "math": [ "ship_new.z += 1" ] },
+      { "mapgen_update": "sky_roof", "target_var": { "global_val": "ship_new" } },
+      { "math": [ "ship_new.z -= 1" ] },
+      { "mapgen_update": "sky_left", "target_var": { "global_val": "ship" } },
+      { "math": [ "ship.z += 1" ] },
+      { "mapgen_update": "sky_left_air", "target_var": { "global_val": "ship" } },
+      { "u_lose_var": "ship_new" },
+      { "u_lose_var": "ship" }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_SKY_START",
+    "effect": [
+      { "u_location_variable": { "global_val": "ship_new" } },
+      { "math": [ "ship_new.z = 0" ] },
+      { "mapgen_update": "sky_deck", "target_var": { "global_val": "ship_new" } },
+      { "math": [ "ship_new.z += 1" ] },
+      { "mapgen_update": "sky_roof", "target_var": { "global_val": "ship_new" } },
+      { "assign_mission": "MISSION_sky_location" },
+      { "u_lose_var": "ship_new" }
+    ]
+  }
+]

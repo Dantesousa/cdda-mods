@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "dante_skyship",
+    "name": "Dante Skyship",
+    "authors": [ "Dante" ],
+    "description": "A player-piloted skyship HQ: plot a course on the helm console and jump the whole ship across the overmap.",
+    "category": "content",
+    "dependencies": [ "dda" ]
+  }
+]

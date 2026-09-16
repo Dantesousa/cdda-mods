@@ -75,6 +75,14 @@ Adds a **hyper-learning mutation line** (Spark → Bright → Brilliant → Tran
 - Files: `modinfo.json`, `genius.json`, `genius_powers.json`, `genius_dimension.json`, `genius_servants.json`
 - Dependencies: `dda`
 
+### 9. Dante Skyship
+**ID:** `dante_skyship`
+
+A player-piloted **skyship HQ**: plot a course on the helm console and jump the whole ship — crew, vehicles and all — across the overmap, landing in open fields. Starts with the Skyship Captain scenario.
+
+- Files: `modinfo.json`, `skyship_terrain.json`, `skyship_mapgen.json`, `skyship_eoc.json`, `skyship_talk.json`, `skyship_scenario.json`
+- Dependencies: `dda`
+
 ---
 
 ## 📦 Archived Mods
@@ -99,7 +107,8 @@ dda (base game)
 ├── pocket_dimension
 ├── exodii_heritage
 ├── arcane_pocket (requires magiclysm)
-└── genius
+├── genius
+└── dante_skyship
 
 dante_starter_gear (central mod)
 ├── dante_gadgets

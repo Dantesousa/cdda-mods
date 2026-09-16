@@ -1,0 +1,31 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "SKY_HELM",
+    "dynamic_line": "SKYSHIP HELM — jump drive ready.",
+    "responses": [
+      {
+        "text": "> Plot a manual course.",
+        "topic": "SKY_READY",
+        "effect": { "run_eocs": "EOC_SKY_QUERY" }
+      },
+      { "text": "> Release the helm.", "topic": "TALK_DONE" }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "SKY_READY",
+    "dynamic_line": "Course plotted.  Drive spooled.",
+    "responses": [
+      {
+        "condition": { "math": [ "ship_can_travel == 1" ] },
+        "text": "> Jump the ship.",
+        "topic": "TALK_DONE",
+        "effect": { "run_eocs": "EOC_SKY_FLY" },
+        "show_always": true,
+        "show_reason": "Destination must be a clear field far enough away."
+      },
+      { "text": "> Release the helm.", "topic": "TALK_DONE" }
+    ]
+  }
+]

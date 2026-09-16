@@ -1,0 +1,157 @@
+[
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "sky_deck",
+    "object": {
+      "rows": [
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXWWWWWWWWWWWWWWWWXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW.....HH.......WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..bb..........WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..cccc.....l..WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXW..............WXXXX",
+        "XXXXWWWWWWWDDWWWWWWWXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX"
+      ],
+      "terrain": {
+        "X": "t_open_air",
+        "W": "t_metal_wall",
+        ".": "t_metal_floor",
+        "H": "t_sky_helm",
+        "D": "t_door_metal_c",
+        "b": "t_metal_floor",
+        "c": "t_metal_floor",
+        "l": "t_metal_floor"
+      },
+      "furniture": {
+        "b": "f_bed",
+        "c": "f_crate",
+        "l": "f_locker"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "sky_roof",
+    "object": {
+      "rows": [
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXRRRRRRRRRRRRRRRRXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR.....HH.......RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXR..............RXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX"
+      ],
+      "terrain": {
+        "X": "t_open_air",
+        "R": "t_metal_flat_roof",
+        ".": "t_open_air",
+        "H": "t_sky_helm"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "sky_left",
+    "object": {
+      "rows": [
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX"
+      ],
+      "terrain": {
+        "X": "t_grass"
+      }
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "sky_left_air",
+    "object": {
+      "rows": [
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXXXXXXXXXXXXXXXXXXXXXX"
+      ],
+      "terrain": {
+        "X": "t_open_air"
+      }
+    }
+  }
+]
