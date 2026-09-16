@@ -1,0 +1,135 @@
+[
+  {
+    "type": "vehicle_part",
+    "id": "small_civilian_rotors",
+    "copy-from": "small_civilian_rotors",
+    "flags": [ "ROTOR", "SMASH_REMOVE" ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "2 h",
+        "using": [ [ "welding_standard", 50 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "1 h",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 3 ] ],
+        "time": "30 m",
+        "using": [ [ "repair_welding_standard", 1 ] ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "heavy_duty_military_rotor",
+    "copy-from": "heavy_duty_military_rotor",
+    "flags": [ "ROTOR", "SMASH_REMOVE" ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "4 h",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "2 h",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "1 h",
+        "using": [ [ "repair_welding_standard", 2 ] ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "heavy_duty_military_blackhawk_rotors",
+    "copy-from": "heavy_duty_military_blackhawk_rotors",
+    "flags": [ "ROTOR", "SMASH_REMOVE" ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "4 h",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "2 h",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "1 h",
+        "using": [ [ "repair_welding_standard", 2 ] ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "heavy_duty_military_osprey_rotors",
+    "copy-from": "heavy_duty_military_osprey_rotors",
+    "flags": [ "ROTOR", "SMASH_REMOVE" ],
+    "requirements": {
+      "install": {
+        "skills": [ [ "mechanics", 6 ] ],
+        "time": "4 h",
+        "using": [ [ "welding_standard", 100 ] ]
+      },
+      "removal": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "2 h",
+        "using": [ [ "vehicle_weld_removal", 1 ] ]
+      },
+      "repair": {
+        "skills": [ [ "mechanics", 4 ] ],
+        "time": "1 h",
+        "using": [ [ "repair_welding_standard", 2 ] ]
+      }
+    }
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "small_helicopter_rotor",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 6,
+    "time": "6 h",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "WRENCH", "level": 2 } ],
+    "using": [ [ "welding_standard", 50 ] ],
+    "components": [
+      [ [ "steel_chunk", 4 ] ],
+      [ [ "scrap", 8 ] ],
+      [ [ "pipe", 2 ] ],
+      [ [ "wire", 4 ] ],
+      [ [ "spring", 2 ] ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "MODERATE_EXERCISE",
+    "result": "heavy_duty_military_rotor",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_PARTS",
+    "skill_used": "fabrication",
+    "difficulty": 8,
+    "time": "12 h",
+    "autolearn": true,
+    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "WRENCH", "level": 2 } ],
+    "using": [ [ "welding_standard", 100 ] ],
+    "components": [
+      [ [ "steel_chunk", 8 ] ],
+      [ [ "scrap", 12 ] ],
+      [ [ "pipe", 4 ] ],
+      [ [ "copper", 4 ] ],
+      [ [ "wire", 6 ] ],
+      [ [ "power_supply", 1 ] ]
+    ]
+  }
+]

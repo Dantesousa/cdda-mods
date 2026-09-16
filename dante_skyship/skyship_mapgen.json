@@ -31,7 +31,7 @@
       ],
       "terrain": {
         "X": "t_grass",
-        "W": "t_metal_wall",
+        "W": "t_wall_metal",
         ".": "t_metal_floor",
         "H": "t_sky_helm",
         "D": "t_door_metal_c",
@@ -41,7 +41,7 @@
       },
       "furniture": {
         "b": "f_bed",
-        "c": "f_crate",
+        "c": "f_metal_crate_c",
         "l": "f_locker"
       }
     }
