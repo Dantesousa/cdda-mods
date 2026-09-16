@@ -13,7 +13,7 @@
     "points": 1,
     "description": "You woke up on the deck of your own skyship.  The helm is live and the whole overmap is in range.",
     "allowed_locs": [ "skyship_start" ],
-    "professions": [ "unemployed" ],
+    "professions": [ "unemployed", "prof_sky_mechanic" ],
     "flags": [ "LONE_START" ],
     "eoc": [ "EOC_SKY_START" ]
   }
