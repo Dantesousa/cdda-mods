@@ -228,6 +228,7 @@
           "EOC_GENIUS_MENU_CHEM",
           "EOC_GENIUS_MENU_FABRIC",
           "EOC_GENIUS_MENU_BUILD",
+          "EOC_GENIUS_MENU_MECHANIC",
           "EOC_GENIUS_SUMMON_SERVANT",
           "EOC_GENIUS_SUMMON_TOOLBOX",
           "EOC_GENIUS_MIND_ENTER",
@@ -247,7 +248,8 @@
           "h",
           "i",
           "j",
-          "k"
+          "k",
+          "l"
         ],
         "names": [
           "Perfect Clarity",
@@ -256,6 +258,7 @@
           "Conjure Chemicals and Supplies",
           "Conjure Fabric and Leather",
           "Conjure Building Supplies",
+          "Conjure Basic Mechanics",
           "Summon Servant",
           "Summon Toolbox",
           "Enter Mind Palace",
@@ -2185,6 +2188,332 @@
       },
       {
         "run_eocs": "EOC_GENIUS_MENU_FABRIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MENU_MECHANIC",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "EOC_GENIUS_MEC_1CYL",
+          "EOC_GENIUS_MEC_I4",
+          "EOC_GENIUS_MEC_MOTOR_SM",
+          "EOC_GENIUS_MEC_MOTOR_LG",
+          "EOC_GENIUS_MEC_STEAM_SM",
+          "EOC_GENIUS_MEC_STEAM_TR",
+          "EOC_GENIUS_MEC_CONTROLS",
+          "EOC_GENIUS_MEC_SEAT",
+          "EOC_GENIUS_MEC_FRAME",
+          "EOC_GENIUS_MEC_BATTERY",
+          "EOC_GENIUS_MEC_WHEEL",
+          "EOC_GENIUS_MENU_DONE"
+        ],
+        "allow_cancel": true,
+        "keys": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k",
+          "l"
+        ],
+        "names": [
+          "Small 1-Cyl Engine x1",
+          "I4 Engine x1",
+          "Small Electric Motor x1",
+          "Large Electric Motor x1",
+          "Small Steam Engine x1",
+          "Triple Steam Engine x1",
+          "Vehicle Controls x1",
+          "Car Seat x1",
+          "Frame x2",
+          "Car Battery x1",
+          "Bicycle Wheel x2",
+          "Release Thought"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_1CYL",
+    "effect": [
+      {
+        "u_spawn_item": "1cyl_combustion_small",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A chumbrega one-lung engine.  It runs.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_I4",
+    "effect": [
+      {
+        "u_spawn_item": "i4_combustion",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A four-cylinder workhorse.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_MOTOR_SM",
+    "effect": [
+      {
+        "u_spawn_item": "motor_small",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A small electric motor, eager to spin.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_MOTOR_LG",
+    "effect": [
+      {
+        "u_spawn_item": "motor_large",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A large electric motor with ambitions.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_STEAM_SM",
+    "effect": [
+      {
+        "u_spawn_item": "steam_watts_small",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A small steam engine.  Feed it coal.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_STEAM_TR",
+    "effect": [
+      {
+        "u_spawn_item": "steam_triple_small",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A triple-expansion steam engine, hissing softly.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_CONTROLS",
+    "effect": [
+      {
+        "u_spawn_item": "vehicle_controls",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Steering, pedals, and hope.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_SEAT",
+    "effect": [
+      {
+        "u_spawn_item": "seat",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A seat with most of its springs.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_FRAME",
+    "effect": [
+      {
+        "u_spawn_item": "frame",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Bare frames, waiting for purpose.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_BATTERY",
+    "effect": [
+      {
+        "u_spawn_item": "battery_car",
+        "count": 1
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "A charged-enough car battery.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_GENIUS_MEC_WHEEL",
+    "effect": [
+      {
+        "u_spawn_item": "wheel_bicycle",
+        "count": 2
+      },
+      {
+        "u_add_effect": "effect_genius_strain",
+        "duration": "30 minutes"
+      },
+      {
+        "u_add_effect": "winded",
+        "duration": "10 minutes"
+      },
+      {
+        "u_message": "Two honest wheels.",
+        "type": "good"
+      },
+      {
+        "run_eocs": "EOC_GENIUS_MENU_MECHANIC"
       }
     ]
   }
