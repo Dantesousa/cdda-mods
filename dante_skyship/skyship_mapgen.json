@@ -1,6 +1,7 @@
 [
   {
     "type": "mapgen",
+    "//": "Deck rows below are duplicated in sky_deck update entry - keep both in sync. Roof intentionally covers only the north cabin half; the aft deck stays open.",
     "om_terrain": [ "sky_deck_om" ],
     "object": {
       "rows": [

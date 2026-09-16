@@ -11,7 +11,7 @@
     "name": "Skyship Captain",
     "start_name": "Aboard the skyship",
     "points": 1,
-    "description": "You woke up on the deck of your own skyship, parked in the middle of a field.  The helm is live and the whole overmap is in range.",
+    "description": "You woke up on the deck of your own skyship.  The helm is live and the whole overmap is in range.",
     "allowed_locs": [ "skyship_start" ],
     "professions": [ "unemployed" ],
     "flags": [ "LONE_START" ],

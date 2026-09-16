@@ -171,7 +171,7 @@
         "target_max_radius": 30,
         "passable_only": true
       },
-      { "u_teleport": { "context_val": "sky_spawn" } },
+      { "u_teleport": { "context_val": "sky_spawn" }, "force": true },
       { "assign_mission": "MISSION_sky_location" },
       { "u_lose_var": "ship_new" }
     ]
