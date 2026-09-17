@@ -1,7 +1,7 @@
 [
   {
     "type": "mod_tileset",
-    "compatibility": [ "Chibi_Ultica", "ChibiUltica" ],
+    "compatibility": [ "Chibi_Ultica", "ChibiUltica", "MshockXottoplus" ],
     "tiles-new": [
       {
         "file": "genius_omnitoolbox.png",
