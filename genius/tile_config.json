@@ -13,7 +13,10 @@
         "file": "genius_omnitoolbox_wielded.png",
         "sprite_width": 32,
         "sprite_height": 32,
-        "tiles": [ { "id": "overlay_wielded_genius_omnitoolbox", "fg": 0 } ]
+        "tiles": [
+          { "id": "overlay_wielded_genius_omnitoolbox", "fg": 0 },
+          { "id": "overlay_wielded_toolbox_empty", "fg": 0 }
+        ]
       }
     ]
   }
