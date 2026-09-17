@@ -1742,7 +1742,8 @@
     ],
     "melee_damage": {
       "bash": 4
-    }
+    },
+    "looks_like": "toolbox_empty"
   },
   {
     "type": "effect_on_condition",
