@@ -83,6 +83,14 @@ A player-piloted **skyship HQ**: plot a course on the helm console and jump the 
 - Files: `modinfo.json`, `skyship_terrain.json`, `skyship_mapgen.json`, `skyship_eoc.json`, `skyship_talk.json`, `skyship_scenario.json`
 - Dependencies: `dda`
 
+### 10. Dan's Weapons
+**ID:** `dans_weapons`
+
+Adds new firearms with custom sprites: **AK-102 carbine**, **G36 assault rifle**, **Enfield EM-2** and **FG-42 paratrooper rifle** (converted to 5.56 STANAG), each with wielded overlay sprites.
+
+- Files: `genius_ak102.json`, `genius_g36.json`, `dans_em2.json`, `genius_fg42.json`, `tile_config.json`, sprites
+- Dependencies: `dda`
+
 ---
 
 ## 📦 Archived Mods
@@ -108,6 +116,7 @@ dda (base game)
 ├── exodii_heritage
 ├── arcane_pocket (requires magiclysm)
 ├── genius
+├── dans_weapons
 └── dante_skyship
 
 dante_starter_gear (central mod)
