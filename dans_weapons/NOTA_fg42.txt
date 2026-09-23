@@ -1,0 +1,19 @@
+FG42 (Fallschirmjägergewehr 42) — sprite v7, traçado da arte do Dante 2026-09-23.
+
+Arquivos:
+- genius_fg42.png — combo final 64x32: item (fg 6) + overlay_wielded (fg 7).
+  fg livres seguintes no dans_weapons: 8,9.
+- preview.png — ground claro | ground escuro | no personagem (MSX fg 10), 8x.
+
+Método (v7 — detalhada, passou no analisador):
+- v6 tava limpa mas lisa demais. v7 adiciona os detalhes da arte dele à mão
+  via script: alça de mira traseira, poste da massa de mira, ribs no
+  handguard (col alternada + highlight laranja no topo), 2 slots no brake,
+  guard do gatilho, ribs na coronha.
+- Canvas 30x8 (sights em cima, guard embaixo), sem outline artificial —
+  só highlight/shade in-place. Ground y21, overlay y13.
+- Side-mag escondido (vista direita, igual na arte), bipod dobrado vira o
+  ganchinho sob o handguard, muzzle brake com ranhuras pretas.
+
+Item: id genius_fg42, copy-from gun_base_223_semi_rifle (STANAG),
+looks_like ak47. tile_config + JSON validados (parse limpo).

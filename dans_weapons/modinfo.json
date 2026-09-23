@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "dans_weapons",
+    "name": "Dan's Weapons",
+    "authors": ["Dante"],
+    "description": "New firearms added by us: AK-102 carbine, G36 assault rifle, Enfield EM-2 and FG-42 paratrooper rifle.",
+    "category": "content",
+    "dependencies": ["dda"]
+  }
+]

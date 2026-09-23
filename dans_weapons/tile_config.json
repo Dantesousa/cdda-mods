@@ -1,0 +1,80 @@
+[
+  {
+    "type": "mod_tileset",
+    "compatibility": [
+      "Chibi_Ultica",
+      "ChibiUltica",
+      "MshockXottoplus"
+    ],
+    "tiles-new": [
+      {
+        "file": "genius_ak102.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "genius_ak102",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_genius_ak102",
+            "fg": 1,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "genius_g36.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "genius_g36",
+            "fg": 2,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_genius_g36",
+            "fg": 3,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "dans_em2.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "dans_em2",
+            "fg": 4,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_dans_em2",
+            "fg": 5,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "genius_fg42.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "genius_fg42",
+            "fg": 6,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_genius_fg42",
+            "fg": 7,
+            "rotates": false
+          }
+        ]
+      }
+    ]
+  }
+]

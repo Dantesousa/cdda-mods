@@ -1,0 +1,32 @@
+[
+  {
+    "id": "genius_ak102",
+    "copy-from": "gun_base_223_semi_rifle",
+    "looks_like": "ak47",
+    "type": "ITEM",
+    "subtypes": [ "GUN" ],
+    "name": { "str": "AK-102 carbine" },
+    "description": "A compact Kalashnikov carbine chambered in 5.56x45mm NATO, with black polymer furniture and a short 314 mm barrel.  Handy indoors, still unmistakably an AK.",
+    "weight": "3000 g",
+    "volume": "1900 ml",
+    "longest_side": "82 cm",
+    "barrel_length": "314 mm",
+    "price": "900 USD",
+    "price_postapoc": "40 USD",
+    "material": [ "steel", "plastic" ],
+    "dispersion": 190,
+    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 4 ] ],
+    "valid_mod_locations": [
+      [ "barrel", 1 ],
+      [ "brass catcher", 1 ],
+      [ "mechanism", 2 ],
+      [ "rail", 1 ],
+      [ "sights", 1 ],
+      [ "sling", 1 ],
+      [ "stock accessory", 1 ],
+      [ "stock mount", 1 ],
+      [ "underbarrel mount", 1 ]
+    ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE_WELL", "item_restriction": [ "zpap85mag", "zpap85mag_10rd" ] } ]
+  }
+]
