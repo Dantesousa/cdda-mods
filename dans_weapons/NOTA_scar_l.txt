@@ -8,12 +8,15 @@ Arquivos:
   looks_like scar_l, dispersion 165, barrel 410mm.
 - Script: _backup/scar-desert/make_scar.py (BARREL_EXT=3).
 
-Método (detalhado, padrão AK-102/FG42):
-- Base vanilla roubada, shading 100% preservado (rampa tan + outline já eram FDE).
-- In-place: notches no rail, ribs no handguard (sombra/highlight alternados),
-  foregrip vertical x19-20, vents na coronha, anel no muzzle, cano +3px.
-- Wielded = mesmo art shift +7y (geometria vanilla: rows 13-22).
-- Verificado via flood-fill: 1 componente só, 0 pixels órfãos; células idênticas.
+Método (v2 — traçado da print, 2026-09-24):
+- Script: _backup/scar-desert/make_scar_traced.py — silhueta E cores
+  amostradas da arma 65 (label "65" excluído por bbox medida x>=324,y<17).
+- Paleta da print (nada de vanilla): outline (0,0,0), dark (25,24,24),
+  grey (74,72,71)/(103,103,103), tan oliva (74,60,42)/(113,98,71),
+  tan-mid (162,149,114), tan-light (216,194,155).
+- Escala uniforme 369->30px; rear/front sights viram nubs (convenção MSX);
+  vão do guard preservado (bg exato = transparente).
+- Verificado via flood-fill: 1 componente, 0 órfãos, 0 colunas vazias,
+  wielded = shift +7 exato. check-mods exit 0.
 
-Pendente (jogo estava aberto na hora da edição):
-- --check-mods dans_weapons + teste em mundo NOVO após fechar o jogo.
+Pendente: teste em mundo NOVO após fechar o jogo.
