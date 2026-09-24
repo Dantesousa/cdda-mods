@@ -1,0 +1,19 @@
+SCAR-L desert (dans_scar_l) — sprite da base vanilla MSX scar_l (fg 4261/653),
+ref visual: arma 65 da folha Stella_Hoshii (two-tone FDE, cano longo).
+
+Arquivos:
+- dans_scar_l.png — combo final 64x32: item (fg 8) + overlay_wielded (fg 9).
+  fg livres seguintes no dans_weapons: 10,11.
+- dans_scar_l.json — copy-from gun_base_223_semi_rifle (STANAG),
+  looks_like scar_l, dispersion 165, barrel 410mm.
+- Script: _backup/scar-desert/make_scar.py (BARREL_EXT=3).
+
+Método (detalhado, padrão AK-102/FG42):
+- Base vanilla roubada, shading 100% preservado (rampa tan + outline já eram FDE).
+- In-place: notches no rail, ribs no handguard (sombra/highlight alternados),
+  foregrip vertical x19-20, vents na coronha, anel no muzzle, cano +3px.
+- Wielded = mesmo art shift +7y (geometria vanilla: rows 13-22).
+- Verificado via flood-fill: 1 componente só, 0 pixels órfãos; células idênticas.
+
+Pendente (jogo estava aberto na hora da edição):
+- --check-mods dans_weapons + teste em mundo NOVO após fechar o jogo.
