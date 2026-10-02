@@ -1,0 +1,11 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "dante_tweaks",
+    "name": "Dante Tweaks",
+    "authors": ["Dante"],
+    "description": "Personal tuning cheats for faster testing: guaranteed Dreamer/Eater spell picks and faster class dream sequence.",
+    "category": "content",
+    "dependencies": ["xedra_evolved"]
+  }
+]

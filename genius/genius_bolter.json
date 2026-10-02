@@ -1,0 +1,119 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "genius_bolt",
+    "name": { "str": "thought bolt" },
+    "default": "genius_bolt"
+  },
+  {
+    "id": "genius_bolt",
+    "type": "ITEM",
+    "subtypes": [
+      "AMMO"
+    ],
+    "ammo_type": "genius_bolt",
+    "name": {
+      "str_sp": "thought bolt"
+    },
+    "description": "A rifle round remembered so hard it became real.  It flies true and detonates on impact with a soft pop of displaced thought.  It will not survive the mind that made it.",
+    "symbol": "=",
+    "color": "light_blue",
+    "material": [
+      "bone"
+    ],
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "count": 10,
+    "stack_size": 50,
+    "range": 36,
+    "dispersion": 30,
+    "loudness": 80,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 60,
+      "armor_penetration": 15
+    },
+    "explosion": {
+      "power": 30
+    },
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "genius_bolter",
+    "copy-from": "gun_base_rifle_semi",
+    "type": "ITEM",
+    "subtypes": [
+      "GUN"
+    ],
+    "name": {
+      "str": "thoughtcaster rifle"
+    },
+    "description": "A heavy rifle remembered so hard it became real.  Firearm of the mind: every shot detonates on impact, and its core glows with contained thought.  It arrives with a full magazine of ten remembered rounds; when it runs dry, conjure another.  Remembered things do not jam.",
+    "weight": "3200 g",
+    "volume": "3 L",
+    "longest_side": "80 cm",
+    "barrel_length": "500 mm",
+    "price": "0 USD",
+    "price_postapoc": "0 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_blue",
+    "ammo": [
+      "genius_bolt"
+    ],
+    "dispersion": 120,
+    "durability": 10,
+    "min_cycle_recoil": 2800,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "flags": [
+      "TRADER_AVOID",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "faults": [],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "genius_bolt": 10
+        }
+      }
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "genius_bolt",
+    "charges": 10,
+    "category": "CC_AMMO",
+    "subcategory": "CSC_AMMO_RIFLE",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "15 m",
+    "activity_level": "LIGHT_EXERCISE",
+    "autolearn": true,
+    "description": "Transmute scrap metal into ten thought bolts through focused remembering.",
+    "components": [
+      [
+        [
+          "scrap",
+          4
+        ]
+      ]
+    ]
+  }
+]

@@ -72,7 +72,7 @@ Adds a personal **24×24 arcane pocket dimension** accessible via a magical tran
 
 Adds a **hyper-learning mutation line** (Spark → Bright → Brilliant → Transcendent) with instant activated powers: conjure light, food, and blades from thought. The Transcendent menu materializes components and building supplies, summons thought servants and a thought toolbox, and opens a persistent **Mind Palace** dimension to build in.
 
-- Files: `modinfo.json`, `genius.json`, `genius_powers.json`, `genius_dimension.json`, `genius_servants.json`
+- Files: `modinfo.json`, `genius.json`, `genius_powers.json`, `genius_dimension.json`, `genius_servants.json`, `genius_bolter.json`, sprites
 - Dependencies: `dda`
 
 ### 9. Dante Skyship
@@ -88,8 +88,18 @@ A player-piloted **skyship HQ**: plot a course on the helm console and jump the 
 
 Adds new firearms with custom sprites: **AK-102 carbine**, **G36 assault rifle**, **Enfield EM-2** and **FG-42 paratrooper rifle** (converted to 5.56 STANAG), each with wielded overlay sprites.
 
-- Files: `genius_ak102.json`, `genius_g36.json`, `dans_em2.json`, `genius_fg42.json`, `tile_config.json`, sprites
+- Files: `genius_ak102.json`, `genius_g36.json`, `dans_em2.json`, `genius_fg42.json`, `dans_scar_l.json`, `tile_config.json`, sprites
 - Dependencies: `dda`
+
+---
+
+### 11. Dante Tweaks
+**ID:** `dante_tweaks`
+
+Personal tuning cheats for faster testing: guaranteed Dreamer/Eater spell picks and faster class dream sequence.
+
+- Files: `tweaks.json`
+- Dependencies: `xedra_evolved`
 
 ---
 
@@ -117,6 +127,7 @@ dda (base game)
 ├── arcane_pocket (requires magiclysm)
 ├── genius
 ├── dans_weapons
+├── dante_tweaks (requires xedra_evolved)
 └── dante_skyship
 
 dante_starter_gear (central mod)

@@ -1,15 +1,49 @@
 [
   {
     "type": "mod_tileset",
-    "compatibility": [ "Chibi_Ultica", "ChibiUltica", "MshockXottoplus" ],
+    "compatibility": [
+      "Chibi_Ultica",
+      "ChibiUltica",
+      "MshockXottoplus"
+    ],
     "tiles-new": [
       {
         "file": "genius_omnitoolbox.png",
         "sprite_width": 32,
         "sprite_height": 32,
         "tiles": [
-          { "id": "genius_omnitoolbox", "fg": 0, "rotates": false },
-          { "id": "overlay_wielded_genius_omnitoolbox", "fg": 1, "rotates": false }
+          {
+            "id": "genius_omnitoolbox",
+            "fg": 0,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_genius_omnitoolbox",
+            "fg": 1,
+            "rotates": false
+          }
+        ]
+      },
+      {
+        "file": "genius_bolter.png",
+        "sprite_width": 32,
+        "sprite_height": 32,
+        "tiles": [
+          {
+            "id": "genius_bolter",
+            "fg": 2,
+            "rotates": false
+          },
+          {
+            "id": "overlay_wielded_genius_bolter",
+            "fg": 3,
+            "rotates": false
+          },
+          {
+            "id": "genius_bolt",
+            "fg": 4,
+            "rotates": false
+          }
         ]
       }
     ]
